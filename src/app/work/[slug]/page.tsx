@@ -61,7 +61,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       </div>
 
       {/* Results Strip */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-8 rounded-2xl bg-[var(--surface)] border border-[var(--border)] mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-8 rounded-2xl bg-[var(--surface)] border border-[var(--border)] mb-16 relative overflow-hidden">
+        {/* Background Dotted Overlay */}
+        <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-40 z-0" />
         {project.results.map((res, idx) => (
           <div key={idx} className="text-center">
             <div className="text-3xl sm:text-4xl font-extrabold font-display text-[var(--accent)] mb-1">

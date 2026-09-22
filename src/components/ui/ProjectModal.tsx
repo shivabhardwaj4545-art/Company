@@ -100,7 +100,8 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         className="relative w-full max-w-xl rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 shadow-2xl overflow-hidden"
       >
-        {/* Background Accent Glow */}
+        {/* Gradient Dotted Wave Background & Accent Glow Overlay */}
+        <div className="bg-dotted-gradient" />
         <div className="absolute -top-24 -right-24 w-60 h-60 bg-[var(--accent)]/15 rounded-full blur-3xl pointer-events-none" />
 
         {/* Close Button */}

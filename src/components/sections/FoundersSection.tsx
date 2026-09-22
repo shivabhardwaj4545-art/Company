@@ -29,8 +29,10 @@ export function FoundersSection() {
         {founders.map((founder) => (
           <div
             key={founder.id}
-            className="group relative rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 accent-glow-hover flex flex-col sm:flex-row items-center sm:items-start gap-6 overflow-hidden"
+            className="card-popout group rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 overflow-hidden"
           >
+            {/* Gradient Dotted Wave Background */}
+            <div className="bg-dotted-gradient" />
             {/* Founder Avatar & Initials Badge */}
             <div className="relative shrink-0">
               {/* eslint-disable-next-html-extension */}

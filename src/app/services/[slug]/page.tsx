@@ -46,7 +46,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </div>
 
       {/* Detailed Description Box */}
-      <div className="p-8 sm:p-12 rounded-3xl border border-[var(--border)] bg-[var(--surface)] mb-16 accent-glow-hover">
+      <div className="p-8 sm:p-12 rounded-3xl border border-[var(--border)] bg-[var(--surface)] mb-16 accent-glow-hover relative overflow-hidden">
+        {/* Background Dotted Overlay */}
+        <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-40 z-0" />
         <h2 className="text-2xl font-bold font-display text-[var(--text-primary)] mb-4">
           Detailed Capabilities
         </h2>

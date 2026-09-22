@@ -27,14 +27,8 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
     <section
       className="relative min-h-screen flex flex-col justify-center pt-36 sm:pt-40 pb-20 px-4 sm:px-6 lg:px-12 overflow-visible bg-noise border-b border-[var(--border)]"
     >
-      {/* Background Dotted Grid Pattern (from 2 ss) */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-20"
-        style={{
-          backgroundImage: 'radial-gradient(#000000 1.2px, transparent 1.2px)',
-          backgroundSize: '24px 24px',
-        }}
-      />
+      {/* Background Dotted Grid Pattern */}
+      <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-60" />
 
       {/* Subtle Ambient Glow Blobs */}
       <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#a3e635]/15 rounded-full blur-3xl pointer-events-none" />
@@ -124,7 +118,8 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
           <div className="lg:col-span-6 relative pt-4 lg:pt-0">
             
             {/* Main Device Container */}
-            <div className="relative rounded-2xl border-2 border-black bg-[var(--bg)] p-4 sm:p-6 shadow-hard overflow-hidden">
+            <div className="relative rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 sm:p-6 shadow-xl overflow-hidden">
+              <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-40" />
               
               {/* Device Window Header */}
               <div className="flex items-center justify-between pb-4 mb-4 border-b border-[var(--border)]">

@@ -30,8 +30,10 @@ export function ProductsSection() {
         {products.map((product) => (
           <div
             key={product.slug}
-            className="group relative rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden flex flex-col justify-between accent-glow-hover"
+            className="card-popout group rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden flex flex-col justify-between"
           >
+            {/* Gradient Dotted Wave Background */}
+            <div className="bg-dotted-gradient" />
             <div>
               {/* Product Image Cover */}
               <div className="relative h-48 w-full overflow-hidden bg-[var(--bg)]">

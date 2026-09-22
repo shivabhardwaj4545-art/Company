@@ -36,12 +36,14 @@ export function FAQSection() {
           return (
             <div
               key={faq.id}
-              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+              className={`card-popout rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? 'border-[var(--accent)] bg-[var(--surface)] shadow-lg shadow-[var(--accent-glow)]'
-                  : 'border-[var(--border)] bg-[var(--surface)]/50 hover:border-[var(--text-secondary)]/40'
+                  : 'border-[var(--border)] bg-[var(--surface)]/50'
               }`}
             >
+              {/* Gradient Dotted Wave Background */}
+              <div className="bg-dotted-gradient" />
               <button
                 onClick={() => toggleFAQ(faq.id)}
                 type="button"

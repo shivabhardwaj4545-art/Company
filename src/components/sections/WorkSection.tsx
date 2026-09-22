@@ -31,7 +31,9 @@ export function WorkSection() {
       {/* ========================================================================= */}
       {/* SCREENSHOT 4 INSPIRED: DARK TECH CASE STUDY & METRICS CONSOLE            */}
       {/* ========================================================================= */}
-      <div className="rounded-3xl border-2 border-black bg-[#0B0C0E] text-white p-6 sm:p-10 shadow-hard-lg relative overflow-hidden font-sans">
+      <div className="card-popout rounded-3xl border border-white/10 bg-[#0B0C0E] text-white p-6 sm:p-10 shadow-2xl overflow-hidden font-sans">
+        {/* Gradient Dotted Wave Background */}
+        <div className="bg-dotted-gradient" />
         
         {/* Top Status Header Line (Screenshot 4) */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-white/10 text-xs font-mono font-bold tracking-wider text-gray-400">
@@ -226,8 +228,10 @@ export function WorkSection() {
               key={project.slug}
               href={`/work/${project.slug}`}
               data-cursor="hover"
-              className="group rounded-2xl border-2 border-black bg-[var(--surface)] overflow-hidden shadow-hard flex flex-col justify-between hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-hard-lg transition-all"
+              className="card-popout group rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden shadow-md flex flex-col justify-between"
             >
+              {/* Gradient Dotted Wave Background */}
+              <div className="bg-dotted-gradient" />
               {/* Image Container */}
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[var(--bg)]">
                 {/* eslint-disable-next-html-extension */}
@@ -252,7 +256,7 @@ export function WorkSection() {
                   <span className="text-xs font-extrabold tracking-widest text-[#a3e635] uppercase">
                     {project.client}
                   </span>
-                  <div className="p-2 rounded-full border border-black bg-[var(--bg)] group-hover:bg-[#a3e635] group-hover:text-black transition-colors">
+                  <div className="p-2 rounded-full border border-[var(--border)] bg-[var(--bg)] group-hover:bg-[#a3e635] group-hover:text-black transition-colors">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -265,7 +269,7 @@ export function WorkSection() {
                 </p>
 
                 {/* Metric Strip */}
-                <div className="flex flex-wrap gap-4 pt-4 border-t-2 border-black">
+                <div className="flex flex-wrap gap-4 pt-4 border-t border-[var(--border)]">
                   {project.results.map((res, idx) => (
                     <div key={idx} className="flex items-baseline gap-2">
                       <span className="text-lg font-black font-display text-[#a3e635]">

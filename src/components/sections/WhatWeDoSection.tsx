@@ -43,15 +43,17 @@ export function WhatWeDoSection() {
         {services.map((service) => (
           <div
             key={service.slug}
-            className="relative p-6 sm:p-8 rounded-2xl bg-[var(--surface)] border-2 border-black shadow-hard flex flex-col justify-between group hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-hard-lg transition-all"
+            className="card-popout p-6 sm:p-8 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-md flex flex-col justify-between group overflow-hidden"
           >
+            {/* Gradient Dotted Wave Background */}
+            <div className="bg-dotted-gradient" />
             <div>
               {/* Number & Icon */}
               <div className="flex items-center justify-between mb-6">
                 <span className="text-4xl font-black font-display text-[#a3e635] tracking-tight">
                   {service.number}
                 </span>
-                <div className="p-3 rounded-xl bg-[var(--bg)] border-2 border-black shadow-[2px_2px_0px_#000]">
+                <div className="p-3 rounded-xl bg-[var(--bg)] border border-[var(--border)] shadow-sm">
                   {getIcon(service.icon)}
                 </div>
               </div>
@@ -79,7 +81,7 @@ export function WhatWeDoSection() {
             <Link
               href={`/services/${service.slug}`}
               data-cursor="hover"
-              className="inline-flex items-center justify-between w-full pt-4 border-t-2 border-black text-xs font-black text-[var(--text-primary)] group-hover:text-[#a3e635] transition-colors uppercase tracking-wider"
+              className="inline-flex items-center justify-between w-full pt-4 border-t border-[var(--border)] text-xs font-black text-[var(--text-primary)] group-hover:text-[#a3e635] transition-colors uppercase tracking-wider"
             >
               <span>EXPLORE SERVICE</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

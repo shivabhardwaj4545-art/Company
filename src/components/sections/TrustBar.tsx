@@ -28,8 +28,8 @@ export function TrustBar() {
         <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-[var(--bg)] to-transparent z-10 pointer-events-none" />
         <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-[var(--bg)] to-transparent z-10 pointer-events-none" />
 
-        {/* Marquee Track */}
-        <div className="animate-marquee py-3 flex items-center gap-12 sm:gap-20">
+        {/* Marquee Track (Moving in Opposite Direction) */}
+        <div className="animate-marquee-reverse py-3 flex items-center gap-12 sm:gap-20">
           {marqueeLogos.map((logo, index) => (
             <div
               key={index}
