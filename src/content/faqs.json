@@ -1,0 +1,32 @@
+[
+  {
+    "id": "faq-1",
+    "question": "What makes NEXUS different from traditional digital agencies?",
+    "answer": "We combine elite engineering (Next.js, WebGL, custom AI agents) with high-end editorial brand design. We don't use generic templates or slow WordPress builders — every project is engineered custom from scratch for sub-second speeds, conversion, and brand dominance.",
+    "category": "General"
+  },
+  {
+    "id": "faq-2",
+    "question": "How long does a typical web or branding project take to complete?",
+    "answer": "Our average timeline for a full digital platform (design + Next.js code + dark/light themes + CMS setup) is 2 to 4 weeks. Smaller landing pages and AI automation bots can launch in as little as 7-10 days.",
+    "category": "Timeline"
+  },
+  {
+    "id": "faq-3",
+    "question": "What is the typical investment required to start a project?",
+    "answer": "Our project scopes typically start at $3,500 for standalone branding or high-converting landing pages, and ranges between $7,500 - $20,000+ for complete custom SaaS web apps, full design systems, and AI automation suites.",
+    "category": "Pricing"
+  },
+  {
+    "id": "faq-4",
+    "question": "Do you offer ongoing maintenance and support after launch?",
+    "answer": "Yes! Every project includes 30 days of post-launch warranty, speed auditing, and support. We also offer monthly retainer plans for continuous feature development, CRO optimization, and dedicated hosting maintenance.",
+    "category": "Support"
+  },
+  {
+    "id": "faq-5",
+    "question": "How does the AI Automation service work?",
+    "answer": "We audit your existing manual workflows (lead capture, support, data entry) and build custom AI pipelines using OpenAI/Claude APIs, Supabase database triggers, and WhatsApp/Telegram bots to automate tasks 24/7.",
+    "category": "AI Automation"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "t1",
+    "clientName": "Devon Carter",
+    "clientHandle": "@devoncarter_ceo",
+    "role": "Founder & CEO",
+    "company": "AuroraPay",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+    "platform": "WhatsApp",
+    "followers": "45K",
+    "message": "NEXUS built our entire web platform in 3 weeks. The site is stupidly fast, load times dropped to under 400ms globally, and our conversion jumped 340% in month 1! Best agency team we have worked with.",
+    "metricHighlight": "+340% Conversion",
+    "verified": true
+  },
+  {
+    "id": "t2",
+    "clientName": "Elena Rostova",
+    "clientHandle": "@elena_brand",
+    "role": "Head of Design",
+    "company": "LuxeWear",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80",
+    "platform": "Instagram",
+    "followers": "120K",
+    "message": "The custom animations, Lenis smooth scroll, and dark mode design elevated LuxeWear into a top-tier luxury brand overnight. Clients keep complimenting the aesthetic!",
+    "metricHighlight": "120K DM Views",
+    "verified": true
+  },
+  {
+    "id": "t3",
+    "clientName": "Marcus Vance",
+    "clientHandle": "@marcus_vance",
+    "role": "VP of Engineering",
+    "company": "Synapse AI",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    "platform": "LinkedIn",
+    "followers": "28K",
+    "message": "Their AI automation pipeline cut our invoice entry time from 6 minutes down to 4 seconds. The team is hyper-responsive, technical, and delivers ahead of schedule.",
+    "metricHighlight": "14K Hours Saved",
+    "verified": true
+  },
+  {
+    "id": "t4",
+    "clientName": "Sarah Jenkins",
+    "clientHandle": "@sarah_j_tech",
+    "role": "Chief Marketing Officer",
+    "company": "PulseMedia",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
+    "platform": "Twitter",
+    "followers": "64K",
+    "message": "If you want a website that actually makes people pause, scroll, and convert — hire NEXUS. The interactive scratch card & custom cursor alone went viral in our team chat!",
+    "metricHighlight": "Viral Web Launch",
+    "verified": true
+  }
+]

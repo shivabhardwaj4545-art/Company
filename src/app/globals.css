@@ -1,26 +1,178 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #F5F2EB; /* Warm Cream background */
+  --surface: #EBE7DC; /* Soft cream card surface */
+  --text-primary: #0F0F10; /* Dark charcoal text */
+  --text-secondary: #5C5C60; /* Muted gray */
+  --border: #D8D2C4; /* Soft warm border */
+  --accent: #a3e635; /* Electric Lime Main Color */
+  --accent-glow: rgba(163, 230, 53, 0.35);
+  --accent-orange: #a3e635; /* Electric Lime Main Color */
+  --accent-yellow: #FFC700; /* Vibrant Gold/Yellow */
+  --noise-opacity: 0.04;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg: #0B0C0E; /* Deep Charcoal / Near Black */
+  --surface: #141518; /* Elevated surface card */
+  --text-primary: #F5F5F5;
+  --text-secondary: #909296;
+  --border: #222429;
+  --accent: #a3e635; /* Electric Lime Main Color */
+  --accent-glow: rgba(163, 230, 53, 0.4);
+  --accent-orange: #a3e635;
+  --accent-yellow: #FFD000;
+  --noise-opacity: 0.08;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-ink: var(--text-primary);
+  --color-muted: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-glow: var(--accent-glow);
+  --color-orange: var(--accent-orange);
+  --color-yellow: var(--accent-yellow);
+
+  --font-display: 'Clash Display', 'Outfit', system-ui, sans-serif;
+  --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hard Drop Shadow utility like brutalist studio design */
+.shadow-hard {
+  box-shadow: 5px 5px 0px #000;
+}
+.dark .shadow-hard {
+  box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.15);
+}
+
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0px #000;
+}
+.dark .shadow-hard-lg {
+  box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.15);
+}
+
+/* Grain texture overlay */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+/* Hover glow effect */
+.accent-glow-hover {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.accent-glow-hover:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 35px -5px var(--accent-glow);
+}
+
+/* Continuous marquee keyframes */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide the default cursor on desktop */
+@media (min-width: 769px) {
+  * {
+    cursor: none !important;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+    z-index: 999999;
+  }
+
+  .custom-cursor svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+/* Keep normal cursor on mobile/tablet */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
+/* Enhanced Hover & Grid Effects */
+.grid-pattern-animated {
+  background-image: radial-gradient(rgba(163, 230, 53, 0.15) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  animation: gridShift 40s linear infinite;
+}
+
+@keyframes gridShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 28px 28px; }
+}
+
+.gradient-glow-card {
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gradient-glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(163, 230, 53, 0.4), transparent, rgba(255, 199, 0, 0.4));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: -1;
+}
+
+.gradient-glow-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover tilt & lift effect */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(163, 230, 53, 0.2);
 }

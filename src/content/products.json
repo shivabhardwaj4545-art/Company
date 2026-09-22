@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "nexus-flow",
+    "name": "NexusFlow AI",
+    "tagline": "Autonomous lead qualification & WhatsApp funnel builder",
+    "description": "An in-house SaaS tool that connects multi-step web forms directly with WhatsApp Cloud API to qualify, assign, and convert incoming inbound leads with intelligent chatbot flows.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    "badge": "In-House SaaS Product",
+    "metrics": [
+      { "label": "Leads Converted", "value": "120K+" },
+      { "label": "Avg Response Time", "value": "1.2s" },
+      { "label": "Customer Rating", "value": "4.9/5" }
+    ],
+    "liveUrl": "https://nexusflow.example.com",
+    "techStack": ["Next.js", "TypeScript", "Supabase", "WhatsApp API", "Tailwind CSS"],
+    "keyFeatures": [
+      "Visual drag-and-drop conversation builder",
+      "Instant WhatsApp message triggers & CRM sync",
+      "Automated lead scoring & agent routing",
+      "Real-time campaign analytics dashboard"
+    ]
+  },
+  {
+    "slug": "canvas-craft",
+    "name": "CanvasCraft Studio",
+    "tagline": "Real-time design token & CSS variable generator for modern web teams",
+    "description": "A developer-first design system tool that exports responsive dark/light color schemes, fluid typography, and glassmorphism utilities into Tailwind CSS and CSS variable configs.",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "badge": "Developer Tool",
+    "metrics": [
+      { "label": "Active Designers", "value": "15K+" },
+      { "label": "GitHub Stars", "value": "2.4K" },
+      { "label": "Tokens Exported", "value": "500K+" }
+    ],
+    "liveUrl": "https://canvascraft.example.com",
+    "techStack": ["React", "Tailwind v4", "Zustand", "Framer Motion", "Vite"],
+    "keyFeatures": [
+      "Live dark/light contrast audit against WCAG 2.1 AAA",
+      "One-click Tailwind CSS v4 & CSS variables export",
+      "Interactive component preview playground",
+      "Figma plugin synchronization"
+    ]
+  },
+  {
+    "slug": "hyper-metric",
+    "name": "HyperMetric Analytics",
+    "tagline": "Privacy-first Web Vitals & revenue tracking snippet",
+    "description": "Lightweight, zero-cookie web analytics dashboard tracking real user monitoring (RUM), conversion paths, and page speed degradations in real time.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    "badge": "Analytics Engine",
+    "metrics": [
+      { "label": "Monthly Pageviews", "value": "45M" },
+      { "label": "Script Size", "value": "< 1.2kB" },
+      { "label": "Uptime", "value": "99.99%" }
+    ],
+    "liveUrl": "https://hypermetric.example.com",
+    "techStack": ["Next.js", "ClickHouse", "Rust", "Tailwind CSS", "Recharts"],
+    "keyFeatures": [
+      "Sub-1kB script snippet with zero effect on page load",
+      "Core Web Vitals diagnostic breakdown per route",
+      "Custom goal conversion & funnel drop-off analytics",
+      "GDPR & CCPA compliant without consent banners"
+    ]
+  }
+]

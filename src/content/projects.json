@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "aurora-pay",
+    "title": "AuroraPay — Next-Gen Fintech Platform",
+    "client": "Aurora Capital LLC",
+    "category": "Web Application & Branding",
+    "year": "2026",
+    "cover": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Complete brand overhaul and ultra-fast web dashboard for a global cross-border payments protocol handling millions in daily volume.",
+    "challenge": "AuroraPay needed to transition from an outdated legacy portal into a high-trust, sleek digital platform that loads under 500ms globally while maintaining rigorous security UI design.",
+    "solution": "We re-engineered their web stack using Next.js App Router, edge functions, and tailored dark-mode UI components featuring subtle glassmorphism and real-time transaction graphs.",
+    "results": [
+      { "metric": "+340%", "label": "Conversion Rate Increase" },
+      { "metric": "380ms", "label": "Average Global Load Time" },
+      { "metric": "$12M+", "label": "Processed in Month 1" }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "techStack": ["Next.js", "Tailwind CSS", "TypeScript", "GSAP", "Prisma"],
+    "liveUrl": "https://aurorapay.example.com"
+  },
+  {
+    "slug": "luxe-wear",
+    "title": "LuxeWear — D2C Fashion Experience",
+    "client": "LuxeWear International",
+    "category": "E-Commerce & Brand Strategy",
+    "year": "2025",
+    "cover": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Immersive e-commerce store with interactive 3D product try-ons, custom checkout funnels, and fluid editorial layouts.",
+    "challenge": "High cart abandonment rates and slow mobile page performance were suppressing conversion for their premium apparel line.",
+    "solution": "Built a headless Shopify storefront using Next.js, Lenis inertia scrolling, micro-interactions, and instant 1-click checkout integration.",
+    "results": [
+      { "metric": "+185%", "label": "Mobile Sales Increase" },
+      { "metric": "-42%", "label": "Cart Abandonment Drop" },
+      { "metric": "4.9s -> 0.8s", "label": "Page Load Speedup" }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "techStack": ["Next.js", "Shopify Storefront API", "Tailwind CSS", "Three.js", "Framer Motion"],
+    "liveUrl": "https://luxewear.example.com"
+  },
+  {
+    "slug": "synapse-ai",
+    "title": "Synapse AI — Enterprise Automation Portal",
+    "client": "Synapse Global",
+    "category": "AI Automation & Web App",
+    "year": "2026",
+    "cover": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "summary": "AI document parser and automated workflow engine for enterprise logistics operations processing 50,000+ invoices daily.",
+    "challenge": "Manual invoice data entry caused costly delays and errors across 12 regional warehouses.",
+    "solution": "Designed and deployed custom AI extraction pipelines integrated with an interactive React control room dashboard and automated WhatsApp notification bot.",
+    "results": [
+      { "metric": "99.4%", "label": "Extraction Accuracy" },
+      { "metric": "14,000 hrs", "label": "Annual Labor Saved" },
+      { "metric": "10x", "label": "Faster Invoice Resolution" }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "techStack": ["Next.js", "Python FastApi", "OpenAI Vision", "Supabase", "Tailwind CSS"],
+    "liveUrl": "https://synapseai.example.com"
+  }
+]

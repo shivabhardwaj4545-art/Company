@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "web-development",
+    "number": "01",
+    "title": "Web Development",
+    "tagline": "High-performance web applications built for speed, scale & conversion.",
+    "description": "We engineer fast, accessible, visually captivating web apps using modern frameworks like Next.js, React, Tailwind CSS, and WebGL. Every site is optimized for 99+ PageSpeed scores, SEO supremacy, and flawless cross-device performance.",
+    "bullets": [
+      "Custom Next.js & React Architectures",
+      "Interactive 3D & GSAP Motion Experiences",
+      "Headless CMS Integration (Sanity, Strapi)",
+      "Core Web Vitals & Technical SEO Optimization"
+    ],
+    "icon": "Code2",
+    "color": "blue",
+    "features": [
+      {
+        "title": "Sub-Second Load Times",
+        "desc": "Built with SSR, edge caching, and media optimization for instant renders."
+      },
+      {
+        "title": "Dynamic Micro-Interactions",
+        "desc": "Engaging scroll triggers, glassmorphism UI, and fluid page transitions."
+      },
+      {
+        "title": "Scalable Infrastructure",
+        "desc": "Modular architecture ready to handle millions of requests gracefully."
+      }
+    ],
+    "deliverables": [
+      "Production-ready Next.js codebase",
+      "Responsive UI component library",
+      "SEO setup & XML sitemaps",
+      "Analytics & speed auditing report"
+    ]
+  },
+  {
+    "slug": "branding-identity",
+    "number": "02",
+    "title": "Branding & Identity",
+    "tagline": "A mark people remember. Systems built to command industry authority.",
+    "description": "We sculpt distinct brand identities that resonate with your audience and make your company unforgettable. From logo suites and typography systems to tone-of-voice and comprehensive brand guidelines.",
+    "bullets": [
+      "Logo Suites & Vector System Assets",
+      "Design Systems & Component Specs",
+      "Brand Messaging & Positioning Playbooks",
+      "Motion Design & Visual Asset Libraries"
+    ],
+    "icon": "Palette",
+    "color": "purple",
+    "features": [
+      {
+        "title": "Distinctive Visual Language",
+        "desc": "Custom typographic scales, curated color tokens, and iconic iconography."
+      },
+      {
+        "title": "Multi-Channel Consistency",
+        "desc": "Asset templates designed for social, web, print, and digital ads."
+      },
+      {
+        "title": "Comprehensive Guidelines",
+        "desc": "Interactive brand manual so your team maintains perfect visual integrity."
+      }
+    ],
+    "deliverables": [
+      "Primary, secondary & mark logo formats",
+      "Figma design system kit",
+      "Typography & color palette specs",
+      "Brand voice & usage guidelines"
+    ]
+  },
+  {
+    "slug": "ai-automation",
+    "number": "03",
+    "title": "AI Automation",
+    "tagline": "Intelligent bots, automated pipelines & generative AI integrations.",
+    "description": "Transform operational efficiency with custom AI agents, automated CRM lead routing, WhatsApp Cloud bots, and LLM-powered business workflows that run 24/7 without manual intervention.",
+    "bullets": [
+      "Custom AI Agents & Customer Support Bots",
+      "WhatsApp Cloud API & Lead Routing Automation",
+      "LLM Integration (OpenAI, Claude, Llama)",
+      "Automated Database & Webhook Pipelines"
+    ],
+    "icon": "Bot",
+    "color": "emerald",
+    "features": [
+      {
+        "title": "24/7 Instant Lead Capture",
+        "desc": "Automated WhatsApp and email follow-ups within 5 seconds of lead form submit."
+      },
+      {
+        "title": "Tailored LLM Knowledge Agents",
+        "desc": "Trained on your private documentation for error-free answers."
+      },
+      {
+        "title": "Workflow Orchestration",
+        "desc": "Seamless connections across Supabase, Stripe, HubSpot, and Slack."
+      }
+    ],
+    "deliverables": [
+      "Deployed AI Agent backend",
+      "WhatsApp & Telegram bot setup",
+      "Admin dashboard & conversation logs",
+      "Webhook trigger integrations"
+    ]
+  }
+]
