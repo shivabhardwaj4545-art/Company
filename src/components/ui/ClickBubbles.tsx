@@ -26,7 +26,7 @@ export function ClickBubbles() {
   const [rings, setRings] = useState<ClickRing[]>([]);
 
   useEffect(() => {
-    const colors = ['#FF4500', '#FFC700', '#000000', '#84CC16', '#FF5500'];
+    const colors = ['#5b45ff', '#9d97f0', '#000000', '#7965ff', '#4834e7'];
 
     const handleClick = (e: MouseEvent) => {
       const clickX = e.clientX;
@@ -99,11 +99,11 @@ export function ClickBubbles() {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
-      {/* Expanding Ring Effect (Matching Screenshots 2 & 3) */}
+      {/* Expanding Ring Effect */}
       {rings.map((ring) => (
         <div
           key={ring.id}
-          className="absolute rounded-full border-2 border-[#FF4500]/50 animate-[ping_0.5s_cubic-bezier(0,0,0.2,1)_forwards]"
+          className="absolute rounded-full border-2 border-[#5b45ff]/50 animate-[ping_0.5s_cubic-bezier(0,0,0.2,1)_forwards]"
           style={{
             left: `${ring.x}px`,
             top: `${ring.y}px`,

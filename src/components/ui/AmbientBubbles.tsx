@@ -17,11 +17,11 @@ export function AmbientBubbles() {
 
   useEffect(() => {
     const colors = [
-      '#84CC16', // Lime
-      '#FF4500', // Orange
+      '#5b45ff', // Purple / Indigo
+      '#9d97f0', // Soft Lavender
       '#38BDF8', // Sky Blue
       '#EC4899', // Pink
-      '#FFC700', // Yellow
+      '#7965ff', // Medium Indigo
       '#A855F7', // Purple
     ];
 

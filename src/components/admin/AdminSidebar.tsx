@@ -54,7 +54,7 @@ export function AdminSidebar({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
         </svg>
       ),
-      badge: pendingRequestsCount > 0 ? { text: pendingRequestsCount, color: 'bg-[#a3e635]/20 text-[#a3e635] border border-[#a3e635]/40' } : null,
+      badge: pendingRequestsCount > 0 ? { text: pendingRequestsCount, color: 'bg-[#5b45ff]/20 text-[#9d97f0] border border-[#5b45ff]/40' } : null,
     },
   ];
 
@@ -63,12 +63,12 @@ export function AdminSidebar({
       <div>
         {/* Brand Header */}
         <div className="flex items-center gap-3 px-2 py-3 mb-6 border-b border-[#222429]">
-          <div className="w-10 h-10 rounded-xl bg-[#a3e635] flex items-center justify-center font-black text-black text-xl shadow-[0_0_20px_rgba(163,230,53,0.3)]">
+          <div className="w-10 h-10 rounded-xl bg-[#5b45ff] flex items-center justify-center font-black text-white text-xl shadow-[0_0_20px_rgba(91,69,255,0.3)]">
             K
           </div>
           <div>
             <h1 className="font-extrabold font-display text-white text-base leading-none">KodX Studio</h1>
-            <span className="text-[11px] font-semibold text-[#a3e635] uppercase tracking-wider block mt-1">
+            <span className="text-[11px] font-semibold text-[#9d97f0] uppercase tracking-wider block mt-1">
               Admin Portal v2.4
             </span>
           </div>
@@ -84,7 +84,7 @@ export function AdminSidebar({
                 onClick={() => setActiveTab(item.id as any)}
                 className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs font-bold transition-all ${
                   isActive
-                    ? 'bg-[#a3e635] text-black shadow-[0_0_20px_rgba(163,230,53,0.25)]'
+                    ? 'bg-[#5b45ff] text-white shadow-[0_0_20px_rgba(91,69,255,0.25)]'
                     : 'text-gray-300 hover:text-white hover:bg-[#222429]'
                 }`}
               >

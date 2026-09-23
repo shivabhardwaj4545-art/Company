@@ -33,7 +33,7 @@ export function DirectRedirectButton({
       <button
         onClick={handleRedirect}
         title={`Direct Redirect to ${url}`}
-        className={`p-2 rounded-lg bg-[#a3e635]/10 hover:bg-[#a3e635] text-[#a3e635] hover:text-black border border-[#a3e635]/30 transition-all group ${className}`}
+        className={`p-2 rounded-lg bg-[#5b45ff]/10 hover:bg-[#5b45ff] text-[#9d97f0] hover:text-white border border-[#5b45ff]/30 transition-all group ${className}`}
       >
         <svg
           className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
@@ -56,7 +56,7 @@ export function DirectRedirectButton({
     return (
       <button
         onClick={handleRedirect}
-        className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg border border-[#a3e635]/40 text-[#a3e635] hover:bg-[#a3e635]/10 transition-all ${className}`}
+        className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg border border-[#5b45ff]/40 text-[#9d97f0] hover:bg-[#5b45ff]/10 transition-all ${className}`}
       >
         <span>{label}</span>
         <svg
@@ -79,7 +79,7 @@ export function DirectRedirectButton({
   return (
     <button
       onClick={handleRedirect}
-      className={`inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#a3e635] text-black hover:bg-[#8ee01d] transition-all shadow-[0_0_15px_rgba(163,230,53,0.3)] ${className}`}
+      className={`inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#5b45ff] text-white hover:bg-[#4834e7] transition-all shadow-[0_0_15px_rgba(91,69,255,0.3)] ${className}`}
     >
       <span>{label}</span>
       <svg

@@ -30,8 +30,8 @@ export function WhyUsSection() {
     <section id="why-us" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[var(--border)]">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
         <div>
-          <span className="text-xs font-black tracking-widest text-[#A3E635] uppercase mb-1 flex items-center gap-2">
-            <Zap className="w-4 h-4 text-[#A3E635]" /> WHY CHOOSE KODX
+          <span className="text-xs font-black tracking-widest text-[#5b45ff] uppercase mb-1 flex items-center gap-2">
+            <Zap className="w-4 h-4 text-[#5b45ff]" /> WHY CHOOSE KODX
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
             Built Different<span className="text-[var(--accent)]">.</span>

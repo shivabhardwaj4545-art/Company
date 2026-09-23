@@ -87,7 +87,7 @@ export function CustomCursor() {
           <path
             d="M25 14 C23 13 20 15 21 20 L31 77 C32 84 40 87 44 81 L57 57 L82 53 C89 52 91 43 85 40 L31 14 C29 13 27 13 25 14 Z"
             fill="#000000"
-            stroke={isHovered ? '#a3e635' : '#FFFFFF'}
+            stroke={isHovered ? '#5b45ff' : '#FFFFFF'}
             strokeWidth="3"
             strokeLinejoin="round"
           />

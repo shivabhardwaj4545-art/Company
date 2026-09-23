@@ -44,7 +44,7 @@ export default function AdminDashboardPage() {
     return (
       <div className="min-h-screen bg-[#0B0C0E] text-white flex items-center justify-center font-mono text-xs">
         <div className="flex items-center gap-2">
-          <span className="w-4 h-4 border-2 border-[#a3e635] border-t-transparent rounded-full animate-spin" />
+          <span className="w-4 h-4 border-2 border-[#5b45ff] border-t-transparent rounded-full animate-spin" />
           <span>Verifying Admin Session...</span>
         </div>
       </div>
@@ -227,7 +227,7 @@ export default function AdminDashboardPage() {
                 <div className="p-5 rounded-2xl bg-[#141518] border border-[#222429]">
                   <div className="flex items-center justify-between text-gray-400 mb-2">
                     <span className="text-xs font-bold uppercase tracking-wider">Active Projects</span>
-                    <span className="p-2 rounded-lg bg-[#a3e635]/10 text-[#a3e635]">
+                    <span className="p-2 rounded-lg bg-[#5b45ff]/10 text-[#9d97f0]">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                       </svg>
@@ -266,14 +266,14 @@ export default function AdminDashboardPage() {
                 <div className="p-5 rounded-2xl bg-[#141518] border border-[#222429]">
                   <div className="flex items-center justify-between text-gray-400 mb-2">
                     <span className="text-xs font-bold uppercase tracking-wider">Monthly Revenue</span>
-                    <span className="p-2 rounded-lg bg-[#a3e635]/10 text-[#a3e635]">
+                    <span className="p-2 rounded-lg bg-[#5b45ff]/10 text-[#9d97f0]">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </span>
                   </div>
                   <div className="text-2xl font-bold font-display text-white">$141,000</div>
-                  <span className="text-[11px] font-bold text-[#a3e635] mt-1 block">+24% vs Last Month</span>
+                  <span className="text-[11px] font-bold text-[#9d97f0] mt-1 block">+24% vs Last Month</span>
                 </div>
               </div>
 
@@ -283,7 +283,7 @@ export default function AdminDashboardPage() {
                 <div className="lg:col-span-2 p-6 rounded-2xl bg-[#141518] border border-[#222429]">
                   <div className="flex items-center justify-between mb-4 border-b border-[#222429] pb-3">
                     <h3 className="font-bold text-base text-white font-display flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#a3e635]" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#5b45ff]" />
                       Real-Time System Activity Feed
                     </h3>
                     <span className="text-xs font-mono text-gray-400">Live Audit Stream</span>
@@ -293,7 +293,7 @@ export default function AdminDashboardPage() {
                     {activityLogs.map((log) => (
                       <div
                         key={log.id}
-                        className="p-3.5 rounded-xl bg-[#0B0C0E] border border-[#222429] flex items-start justify-between gap-3 hover:border-[#a3e635]/40 transition-all"
+                        className="p-3.5 rounded-xl bg-[#0B0C0E] border border-[#222429] flex items-start justify-between gap-3 hover:border-[#5b45ff]/40 transition-all"
                       >
                         <div className="flex items-start gap-3">
                           <span
@@ -301,7 +301,7 @@ export default function AdminDashboardPage() {
                               log.severity === 'alert'
                                 ? 'bg-red-400 animate-pulse'
                                 : log.severity === 'success'
-                                ? 'bg-[#a3e635]'
+                                ? 'bg-[#5b45ff]'
                                 : 'bg-blue-400'
                             }`}
                           />
@@ -353,7 +353,7 @@ export default function AdminDashboardPage() {
 
                   <button
                     onClick={() => setActiveTab('domains')}
-                    className="w-full mt-4 py-2 text-xs font-mono font-bold rounded-xl bg-[#222429] text-[#a3e635] hover:bg-[#a3e635] hover:text-black transition-all"
+                    className="w-full mt-4 py-2 text-xs font-mono font-bold rounded-xl bg-[#222429] text-[#9d97f0] hover:bg-[#5b45ff] hover:text-white transition-all"
                   >
                     View All Domains →
                   </button>
@@ -374,7 +374,7 @@ export default function AdminDashboardPage() {
                 </div>
                 <button
                   onClick={() => setIsAddProjectOpen(true)}
-                  className="px-4 py-2 rounded-xl bg-[#a3e635] text-black font-mono font-bold text-xs hover:bg-[#8ee01d] transition-all flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-xl bg-[#5b45ff] text-white font-mono font-bold text-xs hover:bg-[#4834e7] transition-all flex items-center gap-1.5"
                 >
                   + Add Project
                 </button>
@@ -389,15 +389,15 @@ export default function AdminDashboardPage() {
                   return (
                     <div
                       key={p.id}
-                      className="p-5 rounded-2xl bg-[#141518] border border-[#222429] hover:border-[#a3e635]/50 transition-all flex flex-col justify-between group"
+                      className="p-5 rounded-2xl bg-[#141518] border border-[#222429] hover:border-[#5b45ff]/50 transition-all flex flex-col justify-between group"
                     >
                       <div>
                         <div className="flex items-start justify-between gap-2 mb-3">
                           <div>
-                            <span className="text-[10px] font-mono text-[#a3e635] uppercase tracking-wider">
+                            <span className="text-[10px] font-mono text-[#9d97f0] uppercase tracking-wider">
                               {p.serviceCategory}
                             </span>
-                            <h3 className="font-bold text-base text-white font-display group-hover:text-[#a3e635] transition-colors">
+                            <h3 className="font-bold text-base text-white font-display group-hover:text-[#9d97f0] transition-colors">
                               {p.name}
                             </h3>
                             <p className="text-xs text-gray-400">{p.clientName}</p>
@@ -405,7 +405,7 @@ export default function AdminDashboardPage() {
                           <span
                             className={`px-2 py-0.5 text-[10px] font-mono font-bold rounded border ${
                               p.status === 'Active'
-                                ? 'bg-[#a3e635]/10 text-[#a3e635] border-[#a3e635]/30'
+                                ? 'bg-[#5b45ff]/10 text-[#9d97f0] border-[#5b45ff]/30'
                                 : 'bg-blue-500/10 text-blue-400 border-blue-500/30'
                             }`}
                           >
@@ -488,7 +488,7 @@ export default function AdminDashboardPage() {
                     onClick={() => setDomainFilter('all')}
                     className={`px-3 py-1 text-xs font-mono rounded-lg transition-all ${
                       domainFilter === 'all'
-                        ? 'bg-[#a3e635] text-black font-bold'
+                        ? 'bg-[#5b45ff] text-white font-bold'
                         : 'text-gray-400 hover:text-white'
                     }`}
                   >
@@ -541,7 +541,7 @@ export default function AdminDashboardPage() {
                         <tr key={p.id} className="hover:bg-[#0B0C0E]/50 transition-colors">
                           <td className="p-4 font-bold text-white font-mono">
                             <div className="flex items-center gap-2">
-                              <span className="w-2 h-2 rounded-full bg-[#a3e635]" />
+                              <span className="w-2 h-2 rounded-full bg-[#5b45ff]" />
                               {p.domainName}
                             </div>
                           </td>
@@ -567,7 +567,7 @@ export default function AdminDashboardPage() {
                             <div className="flex items-center justify-end gap-2">
                               <button
                                 onClick={() => handleRenewDomain(p.id)}
-                                className="px-3 py-1.5 rounded-lg bg-[#a3e635]/15 text-[#a3e635] border border-[#a3e635]/30 hover:bg-[#a3e635] hover:text-black font-bold text-xs transition-all"
+                                className="px-3 py-1.5 rounded-lg bg-[#5b45ff]/15 text-[#9d97f0] border border-[#5b45ff]/30 hover:bg-[#5b45ff] hover:text-white font-bold text-xs transition-all"
                                 title="Renew domain & hosting for +1 year"
                               >
                                 ⚡ Renew (+1 Yr)
@@ -609,17 +609,17 @@ export default function AdminDashboardPage() {
                 {requests.map((req) => (
                   <div
                     key={req.id}
-                    className="p-5 rounded-2xl bg-[#141518] border border-[#222429] hover:border-[#a3e635]/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
+                    className="p-5 rounded-2xl bg-[#141518] border border-[#222429] hover:border-[#5b45ff]/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
                   >
                     <div className="space-y-1">
                       <div className="flex items-center gap-3">
                         <h3 className="font-bold text-sm text-white font-display">{req.clientName}</h3>
                         <span className="text-xs font-mono text-gray-400">&lt;{req.clientEmail}&gt;</span>
-                        <span className="px-2 py-0.5 text-[10px] font-mono rounded bg-[#a3e635]/10 text-[#a3e635] border border-[#a3e635]/30">
+                        <span className="px-2 py-0.5 text-[10px] font-mono rounded bg-[#5b45ff]/10 text-[#9d97f0] border border-[#5b45ff]/30">
                           {req.status}
                         </span>
                       </div>
-                      <p className="text-xs font-mono text-[#a3e635]">
+                      <p className="text-xs font-mono text-[#9d97f0]">
                         Service: {req.serviceRequested} | Est. Budget: {req.estimatedBudget}
                       </p>
                       <p className="text-xs text-gray-300 pt-1">"{req.message}"</p>
@@ -630,7 +630,7 @@ export default function AdminDashboardPage() {
                       {req.status !== 'Approved' && (
                         <button
                           onClick={() => handleConvertRequestToProject(req)}
-                          className="px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg bg-[#a3e635] text-black hover:bg-[#8ee01d] transition-all"
+                          className="px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg bg-[#5b45ff] text-white hover:bg-[#4834e7] transition-all"
                         >
                           + Convert to Project
                         </button>

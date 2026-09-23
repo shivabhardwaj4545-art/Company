@@ -71,7 +71,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-[#222429] font-sans">
           <div>
-            <span className="text-xs font-bold text-[#a3e635] uppercase tracking-wider">
+            <span className="text-xs font-bold text-[#9d97f0] uppercase tracking-wider">
               Project Field Customizer
             </span>
             <h2 className="text-xl font-bold font-display text-white mt-0.5">
@@ -97,7 +97,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                 type="text"
                 value={formData.name}
                 onChange={(e) => handleChange('name', e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
                 required
               />
             </div>
@@ -107,7 +107,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                 type="text"
                 value={formData.clientName}
                 onChange={(e) => handleChange('clientName', e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
                 required
               />
             </div>
@@ -118,7 +118,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                 type="email"
                 value={formData.clientEmail}
                 onChange={(e) => handleChange('clientEmail', e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
               />
             </div>
 
@@ -127,7 +127,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
               <select
                 value={formData.serviceCategory}
                 onChange={(e) => handleChange('serviceCategory', e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
               >
                 <option value="Web Development">Web Development</option>
                 <option value="Branding">Branding</option>
@@ -141,7 +141,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
               <select
                 value={formData.status}
                 onChange={(e) => handleChange('status', e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
               >
                 <option value="Active">Active</option>
                 <option value="In Development">In Development</option>
@@ -157,14 +157,14 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                 type="text"
                 value={formData.budget}
                 onChange={(e) => handleChange('budget', e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
               />
             </div>
           </div>
 
           {/* Domain & Hosting Tracking Section */}
           <div className="pt-3 border-t border-[#222429]">
-            <h3 className="text-xs font-bold text-[#a3e635] uppercase mb-3">
+            <h3 className="text-xs font-bold text-[#9d97f0] uppercase mb-3">
               Domain & Hosting Expiration Monitoring
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -174,7 +174,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                   type="text"
                   value={formData.domainName}
                   onChange={(e) => handleChange('domainName', e.target.value)}
-                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
                 />
               </div>
               <div>
@@ -183,7 +183,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                   type="text"
                   value={formData.liveUrl}
                   onChange={(e) => handleChange('liveUrl', e.target.value)}
-                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
                 />
               </div>
 
@@ -193,7 +193,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                   type="date"
                   value={formData.domainExpiryDate}
                   onChange={(e) => handleChange('domainExpiryDate', e.target.value)}
-                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
                 />
               </div>
 
@@ -203,7 +203,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                   type="text"
                   value={formData.hostingProvider}
                   onChange={(e) => handleChange('hostingProvider', e.target.value)}
-                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
                 />
               </div>
 
@@ -213,7 +213,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
                   type="date"
                   value={formData.hostingExpiryDate}
                   onChange={(e) => handleChange('hostingExpiryDate', e.target.value)}
-                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+                  className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
                 />
               </div>
             </div>
@@ -222,11 +222,11 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
           {/* Custom Metadata Fields */}
           <div className="pt-3 border-t border-[#222429]">
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-xs font-bold text-[#a3e635] uppercase">Custom Field Metadata</h3>
+              <h3 className="text-xs font-bold text-[#9d97f0] uppercase">Custom Field Metadata</h3>
               <button
                 type="button"
                 onClick={addCustomField}
-                className="px-2.5 py-1 text-xs font-bold bg-[#a3e635]/10 text-[#a3e635] hover:bg-[#a3e635] hover:text-black rounded border border-[#a3e635]/30 transition-all"
+                className="px-2.5 py-1 text-xs font-bold bg-[#5b45ff]/20 text-[#9d97f0] hover:bg-[#5b45ff] hover:text-white rounded border border-[#5b45ff]/40 transition-all"
               >
                 + Add Custom Field
               </button>
@@ -273,7 +273,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
               rows={3}
               value={formData.notes}
               onChange={(e) => handleChange('notes', e.target.value)}
-              className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#a3e635] focus:outline-none"
+              className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
             />
           </div>
 
@@ -288,7 +288,7 @@ export function ProjectEditModal({ project, isOpen, onClose, onSave }: ProjectEd
             </button>
             <button
               type="submit"
-              className="px-5 py-2 text-xs font-extrabold rounded-lg bg-[#a3e635] text-black hover:bg-[#8ee01d] transition-all shadow-[0_0_15px_rgba(163,230,53,0.3)]"
+              className="px-5 py-2 text-xs font-extrabold rounded-lg bg-[#5b45ff] text-white hover:bg-[#4834e7] transition-all shadow-[0_0_15px_rgba(91,69,255,0.3)]"
             >
               Save Changes
             </button>

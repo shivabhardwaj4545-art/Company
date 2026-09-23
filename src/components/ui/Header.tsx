@@ -41,12 +41,12 @@ export function Header({ onOpenModal }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo - KodX */}
         <Link href="/" className="flex items-center gap-2.5 group" data-cursor="hover">
-          <div className="w-10 h-10 rounded-xl bg-[#a3e635] text-black flex items-center justify-center font-black text-xl border-2 border-black shadow-[2px_2px_0px_#000] group-hover:scale-105 transition-transform">
-            <Zap className="w-5 h-5 fill-black" />
+          <div className="w-10 h-10 rounded-xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-xl border-2 border-black shadow-[2px_2px_0px_#000] group-hover:scale-105 transition-transform">
+            <Zap className="w-5 h-5 fill-white" />
           </div>
           <div className="flex flex-col">
             <span className="font-display font-black text-2xl tracking-tight text-[var(--text-primary)] uppercase">
-              KodX<span className="text-[#a3e635]">.</span>
+              KodX<span className="text-[#5b45ff]">.</span>
             </span>
             <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase -mt-1 font-bold">
               Digital Studio
@@ -75,7 +75,7 @@ export function Header({ onOpenModal }: HeaderProps) {
             onClick={onOpenModal}
             type="button"
             data-cursor="hover"
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#a3e635] text-black text-xs font-black shadow-[3px_3px_0px_#000] border-2 border-black hover:bg-[#b5f540] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all uppercase tracking-wider"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#5b45ff] text-white text-xs font-black shadow-[3px_3px_0px_#000] border-2 border-black hover:bg-[#4834e7] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all uppercase tracking-wider"
           >
             <span>Start a Project</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -116,7 +116,7 @@ export function Header({ onOpenModal }: HeaderProps) {
                 setMobileMenuOpen(false);
                 onOpenModal();
               }}
-              className="w-full py-3 rounded-full bg-[#a3e635] text-black text-center font-black text-sm uppercase tracking-wider shadow-[3px_3px_0px_#000] border-2 border-black"
+              className="w-full py-3 rounded-full bg-[#5b45ff] text-white text-center font-black text-sm uppercase tracking-wider shadow-[3px_3px_0px_#000] border-2 border-black hover:bg-[#4834e7]"
             >
               Start a Project
             </button>

@@ -228,5 +228,5 @@ export function getExpiryBadge(daysLeft: number) {
   if (daysLeft <= 30) {
     return { label: `Expiring Soon (${daysLeft} days)`, color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/40' };
   }
-  return { label: `Healthy (${daysLeft} days)`, color: 'bg-[#a3e635]/10 text-[#a3e635] border-[#a3e635]/30' };
+  return { label: `Healthy (${daysLeft} days)`, color: 'bg-[#5b45ff]/10 text-[#5b45ff] border-[#5b45ff]/30' };
 }

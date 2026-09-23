@@ -3,41 +3,50 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg: #F5F2EB; /* Warm Cream background */
-  --surface: #EBE7DC; /* Soft cream card surface */
-  --text-primary: #0F0F10; /* Dark charcoal text */
-  --text-secondary: #5C5C60; /* Muted gray */
-  --border: #D8D2C4; /* Soft warm border */
-  --accent: #a3e635; /* Electric Lime Main Color */
-  --accent-glow: rgba(163, 230, 53, 0.35);
-  --accent-orange: #a3e635; /* Electric Lime Main Color */
-  --accent-yellow: #FFC700; /* Vibrant Gold/Yellow */
+  --bg: #dce1ff; /* Periwinkle / Light Indigo Banner Background */
+  --banner-bg: #dce1ff;
+  --surface: #ffffff; /* Clean white card surface */
+  --surface-secondary: #f3f5ff; /* Soft lavender-tinted card surface */
+  --text-primary: #000000; /* Pure Black text */
+  --text-secondary: #3f425b; /* Dark charcoal body text */
+  --border: #c8d0fb; /* Soft indigo-periwinkle border */
+  --accent: #5b45ff; /* Vibrant Purple/Indigo Button & Main Accent */
+  --accent-light: #9d97f0; /* Soft Accent / Subtitle / Eyebrow Text */
+  --accent-glow: rgba(91, 69, 255, 0.35);
+  --accent-orange: #5b45ff;
+  --accent-yellow: #9d97f0;
   --noise-opacity: 0.04;
 }
 
 .dark {
-  --bg: #0B0C0E; /* Deep Charcoal / Near Black */
-  --surface: #141518; /* Elevated surface card */
-  --text-primary: #F5F5F5;
-  --text-secondary: #909296;
-  --border: #222429;
-  --accent: #a3e635; /* Electric Lime Main Color */
-  --accent-glow: rgba(163, 230, 53, 0.4);
-  --accent-orange: #a3e635;
-  --accent-yellow: #FFD000;
+  --bg: #0b0c16; /* Deep Midnight Indigo Dark Background */
+  --banner-bg: #111326;
+  --surface: #171a33; /* Dark Elevated Card Surface */
+  --surface-secondary: #1e2242;
+  --text-primary: #ffffff;
+  --text-secondary: #a6abcf;
+  --border: #282c4f;
+  --accent: #5b45ff; /* Electric Indigo Accent */
+  --accent-light: #9d97f0;
+  --accent-glow: rgba(91, 69, 255, 0.45);
+  --accent-orange: #5b45ff;
+  --accent-yellow: #9d97f0;
   --noise-opacity: 0.08;
 }
 
 @theme {
   --color-bg: var(--bg);
+  --color-banner: var(--banner-bg);
   --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
   --color-border: var(--border);
   --color-ink: var(--text-primary);
   --color-muted: var(--text-secondary);
   --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
   --color-accent-glow: var(--accent-glow);
-  --color-orange: var(--accent-orange);
-  --color-yellow: var(--accent-yellow);
+  --color-orange: var(--accent);
+  --color-yellow: var(--accent-light);
 
   --font-display: 'Clash Display', 'Outfit', system-ui, sans-serif;
   --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
