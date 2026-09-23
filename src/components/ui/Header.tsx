@@ -34,14 +34,14 @@ export function Header({ onOpenModal }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'py-3.5 bg-[var(--bg)]/95 backdrop-blur-md border-b-2 border-black shadow-md'
+          ? 'py-3.5 bg-[var(--bg)]/95 backdrop-blur-md border-b border-[var(--border)] shadow-md'
           : 'py-5 bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo - KodX */}
         <Link href="/" className="flex items-center gap-2.5 group" data-cursor="hover">
-          <div className="w-10 h-10 rounded-xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-xl border-2 border-black shadow-[2px_2px_0px_#000] group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-xl shadow-sm border border-white/20 group-hover:scale-105 transition-transform">
             <Zap className="w-5 h-5 fill-white" />
           </div>
           <div className="flex flex-col">
@@ -75,7 +75,7 @@ export function Header({ onOpenModal }: HeaderProps) {
             onClick={onOpenModal}
             type="button"
             data-cursor="hover"
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#5b45ff] text-white text-xs font-black shadow-[3px_3px_0px_#000] border-2 border-black hover:bg-[#4834e7] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all uppercase tracking-wider"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#5b45ff] text-white text-xs font-black shadow-md hover:shadow-lg hover:bg-[#4834e7] transition-all uppercase tracking-wider"
           >
             <span>Start a Project</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -88,7 +88,7 @@ export function Header({ onOpenModal }: HeaderProps) {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
-            className="p-2 rounded-xl border-2 border-black text-[var(--text-primary)] bg-[var(--surface)] shadow-[2px_2px_0px_#000]"
+            className="p-2 rounded-xl border border-[var(--border)] text-[var(--text-primary)] bg-[var(--surface)] shadow-sm"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -97,7 +97,7 @@ export function Header({ onOpenModal }: HeaderProps) {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b-2 border-black bg-[var(--surface)] px-4 py-6 space-y-4">
+        <div className="md:hidden border-b border-[var(--border)] bg-[var(--surface)] px-4 py-6 space-y-4">
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
@@ -110,13 +110,13 @@ export function Header({ onOpenModal }: HeaderProps) {
               </a>
             ))}
           </div>
-          <div className="pt-4 border-t-2 border-black">
+          <div className="pt-4 border-t border-[var(--border)]">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenModal();
               }}
-              className="w-full py-3 rounded-full bg-[#5b45ff] text-white text-center font-black text-sm uppercase tracking-wider shadow-[3px_3px_0px_#000] border-2 border-black hover:bg-[#4834e7]"
+              className="w-full py-3 rounded-full bg-[#5b45ff] text-white text-center font-black text-sm uppercase tracking-wider shadow-md hover:bg-[#4834e7]"
             >
               Start a Project
             </button>

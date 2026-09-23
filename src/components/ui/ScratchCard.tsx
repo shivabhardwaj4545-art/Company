@@ -170,7 +170,7 @@ export function ScratchCard({ children }: ScratchCardProps) {
   return (
     <div
       ref={containerRef}
-      className="relative rounded-2xl border-2 border-black shadow-[6px_6px_0px_#000] overflow-hidden group bg-[var(--surface)]"
+      className="relative rounded-2xl border border-[var(--border)] shadow-xl overflow-hidden group bg-[var(--surface)]"
     >
       {/* Revealed content under canvas */}
       <div className="w-full">{children}</div>

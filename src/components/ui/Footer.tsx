@@ -9,13 +9,13 @@ interface FooterProps {
 
 export function Footer({ onOpenModal }: FooterProps) {
   return (
-    <footer className="border-t-2 border-black bg-[var(--surface)] pt-20 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <footer className="border-t border-[var(--border)] bg-[var(--surface)] pt-20 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Accent Glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[var(--accent)]/15 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
         {/* Large Final CTA Banner */}
-        <div className="rounded-3xl border-2 border-black bg-[var(--bg)] p-8 sm:p-14 mb-16 text-center relative overflow-hidden shadow-[6px_6px_0px_#000]">
+        <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg)] p-8 sm:p-14 mb-16 text-center relative overflow-hidden shadow-xl">
           <div className="max-w-3xl mx-auto">
             <span className="text-xs font-black tracking-widest text-[#5b45ff] uppercase mb-3 inline-block">
               READY TO SCALE YOUR BRAND?
@@ -30,7 +30,7 @@ export function Footer({ onOpenModal }: FooterProps) {
               onClick={onOpenModal}
               type="button"
               data-cursor="hover"
-              className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#5b45ff] text-white text-base font-black shadow-[4px_4px_0px_#000] border-2 border-black hover:bg-[#4834e7] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all uppercase tracking-wide"
+              className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#5b45ff] text-white text-base font-black shadow-md hover:shadow-lg hover:bg-[#4834e7] transition-all uppercase tracking-wide"
             >
               <span>Start a Project Today</span>
               <ArrowUpRight className="w-5 h-5" />
@@ -39,11 +39,11 @@ export function Footer({ onOpenModal }: FooterProps) {
         </div>
 
         {/* Footer Navigation & Brand Info */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b-2 border-black">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[var(--border)]">
           {/* Brand Info */}
           <div className="md:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-2" data-cursor="hover">
-              <div className="w-9 h-9 rounded-xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-base border-2 border-black shadow-[2px_2px_0px_#000]">
+              <div className="w-9 h-9 rounded-xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-base border border-white/20 shadow-sm">
                 <Zap className="w-5 h-5 fill-white" />
               </div>
               <span className="font-display font-black text-2xl tracking-tight text-[var(--text-primary)] uppercase">

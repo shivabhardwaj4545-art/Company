@@ -14,7 +14,7 @@ export function WhatsAppButton() {
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
       data-cursor="hover"
-      className="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#25D366] text-white font-extrabold text-xs sm:text-sm shadow-[4px_4px_0px_#000] border-2 border-black hover:scale-105 transition-all duration-300 group"
+      className="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#25D366] text-white font-extrabold text-xs sm:text-sm shadow-lg hover:shadow-xl border border-white/20 hover:scale-105 transition-all duration-300 group"
     >
       <div className="relative">
         <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />

@@ -72,7 +72,7 @@ export function WorkSection() {
               <Link
                 href={`/work/${featuredProject.slug}`}
                 data-cursor="hover"
-                className="px-6 py-3.5 rounded-xl bg-[#5b45ff] text-white font-black text-xs uppercase tracking-wider border border-black shadow-[3px_3px_0px_#000] hover:bg-[#4834e7] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all flex items-center gap-2"
+                className="px-6 py-3.5 rounded-xl bg-[#5b45ff] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg border border-white/20 hover:bg-[#4834e7] transition-all flex items-center gap-2"
               >
                 <Monitor className="w-4 h-4 text-white" />
                 <span>Launch Console Preview</span>
@@ -244,7 +244,7 @@ export function WorkSection() {
                   <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-xs font-bold text-white border border-white/20">
                     {project.category}
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-[#5b45ff] text-xs font-black text-white border border-black">
+                  <span className="px-3 py-1 rounded-full bg-[#5b45ff] text-xs font-black text-white border border-white/20">
                     {project.year}
                   </span>
                 </div>

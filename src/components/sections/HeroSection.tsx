@@ -25,10 +25,10 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center pt-36 sm:pt-40 pb-20 px-4 sm:px-6 lg:px-12 overflow-visible bg-noise border-b border-[var(--border)] bg-[var(--bg)]"
+      className="relative min-h-screen flex flex-col justify-center pt-36 sm:pt-40 pb-20 px-4 sm:px-6 lg:px-12 overflow-visible border-b border-[var(--border)] bg-[var(--bg)]"
     >
       {/* Background Dotted Grid Pattern */}
-      <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-60" />
+      <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-30" />
 
       {/* Ambient Glow Blobs in Purple/Indigo */}
       <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#5b45ff]/15 rounded-full blur-3xl pointer-events-none" />
@@ -49,13 +49,13 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-black font-display text-[var(--text-primary)] leading-[1.04] tracking-tight uppercase">
-              THE <span className="text-[#5b45ff]">INTELLIGENT</span> FINANCIAL &amp; WEB PLATFORM FOR <span className="text-[#5b45ff]">GLOBAL</span> BUSINESSES
+            <h1 className="text-3xl sm:text-5xl lg:text-[54px] xl:text-[58px] font-black font-display text-[var(--text-primary)] leading-[1.06] tracking-tight uppercase">
+              BUILD THE <br className="hidden sm:inline" />FUTURE OF YOUR BUSINESS.
             </h1>
 
             {/* Paragraph Subtext */}
             <p className="text-base sm:text-lg text-[var(--text-secondary)] font-medium leading-relaxed max-w-xl">
-              Manage payments, custom SaaS platforms, brand assets, and spend with AI-native digital infrastructure and high-converting web software.
+              Turn ideas into digital experiences, products, and systems designed to grow with you.
             </p>
 
             {/* Product Tour Link */}
@@ -79,12 +79,12 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="What's your business email?"
                   required
-                  className="flex-1 px-4 py-3.5 rounded-xl bg-[var(--surface)] border-2 border-black text-xs font-bold text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:border-[#5b45ff] transition-colors shadow-sm"
+                  className="flex-1 px-4 py-3.5 rounded-xl bg-[var(--surface)] border border-[var(--border)] text-xs font-bold text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:border-[#5b45ff] transition-colors shadow-sm"
                 />
                 <button
                   type="submit"
                   data-cursor="hover"
-                  className="px-8 py-3.5 rounded-xl bg-[#5b45ff] text-white font-black text-xs uppercase tracking-wider border-2 border-black shadow-[4px_4px_0px_#000] hover:bg-[#4834e7] hover:translate-x-[-1px] hover:translate-y-[-1px] active:translate-x-0 active:translate-y-0 transition-all shrink-0 flex items-center justify-center gap-2"
+                  className="px-8 py-3.5 rounded-xl bg-[#5b45ff] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:bg-[#4834e7] transition-all shrink-0 flex items-center justify-center gap-2"
                 >
                   {submitted ? (
                     <>
@@ -103,7 +103,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                   type="checkbox"
                   checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}
-                  className="mt-0.5 rounded border-black text-[#5b45ff] focus:ring-0 accent-[#5b45ff]"
+                  className="mt-0.5 rounded border-[var(--border)] text-[#5b45ff] focus:ring-0 accent-[#5b45ff]"
                 />
                 <span className="text-[11px] text-[var(--text-secondary)] font-medium leading-tight">
                   I consent to receiving project proposals and updates from KodX. I can unsubscribe any time.
@@ -142,7 +142,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
                 
                 {/* Physical Card Preview */}
-                <div className="sm:col-span-5 p-4 rounded-xl bg-gradient-to-br from-[#1b173c] to-[#0c0a1f] border-2 border-black text-white flex flex-col justify-between h-44 shadow-md relative overflow-hidden group">
+                <div className="sm:col-span-5 p-4 rounded-xl bg-gradient-to-br from-[#1b173c] to-[#0c0a1f] border border-white/10 text-white flex flex-col justify-between h-44 shadow-md relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#5b45ff]/30 rounded-full blur-2xl group-hover:scale-125 transition-transform" />
                   
                   <div className="flex items-center justify-between relative z-10">
@@ -179,7 +179,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                       <span className="text-[var(--text-primary)] font-bold">$27.50 AUD / $2,000.00</span>
                       <span className="text-[#5b45ff] font-bold">38.1%</span>
                     </div>
-                    <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-black">
+                    <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
                       <div className="bg-[#5b45ff] h-full w-[38.1%]" />
                     </div>
 
@@ -188,7 +188,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                       <span className="text-[var(--text-primary)] font-bold">$307.50 AUD / $500</span>
                       <span className="text-[#9d97f0] font-bold">61.5%</span>
                     </div>
-                    <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-black">
+                    <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
                       <div className="bg-[#9d97f0] h-full w-[61.5%]" />
                     </div>
                   </div>
@@ -224,7 +224,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
             </div>
 
             {/* Floating Cookie / Notification Toast Overlay */}
-            <div className="absolute bottom-[-15px] right-[-10px] sm:right-[-20px] max-w-xs p-4 rounded-2xl bg-[#14152b] border-2 border-black shadow-hard-lg z-20 space-y-2 text-white animate-bounce-subtle">
+            <div className="absolute bottom-[-15px] right-[-10px] sm:right-[-20px] max-w-xs p-4 rounded-2xl bg-[#14152b] border border-white/10 shadow-xl z-20 space-y-2 text-white animate-bounce-subtle">
               <div className="flex items-start gap-2.5">
                 <div className="p-1.5 rounded-lg bg-[#5b45ff] text-white shrink-0 mt-0.5">
                   <Bell className="w-4 h-4" />
@@ -239,7 +239,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                 </div>
               </div>
               <div className="pt-1 flex justify-end">
-                <span className="px-3 py-1 rounded-lg bg-[#5b45ff] text-white text-[10px] font-black uppercase border border-black shadow-[2px_2px_0px_#000]">
+                <span className="px-3 py-1 rounded-lg bg-[#5b45ff] text-white text-[10px] font-black uppercase border border-white/20 shadow-sm">
                   APPROVED (2M AGO)
                 </span>
               </div>

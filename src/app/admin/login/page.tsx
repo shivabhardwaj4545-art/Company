@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
         {/* Logo & Portal Header */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2.5 group mb-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-2xl border-2 border-black shadow-[3px_3px_0px_#000] group-hover:scale-105 transition-transform">
+            <div className="w-12 h-12 rounded-2xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-2xl border border-white/20 shadow-md group-hover:scale-105 transition-transform">
               K
             </div>
           </Link>
