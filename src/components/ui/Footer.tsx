@@ -42,11 +42,14 @@ export function Footer({ onOpenModal }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[var(--border)]">
           {/* Brand Info */}
           <div className="md:col-span-1 space-y-4">
-            <Link href="/" className="flex items-center gap-2" data-cursor="hover">
+            <Link href="/" className="flex flex-col" data-cursor="hover">
               <span className="font-display font-black text-2xl tracking-tight">
                 <span className="text-[var(--text-primary)]">ai</span>
                 <span className="text-[#6a57fa]">KODX</span>
                 <span className="text-[#6a57fa]">.</span>
+              </span>
+              <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase font-bold -mt-1">
+                smarter by design
               </span>
             </Link>
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-medium">

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ThemeToggle } from './ThemeToggle';
 import { Menu, X, ArrowUpRight, Zap } from 'lucide-react';
 
 interface HeaderProps {
@@ -48,7 +47,7 @@ export function Header({ onOpenModal }: HeaderProps) {
               <span className="text-[#6a57fa]">.</span>
             </span>
             <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase -mt-1 font-bold">
-              Digital Studio
+              smarter by design
             </span>
           </div>
         </Link>
@@ -67,9 +66,8 @@ export function Header({ onOpenModal }: HeaderProps) {
           ))}
         </nav>
 
-        {/* Right Actions: Theme Toggle + Start a Project CTA */}
+        {/* Right Actions: Start a Project CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <ThemeToggle />
           <button
             onClick={onOpenModal}
             type="button"
@@ -83,7 +81,6 @@ export function Header({ onOpenModal }: HeaderProps) {
 
         {/* Mobile Controls */}
         <div className="flex items-center gap-3 md:hidden">
-          <ThemeToggle />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"

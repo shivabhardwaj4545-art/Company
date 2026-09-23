@@ -42,8 +42,6 @@ export function FAQSection() {
                   : 'border-[var(--border)] bg-[var(--surface)]/50'
               }`}
             >
-              {/* Gradient Dotted Wave Background */}
-              <div className="bg-dotted-gradient" />
               <button
                 onClick={() => toggleFAQ(faq.id)}
                 type="button"

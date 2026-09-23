@@ -57,8 +57,6 @@ export function TestimonialsSection() {
               data-cursor="hover"
               className="card-popout w-[340px] sm:w-[380px] shrink-0 p-6 rounded-2xl border border-[var(--border)] bg-[var(--surface)] flex flex-col justify-between overflow-hidden"
             >
-              {/* Gradient Dotted Wave Background */}
-              <div className="bg-dotted-gradient" />
               <div>
                 {/* Header: Platform & Verified Badge */}
                 <div className="flex items-center justify-between mb-4 pb-4 border-b border-[var(--border)]">

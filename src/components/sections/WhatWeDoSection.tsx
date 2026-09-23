@@ -45,8 +45,6 @@ export function WhatWeDoSection() {
             key={service.slug}
             className="card-popout p-6 sm:p-8 rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-md flex flex-col justify-between group overflow-hidden"
           >
-            {/* Gradient Dotted Wave Background */}
-            <div className="bg-dotted-gradient" />
             <div>
               {/* Number & Icon */}
               <div className="flex items-center justify-between mb-6">

@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${outfit.variable}`}>
       <body className="bg-[var(--bg)] text-[var(--text-primary)] antialiased min-h-screen selection:bg-[var(--accent)] selection:text-white overflow-x-hidden">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
           <SmoothScrollProvider>
             <CustomCursor />
             {children}

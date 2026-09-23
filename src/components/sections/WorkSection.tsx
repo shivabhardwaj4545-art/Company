@@ -32,8 +32,7 @@ export function WorkSection() {
       {/* DARK TECH CASE STUDY & METRICS CONSOLE                                     */}
       {/* ========================================================================= */}
       <div className="card-popout rounded-3xl border border-white/10 bg-[#0B0C0E] text-white p-6 sm:p-10 shadow-2xl overflow-hidden font-sans">
-        {/* Gradient Dotted Wave Background */}
-        <div className="bg-dotted-gradient" />
+
         
         {/* Top Status Header Line */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-white/10 text-xs font-mono font-bold tracking-wider text-gray-400">
@@ -230,8 +229,6 @@ export function WorkSection() {
               data-cursor="hover"
               className="card-popout group rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden shadow-md flex flex-col justify-between"
             >
-              {/* Gradient Dotted Wave Background */}
-              <div className="bg-dotted-gradient" />
               {/* Image Container */}
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[var(--bg)]">
                 {/* eslint-disable-next-html-extension */}

@@ -27,8 +27,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
     <section
       className="relative min-h-screen flex flex-col justify-center pt-36 sm:pt-40 pb-20 px-4 sm:px-6 lg:px-12 overflow-visible border-b border-[var(--border)] bg-[var(--bg)]"
     >
-      {/* Background Dotted Grid Pattern */}
-      <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-30" />
+
 
       {/* Ambient Glow Blobs in Purple/Indigo */}
       <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#6a57fa]/15 rounded-full blur-3xl pointer-events-none" />
@@ -113,138 +112,21 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
           </div>
 
           {/* ========================================================================= */}
-          {/* RIGHT COLUMN: UI SHOWCASE FRAME                                           */}
+          {/* RIGHT COLUMN: UI SHOWCASE FRAME (FOUNDERS & PRODUCTIVITY OVERLAY)         */}
           {/* ========================================================================= */}
-          <div className="lg:col-span-6 relative pt-4 lg:pt-0">
-            
-            {/* Main Device Container */}
-            <div className="relative rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 sm:p-6 shadow-xl overflow-hidden">
-              <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-40" />
-              
-              {/* Device Window Header */}
-              <div className="flex items-center justify-between pb-4 mb-4 border-b border-[var(--border)]">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-[#6a57fa]" />
-                  <div className="w-3 h-3 rounded-full bg-[#8777ff]" />
-                  <div className="w-3 h-3 rounded-full bg-[#38BDF8]" />
-                  <span className="ml-2 text-xs font-extrabold text-[var(--text-primary)] uppercase tracking-wider font-display">
-                    CARD VIEW
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="px-2.5 py-1 rounded-full bg-[#6a57fa]/10 text-[10px] font-bold text-[#6a57fa] border border-[#6a57fa]/30">
-                    ● System Active
-                  </span>
-                </div>
-              </div>
+          <div className="lg:col-span-6 relative pt-4 lg:pt-0 flex items-center justify-center">
+            {/* Background Ambient Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-[#6a57fa]/20 blur-3xl rounded-full pointer-events-none" />
 
-              {/* Dashboard Grid inside Device */}
-              <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
-                
-                {/* Physical Card Preview */}
-                <div className="sm:col-span-5 p-4 rounded-xl bg-gradient-to-br from-[#1b173c] to-[#0c0a1f] border border-white/10 text-white flex flex-col justify-between h-44 shadow-md relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#6a57fa]/30 rounded-full blur-2xl group-hover:scale-125 transition-transform" />
-                  
-                  <div className="flex items-center justify-between relative z-10">
-                    <span className="text-xs font-black font-display tracking-widest text-[#8777ff]">
-                      KODX PHYSICAL
-                    </span>
-                    <CreditCard className="w-5 h-5 text-[#8777ff]" />
-                  </div>
-
-                  <div className="space-y-1 relative z-10">
-                    <div className="text-[10px] text-gray-300 font-mono tracking-widest">
-                      •••• •••• •••• 8842
-                    </div>
-                    <div className="flex justify-between items-end">
-                      <div>
-                        <div className="text-[9px] uppercase text-gray-400 font-bold">Studio Partner</div>
-                        <div className="text-xs font-bold text-white">Alex Barker</div>
-                      </div>
-                      <span className="text-xs font-extrabold italic text-[#8777ff]">VISA</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card Usage Stats */}
-                <div className="sm:col-span-7 p-4 rounded-xl bg-[var(--surface-secondary)] border border-[var(--border)] flex flex-col justify-between">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs font-bold text-[var(--text-primary)]">Current Month Spend</span>
-                    <span className="text-xs font-extrabold text-[#6a57fa] font-display">$727.50 AUD</span>
-                  </div>
-
-                  <div className="space-y-2 text-[11px]">
-                    <div className="flex justify-between text-[var(--text-secondary)] font-medium">
-                      <span>Monthly</span>
-                      <span className="text-[var(--text-primary)] font-bold">$27.50 AUD / $2,000.00</span>
-                      <span className="text-[#6a57fa] font-bold">38.1%</span>
-                    </div>
-                    <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
-                      <div className="bg-[#6a57fa] h-full w-[38.1%]" />
-                    </div>
-
-                    <div className="flex justify-between text-[var(--text-secondary)] font-medium pt-1">
-                      <span>Weekly</span>
-                      <span className="text-[var(--text-primary)] font-bold">$307.50 AUD / $500</span>
-                      <span className="text-[#8777ff] font-bold">61.5%</span>
-                    </div>
-                    <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
-                      <div className="bg-[#8777ff] h-full w-[61.5%]" />
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Transactions Mini Table */}
-              <div className="mt-4 p-3 rounded-xl bg-[var(--surface-secondary)] border border-[var(--border)] space-y-2">
-                <div className="text-[10px] font-extrabold text-[var(--text-secondary)] uppercase tracking-wider">
-                  RECENT TRANSACTIONS
-                </div>
-                <div className="flex items-center justify-between text-xs py-1 border-b border-[var(--border)]">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded bg-[#6a57fa]/20 text-[#6a57fa] flex items-center justify-center font-bold text-[10px]">
-                      S
-                    </div>
-                    <span className="font-bold text-[var(--text-primary)]">Slack Technologies</span>
-                  </div>
-                  <span className="font-bold text-[var(--text-primary)] font-display">-$1,400.00 AUD</span>
-                </div>
-                <div className="flex items-center justify-between text-xs py-1">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded bg-[#6a57fa]/20 text-[#6a57fa] flex items-center justify-center font-bold text-[10px]">
-                      J
-                    </div>
-                    <span className="font-bold text-[var(--text-primary)]">Jamba Cafe Cairns</span>
-                  </div>
-                  <span className="font-bold text-[var(--text-primary)] font-display">-$32.50 AUD</span>
-                </div>
-              </div>
-
+            {/* Clean Rounded Showcase Image with rounded-3xl border radius */}
+            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/20 hover:scale-[1.01] transition-transform duration-500">
+              {/* eslint-disable-next-html-extension */}
+              <img
+                src="/hero-showcase.png"
+                alt="aiKODX Studio Founders & Workspace Platform Showcase"
+                className="w-full h-auto max-w-full object-cover block"
+              />
             </div>
-
-            {/* Floating Cookie / Notification Toast Overlay */}
-            <div className="absolute bottom-[-15px] right-[-10px] sm:right-[-20px] max-w-xs p-4 rounded-2xl bg-[#14152b] border border-white/10 shadow-xl z-20 space-y-2 text-white animate-bounce-subtle">
-              <div className="flex items-start gap-2.5">
-                <div className="p-1.5 rounded-lg bg-[#6a57fa] text-white shrink-0 mt-0.5">
-                  <Bell className="w-4 h-4" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-black font-display tracking-wide text-white uppercase">
-                    EXPENSE APPROVED
-                  </h4>
-                  <p className="text-[10px] text-gray-300 font-medium leading-normal mt-0.5">
-                    Cardholders have submitted new expenses for your real-time review.
-                  </p>
-                </div>
-              </div>
-              <div className="pt-1 flex justify-end">
-                <span className="px-3 py-1 rounded-lg bg-[#6a57fa] text-white text-[10px] font-black uppercase border border-white/20 shadow-sm">
-                  APPROVED (2M AGO)
-                </span>
-              </div>
-            </div>
-
           </div>
 
         </div>

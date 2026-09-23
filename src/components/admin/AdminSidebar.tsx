@@ -68,8 +68,8 @@ export function AdminSidebar({
               <span className="text-white">ai</span>
               <span className="text-[#6a57fa]">KODX</span>
             </h1>
-            <span className="text-[11px] font-semibold text-[#8777ff] uppercase tracking-wider block mt-1">
-              Admin Portal v2.4
+            <span className="text-[10px] font-bold text-[#8777ff] uppercase tracking-wider block mt-0.5">
+              smarter by design • Admin Portal
             </span>
           </div>
         </div>

@@ -48,8 +48,6 @@ export function WhyUsSection() {
             key={idx}
             className="card-popout p-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] flex items-start gap-5 overflow-hidden"
           >
-            {/* Gradient Dotted Wave Background */}
-            <div className="bg-dotted-gradient" />
             <div className="p-3.5 rounded-xl bg-[var(--bg)] border border-[var(--border)] shrink-0">
               {pillar.icon}
             </div>
