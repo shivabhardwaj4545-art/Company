@@ -66,7 +66,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
               placeholder="e.g. Apex Global Logistics Portal"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
+              className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#857df3] focus:outline-none"
             />
           </div>
 
@@ -79,7 +79,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
                 placeholder="Apex Corp"
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#857df3] focus:outline-none"
               />
             </div>
             <div>
@@ -89,7 +89,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
                 placeholder="contact@apex.com"
                 value={clientEmail}
                 onChange={(e) => setClientEmail(e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#857df3] focus:outline-none"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
                 placeholder="apexgloballogistics.org"
                 value={domainName}
                 onChange={(e) => setDomainName(e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#857df3] focus:outline-none"
               />
             </div>
             <div>
@@ -111,7 +111,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
                 type="date"
                 value={domainExpiryDate}
                 onChange={(e) => setDomainExpiryDate(e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#857df3] focus:outline-none"
               />
             </div>
           </div>
@@ -123,7 +123,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
                 type="text"
                 value={hostingProvider}
                 onChange={(e) => setHostingProvider(e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#857df3] focus:outline-none"
               />
             </div>
             <div>
@@ -133,7 +133,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
                 placeholder="https://apexgloballogistics.org"
                 value={liveUrl}
                 onChange={(e) => setLiveUrl(e.target.value)}
-                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#5b45ff] focus:outline-none"
+                className="w-full px-3 py-2 bg-[#0B0C0E] border border-[#222429] rounded-lg text-sm text-white focus:border-[#857df3] focus:outline-none"
               />
             </div>
           </div>
@@ -148,7 +148,7 @@ export function AddProjectModal({ isOpen, onClose, onAdd }: AddProjectModalProps
             </button>
             <button
               type="submit"
-              className="px-4 py-2 text-xs font-extrabold rounded-lg bg-[#5b45ff] text-white hover:bg-[#4834e7]"
+              className="px-4 py-2 text-xs font-extrabold rounded-lg bg-[#857df3] text-white hover:bg-[#7269e8]"
             >
               + Create Project
             </button>

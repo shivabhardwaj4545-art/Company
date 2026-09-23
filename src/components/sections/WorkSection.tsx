@@ -16,11 +16,11 @@ export function WorkSection() {
       {/* Section Title Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span className="text-xs font-black tracking-widest text-[#5b45ff] uppercase flex items-center gap-2 mb-1">
-            <Trophy className="w-4 h-4 text-[#5b45ff]" /> CLIENT CASE STUDIES
+          <span className="text-xs font-black tracking-widest text-[#857df3] uppercase flex items-center gap-2 mb-1">
+            <Trophy className="w-4 h-4 text-[#857df3]" /> CLIENT CASE STUDIES
           </span>
           <h2 className="text-4xl sm:text-6xl font-black font-display text-[var(--text-primary)] uppercase tracking-tight">
-            FEATURED WORK<span className="text-[#5b45ff]">.</span>
+            FEATURED WORK<span className="text-[#857df3]">.</span>
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] font-medium max-w-md">
@@ -38,14 +38,14 @@ export function WorkSection() {
         {/* Top Status Header Line */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-white/10 text-xs font-mono font-bold tracking-wider text-gray-400">
           <div className="flex items-center gap-3">
-            <span className="text-[#5b45ff] uppercase">← SELECTED WORK</span>
+            <span className="text-[#857df3] uppercase">← SELECTED WORK</span>
             <span className="text-gray-600">|</span>
             <span className="text-gray-300">INDEX 01</span>
             <span className="text-gray-600">|</span>
             <span className="text-white font-extrabold uppercase tracking-widest">AETHER / AURORA FINANCE</span>
           </div>
-          <div className="flex items-center gap-2 text-[#5b45ff]">
-            <span className="w-2 h-2 rounded-full bg-[#5b45ff] animate-pulse" />
+          <div className="flex items-center gap-2 text-[#857df3]">
+            <span className="w-2 h-2 rounded-full bg-[#857df3] animate-pulse" />
             <span className="uppercase tracking-widest text-[11px]">SERIES A DEPLOYED • Q1 PRODUCTION</span>
           </div>
         </div>
@@ -55,7 +55,7 @@ export function WorkSection() {
           
           {/* Left Column (8 cols) */}
           <div className="lg:col-span-8 space-y-6">
-            <div className="text-xs font-black tracking-widest text-[#5b45ff] uppercase font-mono">
+            <div className="text-xs font-black tracking-widest text-[#857df3] uppercase font-mono">
               FINTECH PLATFORM &amp; ALGORITHMIC SETTLEMENT
             </div>
 
@@ -64,7 +64,7 @@ export function WorkSection() {
             </h3>
 
             <p className="text-sm sm:text-base text-gray-300 font-medium leading-relaxed max-w-2xl">
-              How KodX architected a sub-40ms execution UI, GPU-accelerated liquidity surface, and unified brand identity resulting in +340% GMV expansion at Series A.
+              How AiKodX architected a sub-40ms execution UI, GPU-accelerated liquidity surface, and unified brand identity resulting in +340% GMV expansion at Series A.
             </p>
 
             {/* Action Buttons */}
@@ -72,7 +72,7 @@ export function WorkSection() {
               <Link
                 href={`/work/${featuredProject.slug}`}
                 data-cursor="hover"
-                className="px-6 py-3.5 rounded-xl bg-[#5b45ff] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg border border-white/20 hover:bg-[#4834e7] transition-all flex items-center gap-2"
+                className="px-6 py-3.5 rounded-xl bg-[#857df3] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg border border-white/20 hover:bg-[#7269e8] transition-all flex items-center gap-2"
               >
                 <Monitor className="w-4 h-4 text-white" />
                 <span>Launch Console Preview</span>
@@ -83,7 +83,7 @@ export function WorkSection() {
                 data-cursor="hover"
                 className="px-6 py-3.5 rounded-xl bg-[#18181B] text-gray-200 font-black text-xs uppercase tracking-wider border border-white/10 hover:border-white/30 hover:text-white transition-all flex items-center gap-2"
               >
-                <FileText className="w-4 h-4 text-[#5b45ff]" />
+                <FileText className="w-4 h-4 text-[#857df3]" />
                 <span>Read Architectural Blueprint</span>
               </Link>
             </div>
@@ -119,7 +119,7 @@ export function WorkSection() {
               {/* Audit Badge */}
               <div className="pt-2">
                 <div className="p-3 rounded-xl bg-[#090A0C] border border-white/10 flex items-center gap-3">
-                  <ShieldCheck className="w-5 h-5 text-[#5b45ff] shrink-0" />
+                  <ShieldCheck className="w-5 h-5 text-[#857df3] shrink-0" />
                   <div>
                     <div className="text-[10px] uppercase font-bold text-gray-400">AUDIT SCORE</div>
                     <div className="text-xs font-black text-white font-display">100% PWA • 0 Drop Latency</div>
@@ -139,7 +139,7 @@ export function WorkSection() {
             <div>
               <div className="flex items-center justify-between text-[11px] font-mono font-bold text-gray-400 mb-2">
                 <span>VOLUME GROWTH</span>
-                <TrendingUp className="w-4 h-4 text-[#5b45ff]" />
+                <TrendingUp className="w-4 h-4 text-[#857df3]" />
               </div>
               <div className="text-3xl sm:text-4xl font-black font-display text-white tracking-tight">
                 +340%
@@ -149,7 +149,7 @@ export function WorkSection() {
               </p>
             </div>
             <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-              <div className="h-full w-[85%] bg-[#5b45ff]" />
+              <div className="h-full w-[85%] bg-[#857df3]" />
             </div>
           </div>
 
@@ -177,7 +177,7 @@ export function WorkSection() {
             <div>
               <div className="flex items-center justify-between text-[11px] font-mono font-bold text-gray-400 mb-2">
                 <span>LIQUIDITY HANDLED</span>
-                <Building2 className="w-4 h-4 text-[#5b45ff]" />
+                <Building2 className="w-4 h-4 text-[#857df3]" />
               </div>
               <div className="text-3xl sm:text-4xl font-black font-display text-white tracking-tight">
                 $12M+
@@ -187,7 +187,7 @@ export function WorkSection() {
               </p>
             </div>
             <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-              <div className="h-full w-[90%] bg-[#5b45ff]" />
+              <div className="h-full w-[90%] bg-[#857df3]" />
             </div>
           </div>
 
@@ -196,7 +196,7 @@ export function WorkSection() {
             <div>
               <div className="flex items-center justify-between text-[11px] font-mono font-bold text-gray-400 mb-2">
                 <span>RENDER INTEGRITY</span>
-                <Sparkles className="w-4 h-4 text-[#5b45ff]" />
+                <Sparkles className="w-4 h-4 text-[#857df3]" />
               </div>
               <div className="text-3xl sm:text-4xl font-black font-display text-white tracking-tight">
                 100%
@@ -206,7 +206,7 @@ export function WorkSection() {
               </p>
             </div>
             <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-              <div className="h-full w-full bg-[#5b45ff]" />
+              <div className="h-full w-full bg-[#857df3]" />
             </div>
           </div>
 
@@ -219,7 +219,7 @@ export function WorkSection() {
       {/* ========================================================================= */}
       <div className="space-y-6">
         <h3 className="text-xl sm:text-2xl font-black font-display text-[var(--text-primary)] uppercase tracking-wide">
-          More Selected Projects<span className="text-[#5b45ff]">.</span>
+          More Selected Projects<span className="text-[#857df3]">.</span>
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -244,7 +244,7 @@ export function WorkSection() {
                   <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-xs font-bold text-white border border-white/20">
                     {project.category}
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-[#5b45ff] text-xs font-black text-white border border-white/20">
+                  <span className="px-3 py-1 rounded-full bg-[#857df3] text-xs font-black text-white border border-white/20">
                     {project.year}
                   </span>
                 </div>
@@ -253,15 +253,15 @@ export function WorkSection() {
               {/* Details */}
               <div className="p-6 sm:p-8">
                 <div className="flex items-center justify-between gap-4 mb-2">
-                  <span className="text-xs font-extrabold tracking-widest text-[#5b45ff] uppercase">
+                  <span className="text-xs font-extrabold tracking-widest text-[#857df3] uppercase">
                     {project.client}
                   </span>
-                  <div className="p-2 rounded-full border border-[var(--border)] bg-[var(--bg)] group-hover:bg-[#5b45ff] group-hover:text-white transition-colors">
+                  <div className="p-2 rounded-full border border-[var(--border)] bg-[var(--bg)] group-hover:bg-[#857df3] group-hover:text-white transition-colors">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
 
-                <h4 className="text-2xl font-black font-display text-[var(--text-primary)] mb-3 group-hover:text-[#5b45ff] transition-colors">
+                <h4 className="text-2xl font-black font-display text-[var(--text-primary)] mb-3 group-hover:text-[#857df3] transition-colors">
                   {project.title}
                 </h4>
                 <p className="text-xs text-[var(--text-secondary)] font-medium leading-relaxed mb-6">
@@ -272,7 +272,7 @@ export function WorkSection() {
                 <div className="flex flex-wrap gap-4 pt-4 border-t border-[var(--border)]">
                   {project.results.map((res, idx) => (
                     <div key={idx} className="flex items-baseline gap-2">
-                      <span className="text-lg font-black font-display text-[#5b45ff]">
+                      <span className="text-lg font-black font-display text-[#857df3]">
                         {res.metric}
                       </span>
                       <span className="text-[11px] text-[var(--text-secondary)] font-bold">

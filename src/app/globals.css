@@ -10,10 +10,10 @@
   --text-primary: #000000; /* Pure Black text */
   --text-secondary: #3f425b; /* Dark charcoal body text */
   --border: #c8d0fb; /* Soft indigo-periwinkle border */
-  --accent: #5b45ff; /* Vibrant Purple/Indigo Button & Main Accent */
+  --accent: #857df3; /* Soft Purple/Indigo Button & Main Accent */
   --accent-light: #9d97f0; /* Soft Accent / Subtitle / Eyebrow Text */
-  --accent-glow: rgba(91, 69, 255, 0.35);
-  --accent-orange: #5b45ff;
+  --accent-glow: rgba(133, 125, 243, 0.35);
+  --accent-orange: #857df3;
   --accent-yellow: #9d97f0;
   --noise-opacity: 0.04;
 }
@@ -26,10 +26,10 @@
   --text-primary: #ffffff;
   --text-secondary: #a6abcf;
   --border: #282c4f;
-  --accent: #5b45ff; /* Electric Indigo Accent */
+  --accent: #857df3; /* Soft Purple Accent */
   --accent-light: #9d97f0;
-  --accent-glow: rgba(91, 69, 255, 0.45);
-  --accent-orange: #5b45ff;
+  --accent-glow: rgba(133, 125, 243, 0.45);
+  --accent-orange: #857df3;
   --accent-yellow: #9d97f0;
   --noise-opacity: 0.08;
 }
@@ -87,6 +87,14 @@ body {
   background-color: var(--surface);
   border: 1px solid var(--border);
   backdrop-filter: blur(12px);
+}
+
+/* Custom RGB(133, 125, 243) Text Gradient Utility */
+.text-gradient-accent {
+  background: linear-gradient(135deg, rgb(133, 125, 243) 0%, #b8b3f8 50%, rgb(133, 125, 243) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Hover glow effect */

@@ -18,11 +18,11 @@ export function FAQSection() {
     <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-[var(--border)]">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <span className="text-xs font-black tracking-widest text-[#5b45ff] uppercase inline-flex items-center gap-2 mb-2">
-          <HelpCircle className="w-4 h-4 text-[#5b45ff]" /> GOT QUESTIONS?
+        <span className="text-xs font-black tracking-widest text-[#857df3] uppercase inline-flex items-center gap-2 mb-2">
+          <HelpCircle className="w-4 h-4 text-[#857df3]" /> GOT QUESTIONS?
         </span>
         <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-          Frequently Asked Queries<span className="text-[var(--accent)]">.</span>
+          Frequently Asked Queries<span className="text-[#857df3]">.</span>
         </h2>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] mt-3 max-w-xl mx-auto">
           Everything you need to know about our process, timelines, deliverables, and partnership model.

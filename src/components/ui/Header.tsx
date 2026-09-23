@@ -39,14 +39,14 @@ export function Header({ onOpenModal }: HeaderProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo - KodX */}
+        {/* Brand Logo - AiKodX */}
         <Link href="/" className="flex items-center gap-2.5 group" data-cursor="hover">
-          <div className="w-10 h-10 rounded-xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-xl shadow-sm border border-white/20 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-[#857df3] text-white flex items-center justify-center font-black text-xl shadow-sm border border-white/20 group-hover:scale-105 transition-transform">
             <Zap className="w-5 h-5 fill-white" />
           </div>
           <div className="flex flex-col">
             <span className="font-display font-black text-2xl tracking-tight text-[var(--text-primary)] uppercase">
-              KodX<span className="text-[#5b45ff]">.</span>
+              AiKodX<span className="text-[#857df3]">.</span>
             </span>
             <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase -mt-1 font-bold">
               Digital Studio
@@ -75,7 +75,7 @@ export function Header({ onOpenModal }: HeaderProps) {
             onClick={onOpenModal}
             type="button"
             data-cursor="hover"
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#5b45ff] text-white text-xs font-black shadow-md hover:shadow-lg hover:bg-[#4834e7] transition-all uppercase tracking-wider"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#857df3] text-white text-xs font-black shadow-md hover:shadow-lg hover:bg-[#7269e8] transition-all uppercase tracking-wider"
           >
             <span>Start a Project</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -116,7 +116,7 @@ export function Header({ onOpenModal }: HeaderProps) {
                 setMobileMenuOpen(false);
                 onOpenModal();
               }}
-              className="w-full py-3 rounded-full bg-[#5b45ff] text-white text-center font-black text-sm uppercase tracking-wider shadow-md hover:bg-[#4834e7]"
+              className="w-full py-3 rounded-full bg-[#857df3] text-white text-center font-black text-sm uppercase tracking-wider shadow-md hover:bg-[#7269e8]"
             >
               Start a Project
             </button>

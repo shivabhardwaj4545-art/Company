@@ -31,7 +31,7 @@ export function AdminHeader({ onOpenAddProject, searchQuery, setSearchQuery }: A
           placeholder="Search projects, domains, clients, leads..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-4 py-2.5 bg-[#0B0C0E] border border-[#222429] rounded-xl text-xs font-semibold text-white placeholder-gray-500 focus:border-[#5b45ff] focus:outline-none transition-all"
+          className="w-full pl-10 pr-4 py-2.5 bg-[#0B0C0E] border border-[#222429] rounded-xl text-xs font-semibold text-white placeholder-gray-500 focus:border-[#857df3] focus:outline-none transition-all"
         />
       </div>
 
@@ -39,14 +39,14 @@ export function AdminHeader({ onOpenAddProject, searchQuery, setSearchQuery }: A
       <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
         {/* System Status Pill */}
         <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0B0C0E] border border-[#222429]">
-          <span className="w-2 h-2 rounded-full bg-[#5b45ff] animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#857df3] animate-pulse" />
           <span className="text-xs font-bold text-gray-300">Live Server Monitor</span>
         </div>
 
         {/* Action Button */}
         <button
           onClick={onOpenAddProject}
-          className="px-5 py-2.5 rounded-xl bg-[#5b45ff] text-white font-extrabold text-xs hover:bg-[#4834e7] transition-all shadow-[0_0_20px_rgba(91,69,255,0.3)] flex items-center gap-2"
+          className="px-5 py-2.5 rounded-xl bg-[#857df3] text-white font-extrabold text-xs hover:bg-[#7269e8] transition-all shadow-[0_0_20px_rgba(133,125,243,0.3)] flex items-center gap-2"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />

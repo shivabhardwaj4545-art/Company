@@ -1,68 +1,68 @@
 [
   {
-    "slug": "aurora-pay",
-    "title": "AuroraPay — Next-Gen Fintech Platform",
-    "client": "Aurora Capital LLC",
-    "category": "Web Application & Branding",
+    "slug": "ezrestero",
+    "title": "EzRestero — Smart Restaurant & Order Management System",
+    "client": "EzRestero Hospitality Group",
+    "category": "Web Application & Order Automation",
     "year": "2026",
-    "cover": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Complete brand overhaul and ultra-fast web dashboard for a global cross-border payments protocol handling millions in daily volume.",
-    "challenge": "AuroraPay needed to transition from an outdated legacy portal into a high-trust, sleek digital platform that loads under 500ms globally while maintaining rigorous security UI design.",
-    "solution": "We re-engineered their web stack using Next.js App Router, edge functions, and tailored dark-mode UI components featuring subtle glassmorphism and real-time transaction graphs.",
+    "cover": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Next-gen POS, QR menu ordering, and kitchen workflow platform for modern restaurants and dining chains.",
+    "challenge": "Traditional POS systems suffered from slow order routing, kitchen delays, and poor table QR ordering experiences.",
+    "solution": "Engineered a real-time order sync portal with sub-50ms table checkout and automated kitchen display routing.",
     "results": [
-      { "metric": "+340%", "label": "Conversion Rate Increase" },
-      { "metric": "380ms", "label": "Average Global Load Time" },
-      { "metric": "$12M+", "label": "Processed in Month 1" }
+      { "metric": "+240%", "label": "Table Turnover" },
+      { "metric": "0.3s", "label": "Order Processing" },
+      { "metric": "$8M+", "label": "Volume Managed" }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
     ],
-    "techStack": ["Next.js", "Tailwind CSS", "TypeScript", "GSAP", "Prisma"],
-    "liveUrl": "https://aurorapay.example.com"
+    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets", "Node.js"],
+    "liveUrl": "https://ezrestero.com"
   },
   {
-    "slug": "luxe-wear",
-    "title": "LuxeWear — D2C Fashion Experience",
-    "client": "LuxeWear International",
-    "category": "E-Commerce & Brand Strategy",
-    "year": "2025",
-    "cover": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Immersive e-commerce store with interactive 3D product try-ons, custom checkout funnels, and fluid editorial layouts.",
-    "challenge": "High cart abandonment rates and slow mobile page performance were suppressing conversion for their premium apparel line.",
-    "solution": "Built a headless Shopify storefront using Next.js, Lenis inertia scrolling, micro-interactions, and instant 1-click checkout integration.",
+    "slug": "msg-platform",
+    "title": "MSG — Unified Messaging & Client Communication Platform",
+    "client": "MSG Enterprise Systems",
+    "category": "Omnichannel Communications & Web App",
+    "year": "2026",
+    "cover": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    "summary": "High-speed unified inbox and broadcast engine connecting WhatsApp, SMS, and email for instant customer support.",
+    "challenge": "Fragmented customer chats led to dropped leads and slow response times across multiple channels.",
+    "solution": "Unified all inbound communication into a single realtime dashboard powered by Next.js and socket gateways.",
     "results": [
-      { "metric": "+185%", "label": "Mobile Sales Increase" },
-      { "metric": "-42%", "label": "Cart Abandonment Drop" },
-      { "metric": "4.9s -> 0.8s", "label": "Page Load Speedup" }
+      { "metric": "99.8%", "label": "Lead Response Rate" },
+      { "metric": "1.5s", "label": "Avg Response Time" },
+      { "metric": "50,000+", "label": "Daily Messages" }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
     ],
-    "techStack": ["Next.js", "Shopify Storefront API", "Tailwind CSS", "Three.js", "Framer Motion"],
-    "liveUrl": "https://luxewear.example.com"
+    "techStack": ["Next.js", "WhatsApp API", "Tailwind CSS", "Redis", "TypeScript"],
+    "liveUrl": "https://msg.io"
   },
   {
-    "slug": "synapse-ai",
-    "title": "Synapse AI — Enterprise Automation Portal",
-    "client": "Synapse Global",
-    "category": "AI Automation & Web App",
-    "year": "2026",
-    "cover": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "summary": "AI document parser and automated workflow engine for enterprise logistics operations processing 50,000+ invoices daily.",
-    "challenge": "Manual invoice data entry caused costly delays and errors across 12 regional warehouses.",
-    "solution": "Designed and deployed custom AI extraction pipelines integrated with an interactive React control room dashboard and automated WhatsApp notification bot.",
+    "slug": "dropizi-courier",
+    "title": "Dropizi Courier — Dynamic Logistics & Parcel Delivery Engine",
+    "client": "Dropizi Express Global",
+    "category": "Logistics & AI Parcel Tracking (Future Works)",
+    "year": "2026 (Upcoming)",
+    "cover": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Upcoming end-to-end courier dispatching platform, dynamic parcel route optimization, and live GPS delivery tracking.",
+    "challenge": "Manual courier assignment and legacy tracking systems caused delay bottlenecks across last-mile delivery.",
+    "solution": "Developing autonomous parcel assignment algorithms, driver mobile dispatch portals, and live SMS/WhatsApp delivery alerts.",
     "results": [
-      { "metric": "99.4%", "label": "Extraction Accuracy" },
-      { "metric": "14,000 hrs", "label": "Annual Labor Saved" },
-      { "metric": "10x", "label": "Faster Invoice Resolution" }
+      { "metric": "In Pipeline", "label": "Development Status" },
+      { "metric": "< 15min", "label": "Target Dispatch Time" },
+      { "metric": "Live GPS", "label": "Tracking Ready" }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
     ],
-    "techStack": ["Next.js", "Python FastApi", "OpenAI Vision", "Supabase", "Tailwind CSS"],
-    "liveUrl": "https://synapseai.example.com"
+    "techStack": ["Next.js", "Google Maps API", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    "liveUrl": "https://dropizi.com"
   }
 ]

@@ -17,11 +17,11 @@ export function Footer({ onOpenModal }: FooterProps) {
         {/* Large Final CTA Banner */}
         <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg)] p-8 sm:p-14 mb-16 text-center relative overflow-hidden shadow-xl">
           <div className="max-w-3xl mx-auto">
-            <span className="text-xs font-black tracking-widest text-[#5b45ff] uppercase mb-3 inline-block">
+            <span className="text-xs font-black tracking-widest text-[#857df3] uppercase mb-3 inline-block">
               READY TO SCALE YOUR BRAND?
             </span>
             <h2 className="text-4xl sm:text-6xl font-black font-display text-[var(--text-primary)] leading-tight mb-6 uppercase">
-              Let's build something extraordinary together<span className="text-[#5b45ff]">.</span>
+              Let's build something extraordinary together<span className="text-[#857df3]">.</span>
             </h2>
             <p className="text-sm sm:text-lg text-[var(--text-secondary)] mb-8 max-w-xl mx-auto font-medium">
               Book a call or complete our quick 4-step project inquiry to get a detailed proposal &amp; architecture plan within 24 hours.
@@ -30,7 +30,7 @@ export function Footer({ onOpenModal }: FooterProps) {
               onClick={onOpenModal}
               type="button"
               data-cursor="hover"
-              className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#5b45ff] text-white text-base font-black shadow-md hover:shadow-lg hover:bg-[#4834e7] transition-all uppercase tracking-wide"
+              className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#857df3] text-white text-base font-black shadow-md hover:shadow-lg hover:bg-[#7269e8] transition-all uppercase tracking-wide"
             >
               <span>Start a Project Today</span>
               <ArrowUpRight className="w-5 h-5" />
@@ -43,11 +43,11 @@ export function Footer({ onOpenModal }: FooterProps) {
           {/* Brand Info */}
           <div className="md:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-2" data-cursor="hover">
-              <div className="w-9 h-9 rounded-xl bg-[#5b45ff] text-white flex items-center justify-center font-black text-base border border-white/20 shadow-sm">
+              <div className="w-9 h-9 rounded-xl bg-[#857df3] text-white flex items-center justify-center font-black text-base border border-white/20 shadow-sm">
                 <Zap className="w-5 h-5 fill-white" />
               </div>
               <span className="font-display font-black text-2xl tracking-tight text-[var(--text-primary)] uppercase">
-                KodX<span className="text-[#5b45ff]">.</span>
+                AiKodX<span className="text-[#857df3]">.</span>
               </span>
             </Link>
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-medium">
@@ -61,9 +61,9 @@ export function Footer({ onOpenModal }: FooterProps) {
               Services
             </h4>
             <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li><Link href="/services/web-development" className="hover:text-[#5b45ff] transition-colors">Web Development</Link></li>
-              <li><Link href="/services/branding-identity" className="hover:text-[#5b45ff] transition-colors">Branding &amp; Identity</Link></li>
-              <li><Link href="/services/ai-automation" className="hover:text-[#5b45ff] transition-colors">AI Automation</Link></li>
+              <li><Link href="/services/web-development" className="hover:text-[#857df3] transition-colors">Web Development</Link></li>
+              <li><Link href="/services/branding-identity" className="hover:text-[#857df3] transition-colors">Branding &amp; Identity</Link></li>
+              <li><Link href="/services/ai-automation" className="hover:text-[#857df3] transition-colors">AI Automation</Link></li>
             </ul>
           </div>
 
@@ -73,9 +73,9 @@ export function Footer({ onOpenModal }: FooterProps) {
               Products
             </h4>
             <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li><Link href="/products/nexus-flow" className="hover:text-[#5b45ff] transition-colors">NexusFlow AI</Link></li>
-              <li><Link href="/products/canvas-craft" className="hover:text-[#5b45ff] transition-colors">CanvasCraft Studio</Link></li>
-              <li><Link href="/products/hyper-metric" className="hover:text-[#5b45ff] transition-colors">HyperMetric Analytics</Link></li>
+              <li><Link href="/products/ezrestero" className="hover:text-[#857df3] transition-colors">EZRestro POS</Link></li>
+              <li><Link href="/products/canvas-craft" className="hover:text-[#857df3] transition-colors">CanvasCraft Studio</Link></li>
+              <li><Link href="/products/hyper-metric" className="hover:text-[#857df3] transition-colors">HyperMetric Analytics</Link></li>
             </ul>
           </div>
 
@@ -85,7 +85,7 @@ export function Footer({ onOpenModal }: FooterProps) {
               Connect
             </h4>
             <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li>hello@kodx.studio</li>
+              <li>hello@aikodx.studio</li>
               <li><strong>Direct Phone:</strong> +91 8445178177</li>
               <li>San Francisco, CA &amp; London, UK</li>
             </ul>
@@ -95,12 +95,12 @@ export function Footer({ onOpenModal }: FooterProps) {
         {/* Bottom Bar: Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[var(--text-secondary)] font-semibold gap-4">
           <div>
-            © {new Date().getFullYear()} KodX Studio. All rights reserved.
+            © {new Date().getFullYear()} AiKodX Studio. All rights reserved.
           </div>
           <div className="flex items-center gap-1">
             <span>Crafted with</span>
-            <Heart className="w-3.5 h-3.5 text-[#5b45ff] fill-[#5b45ff] inline" />
-            <span>using Next.js &amp; KodX Design System.</span>
+            <Heart className="w-3.5 h-3.5 text-[#857df3] fill-[#857df3] inline" />
+            <span>using Next.js &amp; AiKodX Design System.</span>
           </div>
         </div>
       </div>

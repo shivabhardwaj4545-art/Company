@@ -12,11 +12,11 @@ export function FoundersSection() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
         <div>
-          <span className="text-xs font-black tracking-widest text-[#5b45ff] uppercase flex items-center gap-2 mb-1">
-            <Users className="w-4 h-4 text-[#5b45ff]" /> LEADERSHIP &amp; VISION
+          <span className="text-xs font-black tracking-widest text-[#857df3] uppercase flex items-center gap-2 mb-1">
+            <Users className="w-4 h-4 text-[#857df3]" /> LEADERSHIP &amp; VISION
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-            Meet the Founders<span className="text-[var(--accent)]">.</span>
+            Meet the Founders<span className="text-[#857df3]">.</span>
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md">

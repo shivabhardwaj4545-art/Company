@@ -7,7 +7,7 @@ export function TrustBar() {
     { name: 'SYNAPSE AI', code: 'SYNAPSE_AI' },
     { name: 'PULSE MEDIA', code: 'PULSE::MEDIA' },
     { name: 'HYPER METRIC', code: 'HYPER.METRIC' },
-    { name: 'NEXUS FLOW', code: 'NEXUS.FLOW' },
+    { name: 'AIKODX FLOW', code: 'AIKODX.FLOW' },
     { name: 'VERTEX LABS', code: 'VERTEX_LABS' },
     { name: 'QUANTUM HQ', code: 'QUANTUM//HQ' },
   ];

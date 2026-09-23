@@ -17,19 +17,19 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'KodX Studio | Web Development, Branding & AI Automation',
+  title: 'AiKodX Studio | Web Development, Branding & AI Automation',
   description:
-    'KodX Studio crafts high-converting Next.js web applications, iconic brand identities, and autonomous AI lead pipelines.',
+    'AiKodX Studio crafts high-converting Next.js web applications, iconic brand identities, and autonomous AI lead pipelines.',
   keywords: [
-    'KodX Studio',
+    'AiKodX Studio',
     'Digital Agency',
     'Next.js Web Development',
     'AI Automation',
     'Branding Studio',
   ],
-  authors: [{ name: 'KodX Studio' }],
+  authors: [{ name: 'AiKodX Studio' }],
   openGraph: {
-    title: 'KodX Studio',
+    title: 'AiKodX Studio',
     description: 'High-performance web development, branding & AI automation.',
     type: 'website',
   },
