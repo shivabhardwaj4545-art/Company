@@ -13,11 +13,11 @@ export function ProductsSection() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span className="text-xs font-black tracking-widest text-[#857df3] uppercase flex items-center gap-2 mb-1">
-            <Sparkles className="w-4 h-4 text-[#857df3]" /> PROPRIETARY TECH
+          <span className="text-xs font-black tracking-widest text-[#6a57fa] uppercase flex items-center gap-2 mb-1">
+            <Sparkles className="w-4 h-4 text-[#6a57fa]" /> PROPRIETARY TECH
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-            In-House Products<span className="text-[#857df3]">.</span>
+            In-House Products<span className="text-[#6a57fa]">.</span>
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md">
@@ -25,8 +25,8 @@ export function ProductsSection() {
         </p>
       </div>
 
-      {/* 3 Columns Desktop / 1 Column Mobile Responsive Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* 2 Columns Responsive Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {products.map((product) => (
           <div
             key={product.slug}

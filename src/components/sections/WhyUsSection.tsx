@@ -30,11 +30,11 @@ export function WhyUsSection() {
     <section id="why-us" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[var(--border)]">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
         <div>
-          <span className="text-xs font-black tracking-widest text-[#857df3] uppercase mb-1 flex items-center gap-2">
-            <Zap className="w-4 h-4 text-[#857df3]" /> WHY CHOOSE AIKODX
+          <span className="text-xs font-black tracking-widest text-[#6a57fa] uppercase mb-1 flex items-center gap-2">
+            <Zap className="w-4 h-4 text-[#6a57fa]" /> WHY CHOOSE AIKODX
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-            Built Different<span className="text-[#857df3]">.</span>
+            Built Different<span className="text-[#6a57fa]">.</span>
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md">

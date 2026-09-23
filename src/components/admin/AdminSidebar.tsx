@@ -63,12 +63,12 @@ export function AdminSidebar({
       <div>
         {/* Brand Header */}
         <div className="flex items-center gap-3 px-2 py-3 mb-6 border-b border-[#222429]">
-          <div className="w-10 h-10 rounded-xl bg-[#857df3] flex items-center justify-center font-black text-white text-xl shadow-[0_0_20px_rgba(133,125,243,0.3)]">
-            K
-          </div>
           <div>
-            <h1 className="font-extrabold font-display text-white text-base leading-none">AiKodX Studio</h1>
-            <span className="text-[11px] font-semibold text-[#9d97f0] uppercase tracking-wider block mt-1">
+            <h1 className="font-black font-display text-xl leading-none">
+              <span className="text-white">ai</span>
+              <span className="text-[#6a57fa]">KODX</span>
+            </h1>
+            <span className="text-[11px] font-semibold text-[#8777ff] uppercase tracking-wider block mt-1">
               Admin Portal v2.4
             </span>
           </div>

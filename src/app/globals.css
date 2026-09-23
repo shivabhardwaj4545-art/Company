@@ -10,11 +10,11 @@
   --text-primary: #000000; /* Pure Black text */
   --text-secondary: #3f425b; /* Dark charcoal body text */
   --border: #c8d0fb; /* Soft indigo-periwinkle border */
-  --accent: #857df3; /* Soft Purple/Indigo Button & Main Accent */
-  --accent-light: #9d97f0; /* Soft Accent / Subtitle / Eyebrow Text */
-  --accent-glow: rgba(133, 125, 243, 0.35);
-  --accent-orange: #857df3;
-  --accent-yellow: #9d97f0;
+  --accent: #6a57fa; /* Primary Accent / Button Background */
+  --accent-light: #8777ff; /* Soft Accent / Subtitle / Eyebrow Text */
+  --accent-glow: rgba(106, 87, 250, 0.35);
+  --accent-orange: #6a57fa;
+  --accent-yellow: #8777ff;
   --noise-opacity: 0.04;
 }
 
@@ -26,11 +26,11 @@
   --text-primary: #ffffff;
   --text-secondary: #a6abcf;
   --border: #282c4f;
-  --accent: #857df3; /* Soft Purple Accent */
-  --accent-light: #9d97f0;
-  --accent-glow: rgba(133, 125, 243, 0.45);
-  --accent-orange: #857df3;
-  --accent-yellow: #9d97f0;
+  --accent: #6a57fa; /* Primary Accent / Button Background */
+  --accent-light: #8777ff;
+  --accent-glow: rgba(106, 87, 250, 0.45);
+  --accent-orange: #6a57fa;
+  --accent-yellow: #8777ff;
   --noise-opacity: 0.08;
 }
 

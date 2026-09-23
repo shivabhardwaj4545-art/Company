@@ -17,11 +17,11 @@ export function Footer({ onOpenModal }: FooterProps) {
         {/* Large Final CTA Banner */}
         <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg)] p-8 sm:p-14 mb-16 text-center relative overflow-hidden shadow-xl">
           <div className="max-w-3xl mx-auto">
-            <span className="text-xs font-black tracking-widest text-[#857df3] uppercase mb-3 inline-block">
+            <span className="text-xs font-black tracking-widest text-[#6a57fa] uppercase mb-3 inline-block">
               READY TO SCALE YOUR BRAND?
             </span>
             <h2 className="text-4xl sm:text-6xl font-black font-display text-[var(--text-primary)] leading-tight mb-6 uppercase">
-              Let's build something extraordinary together<span className="text-[#857df3]">.</span>
+              Let's build something extraordinary together<span className="text-[#6a57fa]">.</span>
             </h2>
             <p className="text-sm sm:text-lg text-[var(--text-secondary)] mb-8 max-w-xl mx-auto font-medium">
               Book a call or complete our quick 4-step project inquiry to get a detailed proposal &amp; architecture plan within 24 hours.
@@ -30,7 +30,7 @@ export function Footer({ onOpenModal }: FooterProps) {
               onClick={onOpenModal}
               type="button"
               data-cursor="hover"
-              className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#857df3] text-white text-base font-black shadow-md hover:shadow-lg hover:bg-[#7269e8] transition-all uppercase tracking-wide"
+              className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#6a57fa] text-white text-base font-black shadow-md hover:shadow-lg hover:bg-[#5844f7] transition-all uppercase tracking-wide"
             >
               <span>Start a Project Today</span>
               <ArrowUpRight className="w-5 h-5" />
@@ -43,11 +43,10 @@ export function Footer({ onOpenModal }: FooterProps) {
           {/* Brand Info */}
           <div className="md:col-span-1 space-y-4">
             <Link href="/" className="flex items-center gap-2" data-cursor="hover">
-              <div className="w-9 h-9 rounded-xl bg-[#857df3] text-white flex items-center justify-center font-black text-base border border-white/20 shadow-sm">
-                <Zap className="w-5 h-5 fill-white" />
-              </div>
-              <span className="font-display font-black text-2xl tracking-tight text-[var(--text-primary)] uppercase">
-                AiKodX<span className="text-[#857df3]">.</span>
+              <span className="font-display font-black text-2xl tracking-tight">
+                <span className="text-[var(--text-primary)]">ai</span>
+                <span className="text-[#6a57fa]">KODX</span>
+                <span className="text-[#6a57fa]">.</span>
               </span>
             </Link>
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-medium">

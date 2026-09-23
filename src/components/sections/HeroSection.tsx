@@ -31,8 +31,8 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
       <div className="absolute inset-0 pointer-events-none bg-dotted-theme opacity-30" />
 
       {/* Ambient Glow Blobs in Purple/Indigo */}
-      <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#857df3]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#9d97f0]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#6a57fa]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#8777ff]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -43,8 +43,8 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
           <div className="lg:col-span-6 space-y-6">
             
             {/* Top Eyebrow Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#857df3]/10 text-[#857df3] border border-[#857df3]/30 text-xs font-black uppercase tracking-widest shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-[#857df3]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/30 text-xs font-black uppercase tracking-widest shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-[#6a57fa]" />
               INTELLIGENT DIGITAL STUDIO
             </div>
 
@@ -63,10 +63,10 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
               <a
                 href="#services"
                 data-cursor="hover"
-                className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#857df3] hover:text-[#9d97f0] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#6a57fa] hover:text-[#8777ff] transition-colors"
               >
                 <span>TAKE A PRODUCT TOUR</span>
-                <ChevronRight className="w-4 h-4 text-[#857df3]" />
+                <ChevronRight className="w-4 h-4 text-[#6a57fa]" />
               </a>
             </div>
 
@@ -79,12 +79,12 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="What's your business email?"
                   required
-                  className="flex-1 px-4 py-3.5 rounded-xl bg-[var(--surface)] border border-[var(--border)] text-xs font-bold text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:border-[#857df3] transition-colors shadow-sm"
+                  className="flex-1 px-4 py-3.5 rounded-xl bg-[var(--surface)] border border-[var(--border)] text-xs font-bold text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:border-[#6a57fa] transition-colors shadow-sm"
                 />
                 <button
                   type="submit"
                   data-cursor="hover"
-                  className="px-8 py-3.5 rounded-xl bg-[#857df3] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:bg-[#7269e8] transition-all shrink-0 flex items-center justify-center gap-2"
+                  className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:bg-[#5844f7] transition-all shrink-0 flex items-center justify-center gap-2"
                 >
                   {submitted ? (
                     <>
@@ -103,7 +103,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                   type="checkbox"
                   checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}
-                  className="mt-0.5 rounded border-[var(--border)] text-[#857df3] focus:ring-0 accent-[#857df3]"
+                  className="mt-0.5 rounded border-[var(--border)] text-[#6a57fa] focus:ring-0 accent-[#6a57fa]"
                 />
                 <span className="text-[11px] text-[var(--text-secondary)] font-medium leading-tight">
                   I consent to receiving project proposals and updates from AiKodX. I can unsubscribe any time.
@@ -124,15 +124,15 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
               {/* Device Window Header */}
               <div className="flex items-center justify-between pb-4 mb-4 border-b border-[var(--border)]">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-[#857df3]" />
-                  <div className="w-3 h-3 rounded-full bg-[#9d97f0]" />
+                  <div className="w-3 h-3 rounded-full bg-[#6a57fa]" />
+                  <div className="w-3 h-3 rounded-full bg-[#8777ff]" />
                   <div className="w-3 h-3 rounded-full bg-[#38BDF8]" />
                   <span className="ml-2 text-xs font-extrabold text-[var(--text-primary)] uppercase tracking-wider font-display">
                     CARD VIEW
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="px-2.5 py-1 rounded-full bg-[#857df3]/10 text-[10px] font-bold text-[#857df3] border border-[#857df3]/30">
+                  <span className="px-2.5 py-1 rounded-full bg-[#6a57fa]/10 text-[10px] font-bold text-[#6a57fa] border border-[#6a57fa]/30">
                     ● System Active
                   </span>
                 </div>
@@ -143,13 +143,13 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                 
                 {/* Physical Card Preview */}
                 <div className="sm:col-span-5 p-4 rounded-xl bg-gradient-to-br from-[#1b173c] to-[#0c0a1f] border border-white/10 text-white flex flex-col justify-between h-44 shadow-md relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#857df3]/30 rounded-full blur-2xl group-hover:scale-125 transition-transform" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#6a57fa]/30 rounded-full blur-2xl group-hover:scale-125 transition-transform" />
                   
                   <div className="flex items-center justify-between relative z-10">
-                    <span className="text-xs font-black font-display tracking-widest text-[#9d97f0]">
+                    <span className="text-xs font-black font-display tracking-widest text-[#8777ff]">
                       KODX PHYSICAL
                     </span>
-                    <CreditCard className="w-5 h-5 text-[#9d97f0]" />
+                    <CreditCard className="w-5 h-5 text-[#8777ff]" />
                   </div>
 
                   <div className="space-y-1 relative z-10">
@@ -161,7 +161,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                         <div className="text-[9px] uppercase text-gray-400 font-bold">Studio Partner</div>
                         <div className="text-xs font-bold text-white">Alex Barker</div>
                       </div>
-                      <span className="text-xs font-extrabold italic text-[#9d97f0]">VISA</span>
+                      <span className="text-xs font-extrabold italic text-[#8777ff]">VISA</span>
                     </div>
                   </div>
                 </div>
@@ -170,26 +170,26 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                 <div className="sm:col-span-7 p-4 rounded-xl bg-[var(--surface-secondary)] border border-[var(--border)] flex flex-col justify-between">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-xs font-bold text-[var(--text-primary)]">Current Month Spend</span>
-                    <span className="text-xs font-extrabold text-[#857df3] font-display">$727.50 AUD</span>
+                    <span className="text-xs font-extrabold text-[#6a57fa] font-display">$727.50 AUD</span>
                   </div>
 
                   <div className="space-y-2 text-[11px]">
                     <div className="flex justify-between text-[var(--text-secondary)] font-medium">
                       <span>Monthly</span>
                       <span className="text-[var(--text-primary)] font-bold">$27.50 AUD / $2,000.00</span>
-                      <span className="text-[#857df3] font-bold">38.1%</span>
+                      <span className="text-[#6a57fa] font-bold">38.1%</span>
                     </div>
                     <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
-                      <div className="bg-[#857df3] h-full w-[38.1%]" />
+                      <div className="bg-[#6a57fa] h-full w-[38.1%]" />
                     </div>
 
                     <div className="flex justify-between text-[var(--text-secondary)] font-medium pt-1">
                       <span>Weekly</span>
                       <span className="text-[var(--text-primary)] font-bold">$307.50 AUD / $500</span>
-                      <span className="text-[#9d97f0] font-bold">61.5%</span>
+                      <span className="text-[#8777ff] font-bold">61.5%</span>
                     </div>
                     <div className="w-full bg-[var(--bg)] h-2 rounded-full overflow-hidden border border-[var(--border)]">
-                      <div className="bg-[#9d97f0] h-full w-[61.5%]" />
+                      <div className="bg-[#8777ff] h-full w-[61.5%]" />
                     </div>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                 </div>
                 <div className="flex items-center justify-between text-xs py-1 border-b border-[var(--border)]">
                   <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded bg-[#857df3]/20 text-[#857df3] flex items-center justify-center font-bold text-[10px]">
+                    <div className="w-6 h-6 rounded bg-[#6a57fa]/20 text-[#6a57fa] flex items-center justify-center font-bold text-[10px]">
                       S
                     </div>
                     <span className="font-bold text-[var(--text-primary)]">Slack Technologies</span>
@@ -212,7 +212,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                 </div>
                 <div className="flex items-center justify-between text-xs py-1">
                   <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded bg-[#857df3]/20 text-[#857df3] flex items-center justify-center font-bold text-[10px]">
+                    <div className="w-6 h-6 rounded bg-[#6a57fa]/20 text-[#6a57fa] flex items-center justify-center font-bold text-[10px]">
                       J
                     </div>
                     <span className="font-bold text-[var(--text-primary)]">Jamba Cafe Cairns</span>
@@ -226,7 +226,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
             {/* Floating Cookie / Notification Toast Overlay */}
             <div className="absolute bottom-[-15px] right-[-10px] sm:right-[-20px] max-w-xs p-4 rounded-2xl bg-[#14152b] border border-white/10 shadow-xl z-20 space-y-2 text-white animate-bounce-subtle">
               <div className="flex items-start gap-2.5">
-                <div className="p-1.5 rounded-lg bg-[#857df3] text-white shrink-0 mt-0.5">
+                <div className="p-1.5 rounded-lg bg-[#6a57fa] text-white shrink-0 mt-0.5">
                   <Bell className="w-4 h-4" />
                 </div>
                 <div>
@@ -239,7 +239,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                 </div>
               </div>
               <div className="pt-1 flex justify-end">
-                <span className="px-3 py-1 rounded-lg bg-[#857df3] text-white text-[10px] font-black uppercase border border-white/20 shadow-sm">
+                <span className="px-3 py-1 rounded-lg bg-[#6a57fa] text-white text-[10px] font-black uppercase border border-white/20 shadow-sm">
                   APPROVED (2M AGO)
                 </span>
               </div>

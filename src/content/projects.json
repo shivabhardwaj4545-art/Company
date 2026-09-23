@@ -1,47 +1,47 @@
 [
   {
     "slug": "ezrestero",
-    "title": "EzRestero — Smart Restaurant & Order Management System",
+    "title": "EzRestero — Scan. Order. Enjoy. AI-Powered Restaurant Platform",
     "client": "EzRestero Hospitality Group",
-    "category": "Web Application & Order Automation",
+    "category": "AI-Powered QR Restaurant Platform",
     "year": "2026",
     "cover": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Next-gen POS, QR menu ordering, and kitchen workflow platform for modern restaurants and dining chains.",
-    "challenge": "Traditional POS systems suffered from slow order routing, kitchen delays, and poor table QR ordering experiences.",
-    "solution": "Engineered a real-time order sync portal with sub-50ms table checkout and automated kitchen display routing.",
+    "summary": "The complete QR-based restaurant ordering platform. Customers scan, browse, order, and track — all without downloading an app. You get real-time orders, AI insights, and powerful analytics.",
+    "challenge": "Traditional POS systems suffered from slow order routing, kitchen delays, high app download barriers for customers, and poor table QR ordering experiences.",
+    "solution": "AiKodX engineered a zero-app web platform with sub-50ms table checkout, AI-powered menu insights, live KDS kitchen routing, and an instant Admin Dashboard.",
     "results": [
       { "metric": "+240%", "label": "Table Turnover" },
-      { "metric": "0.3s", "label": "Order Processing" },
-      { "metric": "$8M+", "label": "Volume Managed" }
+      { "metric": "< 50ms", "label": "Order Sync Speed" },
+      { "metric": "0 App", "label": "Downloads Required" }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
     ],
-    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets", "Node.js"],
-    "liveUrl": "https://ezrestero.com"
+    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets", "Node.js", "AI Analytics"],
+    "liveUrl": "https://ezrestro.online/"
   },
   {
     "slug": "msg-platform",
-    "title": "MSG — Unified Messaging & Client Communication Platform",
-    "client": "MSG Enterprise Systems",
-    "category": "Omnichannel Communications & Web App",
+    "title": "MSG — Premium Ladies Suits, Sarees & Ethnic Wear Store",
+    "client": "MSG Ethnic Fashion House",
+    "category": "D2C E-Commerce & Brand Strategy",
     "year": "2026",
-    "cover": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    "summary": "High-speed unified inbox and broadcast engine connecting WhatsApp, SMS, and email for instant customer support.",
-    "challenge": "Fragmented customer chats led to dropped leads and slow response times across multiple channels.",
-    "solution": "Unified all inbound communication into a single realtime dashboard powered by Next.js and socket gateways.",
+    "cover": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80",
+    "summary": "High-converting D2C e-commerce platform for premium ladies suits, designer silk sarees, dupattas, and custom tailored ethnic wear.",
+    "challenge": "MSG required an ultra-fast, mobile-first e-commerce store with high-res saree zoom viewports, custom stitching option selectors, and 1-click WhatsApp checkout.",
+    "solution": "AiKodX engineered a Next.js headless storefront with sub-50ms page transitions, custom fabric filters, interactive size guides, and integrated WhatsApp order routing.",
     "results": [
-      { "metric": "99.8%", "label": "Lead Response Rate" },
-      { "metric": "1.5s", "label": "Avg Response Time" },
-      { "metric": "50,000+", "label": "Daily Messages" }
+      { "metric": "+210%", "label": "Mobile Conversion" },
+      { "metric": "< 0.5s", "label": "High-Res Image Load" },
+      { "metric": "25,000+", "label": "Suits & Sarees Shipped" }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1200&q=80"
     ],
-    "techStack": ["Next.js", "WhatsApp API", "Tailwind CSS", "Redis", "TypeScript"],
-    "liveUrl": "https://msg.io"
+    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Shopify Storefront API", "WhatsApp Checkout"],
+    "liveUrl": "https://msg-53do.onrender.com/"
   },
   {
     "slug": "dropizi-courier",

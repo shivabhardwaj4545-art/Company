@@ -24,15 +24,18 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="py-24 border-t border-[var(--border)] overflow-hidden bg-noise">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <section className="relative py-24 border-t border-[var(--border)] overflow-hidden bg-[#6a57fa]/10">
+      {/* Background Radial Glow in #6a57fa */}
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(106,87,250,0.25),transparent_70%)]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <span className="text-xs font-black tracking-widest text-[#857df3] uppercase flex items-center gap-2 mb-1">
-              <MessageSquareQuote className="w-4 h-4 text-[#857df3]" /> SOCIAL PROOF &amp; RECEIPTS
+            <span className="text-xs font-black tracking-widest text-[#6a57fa] uppercase flex items-center gap-2 mb-1">
+              <MessageSquareQuote className="w-4 h-4 text-[#6a57fa]" /> SOCIAL PROOF &amp; RECEIPTS
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-              Straight From the DMs<span className="text-[#857df3]">.</span>
+              Straight From the DMs<span className="text-[#6a57fa]">.</span>
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md">
@@ -42,10 +45,10 @@ export function TestimonialsSection() {
       </div>
 
       {/* Auto-Scrolling Infinite Review Track (No Scrollbar) */}
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden z-10">
         {/* Left & Right Gradient Fades */}
-        <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[var(--bg)] to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[var(--bg)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#6a57fa]/20 via-[#6a57fa]/10 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#6a57fa]/20 via-[#6a57fa]/10 to-transparent z-10 pointer-events-none" />
 
         <div className="animate-marquee flex gap-6 no-scrollbar py-4 px-4 select-none">
           {marqueeTestimonials.map((t, idx) => (
