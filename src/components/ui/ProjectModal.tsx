@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, ArrowLeft, CheckCircle2, Sparkles, Send } from 'lucide-react';
 
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
+  initialEmail?: string;
 }
 
 export interface CountryCode {
@@ -59,7 +60,7 @@ export const COUNTRY_CODES: CountryCode[] = [
   { code: 'BR', name: 'Brazil', dialCode: '+55', flag: '🇧🇷', placeholder: '11 91234 5678', length: 11 }
 ];
 
-export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
+export function ProjectModal({ isOpen, onClose, initialEmail }: ProjectModalProps) {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -69,11 +70,17 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
+    email: initialEmail || '',
     projectType: 'web-development',
     budgetRange: '$5k - $10k',
     details: '',
   });
+
+  useEffect(() => {
+    if (initialEmail && isOpen) {
+      setFormData((prev) => ({ ...prev, email: initialEmail }));
+    }
+  }, [initialEmail, isOpen]);
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 

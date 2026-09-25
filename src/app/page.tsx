@@ -16,9 +16,18 @@ import { ProjectModal } from '@/components/ui/ProjectModal';
 
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [initialEmail, setInitialEmail] = useState('');
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleOpenModal = (email?: string) => {
+    if (typeof email === 'string' && email.trim()) {
+      setInitialEmail(email.trim());
+    }
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text-primary)] relative">
@@ -56,7 +65,7 @@ export default function HomePage() {
       <Footer onOpenModal={handleOpenModal} />
 
       {/* 4-Step Project Inquiry Lead Modal */}
-      <ProjectModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <ProjectModal isOpen={isModalOpen} onClose={handleCloseModal} initialEmail={initialEmail} />
     </main>
   );
 }

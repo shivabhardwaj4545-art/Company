@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Sparkles, ChevronRight, Check, Rocket, CheckCircle2, TrendingUp, ArrowRight } from 'lucide-react';
 
 interface HeroSectionProps {
-  onOpenModal: () => void;
+  onOpenModal: (initialEmail?: string) => void;
 }
 
 export function HeroSection({ onOpenModal }: HeroSectionProps) {
@@ -18,8 +18,8 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
-        onOpenModal();
-      }, 1000);
+        onOpenModal(email);
+      }, 600);
     }
   };
 
@@ -208,7 +208,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
 
                 <button
                   type="button"
-                  onClick={onOpenModal}
+                  onClick={() => onOpenModal()}
                   className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
                 >
                   <span>Get started</span>
