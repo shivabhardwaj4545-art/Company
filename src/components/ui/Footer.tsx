@@ -21,7 +21,7 @@ export function Footer({ onOpenModal }: FooterProps) {
               READY TO SCALE YOUR BRAND?
             </span>
             <h2 className="text-4xl sm:text-6xl font-black font-display text-[var(--text-primary)] leading-tight mb-6 uppercase">
-              Let's build something extraordinary together<span className="text-[#6a57fa]">.</span>
+              Let's build something extraordinary together
             </h2>
             <p className="text-sm sm:text-lg text-[var(--text-secondary)] mb-8 max-w-xl mx-auto font-medium">
               Book a call or complete our quick 4-step project inquiry to get a detailed proposal &amp; architecture plan within 24 hours.

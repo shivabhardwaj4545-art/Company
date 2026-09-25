@@ -34,7 +34,7 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
           <Trophy className="w-4 h-4 text-[#6a57fa]" /> SELECTED WORK
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-[var(--text-primary)] uppercase tracking-tight leading-none">
-          BUILT BY US<span className="text-[#6a57fa]">.</span>
+          BUILT BY US
         </h2>
         <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium max-w-xl">
           A few of the client brands and applications we design, build, and automate for.

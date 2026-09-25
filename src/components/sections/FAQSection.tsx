@@ -22,7 +22,7 @@ export function FAQSection() {
           <HelpCircle className="w-4 h-4 text-[#6a57fa]" /> GOT QUESTIONS?
         </span>
         <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-          Frequently Asked Queries<span className="text-[#6a57fa]">.</span>
+          Frequently Asked Queries
         </h2>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] mt-3 max-w-xl mx-auto">
           Everything you need to know about our process, timelines, deliverables, and partnership model.

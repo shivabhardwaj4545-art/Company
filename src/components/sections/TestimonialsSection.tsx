@@ -35,7 +35,7 @@ export function TestimonialsSection() {
               <MessageSquareQuote className="w-4 h-4 text-[#6a57fa]" /> SOCIAL PROOF &amp; RECEIPTS
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-              Straight From the DMs<span className="text-[#6a57fa]">.</span>
+              Straight From the DMs
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md">

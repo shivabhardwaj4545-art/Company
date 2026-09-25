@@ -30,7 +30,7 @@ export function WhatWeDoSection() {
             THREE THINGS. DONE RIGHT.
           </span>
           <h2 className="text-4xl sm:text-6xl font-black font-display text-[var(--text-primary)] uppercase tracking-tight">
-            WHAT WE DO<span className="text-[#6a57fa]">.</span>
+            WHAT WE DO
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] font-medium max-w-md">

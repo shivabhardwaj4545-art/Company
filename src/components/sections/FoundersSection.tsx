@@ -16,7 +16,7 @@ export function FoundersSection() {
             <Users className="w-4 h-4 text-[#6a57fa]" /> LEADERSHIP &amp; VISION
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-            Meet the Founders<span className="text-[#6a57fa]">.</span>
+            Meet the Founders
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md">

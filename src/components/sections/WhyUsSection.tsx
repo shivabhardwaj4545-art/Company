@@ -34,7 +34,7 @@ export function WhyUsSection() {
             <Zap className="w-4 h-4 text-[#6a57fa]" /> WHY CHOOSE AIKODX
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-[var(--text-primary)]">
-            Built Different<span className="text-[#6a57fa]">.</span>
+            Built Different
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md">

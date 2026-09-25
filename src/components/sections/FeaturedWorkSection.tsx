@@ -21,7 +21,7 @@ export function FeaturedWorkSection() {
           <Trophy className="w-4 h-4 text-[#6a57fa]" /> FLAGSHIP PLATFORM SPOTLIGHT
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-[var(--text-primary)] uppercase tracking-tight leading-none">
-          OUR FEATURED WORK<span className="text-[#6a57fa]">.</span>
+          OUR FEATURED WORK
         </h2>
         <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium max-w-xl">
           An in-depth showcase of our flagship AI hospitality platform built for scale.

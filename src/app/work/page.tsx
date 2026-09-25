@@ -27,7 +27,7 @@ export default function AllProjectsPage() {
           <Trophy className="w-4 h-4 text-[#6a57fa]" /> COMPLETE PORTFOLIO
         </span>
         <h1 className="text-4xl sm:text-6xl font-black font-display text-[var(--text-primary)] uppercase tracking-tight leading-tight">
-          All Projects &amp; Case Studies<span className="text-[#6a57fa]">.</span>
+          All Projects &amp; Case Studies
         </h1>
         <p className="text-base sm:text-lg text-[var(--text-secondary)] font-medium max-w-2xl leading-relaxed">
           Explore our full suite of custom AI web applications, e-commerce engines, restaurant management systems, and mobility platforms engineered by AiKodX.
