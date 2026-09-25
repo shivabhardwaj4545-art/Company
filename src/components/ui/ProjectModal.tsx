@@ -9,12 +9,24 @@ interface ProjectModalProps {
   onClose: () => void;
 }
 
+const COUNTRY_CODES = [
+  { code: '+91', country: 'IN', flag: '🇮🇳', name: 'India', digits: 10 },
+  { code: '+1', country: 'US', flag: '🇺🇸', name: 'United States', digits: 10 },
+  { code: '+44', country: 'GB', flag: '🇬🇧', name: 'United Kingdom', digits: 11 },
+  { code: '+971', country: 'AE', flag: '🇦🇪', name: 'UAE', digits: 9 },
+  { code: '+1', country: 'CA', flag: '🇨🇦', name: 'Canada', digits: 10 },
+  { code: '+61', country: 'AU', flag: '🇦🇺', name: 'Australia', digits: 9 },
+  { code: '+65', country: 'SG', flag: '🇸🇬', name: 'Singapore', digits: 8 },
+  { code: '+49', country: 'DE', flag: '🇩🇪', name: 'Germany', digits: 11 },
+];
+
 export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   // Form State
+  const [selectedCountry, setSelectedCountry] = useState(COUNTRY_CODES[0]); // Default India +91
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -26,10 +38,23 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Restrict strictly to numeric digits only
+    const digitsOnly = e.target.value.replace(/\D/g, '');
+    // Limit length strictly to country max digits
+    const trimmed = digitsOnly.slice(0, selectedCountry.digits);
+    setFormData({ ...formData, phone: trimmed });
+    if (errors.phone) setErrors({ ...errors, phone: '' });
+  };
+
   const handleNext = () => {
     if (step === 1) {
       if (!formData.name.trim()) {
-        setErrors({ name: 'Please enter your name' });
+        setErrors({ name: 'Please enter your full name' });
+        return;
+      }
+      if (!formData.email.trim() || !formData.email.includes('@')) {
+        setErrors({ email: 'Please enter a valid email address' });
         return;
       }
       setErrors({});
@@ -37,7 +62,13 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
 
     if (step === 2) {
       if (!formData.phone.trim()) {
-        setErrors({ phone: 'Please enter a valid phone number' });
+        setErrors({ phone: 'Please enter your phone / WhatsApp number' });
+        return;
+      }
+      if (formData.phone.length < selectedCountry.digits) {
+        setErrors({
+          phone: `Please enter a valid ${selectedCountry.digits}-digit phone number for ${selectedCountry.name}`,
+        });
         return;
       }
       setErrors({});
@@ -59,10 +90,15 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const handleSubmit = async () => {
     setLoading(true);
     try {
+      const fullPhone = `${selectedCountry.code} ${formData.phone}`;
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          countryCode: selectedCountry.code,
+          fullPhone,
+        }),
       });
 
       const data = await res.json();
@@ -79,6 +115,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const resetForm = () => {
     setStep(1);
     setSubmitted(false);
+    setSelectedCountry(COUNTRY_CODES[0]);
     setFormData({
       name: '',
       phone: '',
@@ -87,6 +124,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
       budgetRange: '$5k - $10k',
       details: '',
     });
+    setErrors({});
     onClose();
   };
 
@@ -120,8 +158,8 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                 <Sparkles className="w-3.5 h-3.5" /> Start a Project — Step {step} of 4
               </div>
               <h3 className="text-2xl font-bold font-display text-[var(--text-primary)]">
-                {step === 1 && "What's your name?"}
-                {step === 2 && 'How can we reach you?'}
+                {step === 1 && "What's your contact info?"}
+                {step === 2 && 'Phone / WhatsApp Number'}
                 {step === 3 && 'What type of project is this?'}
                 {step === 4 && 'Project details & budget'}
               </h3>
@@ -168,42 +206,88 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                         </label>
                         <input
                           type="text"
-                          placeholder="e.g. Sarah Jenkins"
+                          placeholder="e.g. Rohan Mehta"
                           value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          onChange={(e) => {
+                            setFormData({ ...formData, name: e.target.value });
+                            if (errors.name) setErrors({ ...errors, name: '' });
+                          }}
                           className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
                         />
                         {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1 uppercase tracking-wider">
-                          Email Address (Optional)
+                          Email Address *
                         </label>
                         <input
                           type="email"
-                          placeholder="sarah@company.com"
+                          placeholder="rohan@company.com"
                           value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          onChange={(e) => {
+                            setFormData({ ...formData, email: e.target.value });
+                            if (errors.email) setErrors({ ...errors, email: '' });
+                          }}
                           className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
                         />
+                        {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
                       </div>
                     </div>
                   )}
 
-                  {/* Step 2: Phone */}
+                  {/* Step 2: Phone with Country Code Selector & Digit Limit */}
                   {step === 2 && (
                     <div className="space-y-4">
                       <div>
                         <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1 uppercase tracking-wider">
                           Phone / WhatsApp Number *
                         </label>
-                        <input
-                          type="tel"
-                          placeholder="+1 (555) 000-0000"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
-                        />
+                        <div className="flex gap-2.5">
+                          {/* Country Code Dropdown */}
+                          <select
+                            value={selectedCountry.code + '_' + selectedCountry.country}
+                            onChange={(e) => {
+                              const [code, country] = e.target.value.split('_');
+                              const found = COUNTRY_CODES.find(
+                                (c) => c.code === code && c.country === country
+                              );
+                              if (found) {
+                                setSelectedCountry(found);
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  phone: prev.phone.slice(0, found.digits),
+                                }));
+                              }
+                            }}
+                            className="px-3 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] font-semibold text-xs focus:outline-none focus:border-[var(--accent)] cursor-pointer shrink-0"
+                          >
+                            {COUNTRY_CODES.map((item, idx) => (
+                              <option key={idx} value={item.code + '_' + item.country}>
+                                {item.flag} {item.code} ({item.country})
+                              </option>
+                            ))}
+                          </select>
+
+                          {/* Numeric Only Input with Length Restriction */}
+                          <input
+                            type="tel"
+                            placeholder={`e.g. ${'9'.repeat(selectedCountry.digits)}`}
+                            value={formData.phone}
+                            maxLength={selectedCountry.digits}
+                            onChange={handlePhoneChange}
+                            className="flex-1 px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] font-semibold focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] tracking-wider"
+                          />
+                        </div>
+
+                        {/* Helper info & validation message */}
+                        <div className="flex items-center justify-between mt-1.5 text-[11px] text-[var(--text-secondary)]">
+                          <span>
+                            {selectedCountry.flag} {selectedCountry.name} ({selectedCountry.code}) — Exactly {selectedCountry.digits} digits required
+                          </span>
+                          <span className="font-bold text-[var(--accent)]">
+                            {formData.phone.length} / {selectedCountry.digits}
+                          </span>
+                        </div>
                         {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
                       </div>
                     </div>
@@ -296,7 +380,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                 className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[var(--accent)] text-white text-sm font-semibold hover:opacity-90 shadow-lg shadow-[var(--accent-glow)] transition-all disabled:opacity-50"
               >
                 {loading ? (
-                  'Submitting...'
+                  'Sending & Notifying...'
                 ) : step === 4 ? (
                   <>
                     Submit Project Request <Send className="w-4 h-4" />
@@ -320,10 +404,10 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
               <CheckCircle2 className="w-8 h-8" />
             </motion.div>
             <h3 className="text-2xl font-bold text-[var(--text-primary)] font-display mb-2">
-              Project Request Sent!
+              Project Request Received &amp; Confirmed!
             </h3>
             <p className="text-sm text-[var(--text-secondary)] max-w-sm mx-auto mb-6">
-              Thanks {formData.name}, we received your project details. Our team will review and reply via WhatsApp/Email within 4 hours.
+              Thank you {formData.name}! Your request has been recorded and an email notification has been sent. Our team will reach out to <strong>{selectedCountry.code} {formData.phone}</strong> shortly.
             </p>
             <button
               onClick={resetForm}
