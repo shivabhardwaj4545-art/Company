@@ -118,8 +118,8 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
             {/* Background Ambient Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-[#6a57fa]/20 blur-3xl rounded-full pointer-events-none" />
 
-            {/* Clean Rounded Showcase Image with rounded-3xl border radius */}
-            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/20 hover:scale-[1.01] transition-transform duration-500">
+            {/* Clean Rounded Showcase Image */}
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl hover:scale-[1.01] transition-transform duration-500">
               {/* eslint-disable-next-html-extension */}
               <img
                 src="/hero-showcase.png"
