@@ -44,7 +44,6 @@ export function Header({ onOpenModal }: HeaderProps) {
             <span className="font-display font-black text-2xl sm:text-3xl tracking-tight">
               <span className="text-[var(--text-primary)]">ai</span>
               <span className="text-[#6a57fa]">KODX</span>
-              <span className="text-[#6a57fa]">.</span>
             </span>
             <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase -mt-1 font-bold">
               smarter by design

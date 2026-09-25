@@ -46,7 +46,6 @@ export function Footer({ onOpenModal }: FooterProps) {
               <span className="font-display font-black text-2xl tracking-tight">
                 <span className="text-[var(--text-primary)]">ai</span>
                 <span className="text-[#6a57fa]">KODX</span>
-                <span className="text-[#6a57fa]">.</span>
               </span>
               <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase font-bold -mt-1">
                 smarter by design
