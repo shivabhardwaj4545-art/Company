@@ -23,6 +23,14 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
     }
   };
 
+  const scrollToServices = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById('services');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section
       className="relative min-h-screen flex flex-col justify-center pt-36 sm:pt-40 pb-24 px-4 sm:px-6 lg:px-12 overflow-visible border-b border-[var(--border)] bg-[var(--bg)]"
@@ -59,8 +67,9 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
             <div className="pt-1">
               <a
                 href="#services"
+                onClick={scrollToServices}
                 data-cursor="hover"
-                className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#6a57fa] hover:text-[#8777ff] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#6a57fa] hover:text-[#8777ff] transition-colors cursor-pointer"
               >
                 <span>TAKE A PRODUCT TOUR</span>
                 <ChevronRight className="w-4 h-4 text-[#6a57fa]" />
@@ -231,13 +240,14 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                   <p className="text-[10px] text-slate-600 font-medium leading-relaxed">
                     Let's turn your ideas into action. Manage projects, track progress and achieve more — together.
                   </p>
-                  <button
-                    type="button"
-                    onClick={onOpenModal}
-                    className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
+                  <a
+                    href="#services"
+                    onClick={scrollToServices}
+                    data-cursor="hover"
+                    className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20 cursor-pointer"
                   >
                     <span>Take a tour →</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
