@@ -112,143 +112,139 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
           {/* ========================================================================= */}
           {/* RIGHT COLUMN: MULTI-LAYERED OVERLAPPING INTERACTIVE UI SHOWCASE           */}
           {/* ========================================================================= */}
-          <div className="lg:col-span-6 relative pt-6 lg:pt-0">
+          <div className="lg:col-span-6 relative pt-8 lg:pt-0">
             {/* Background Ambient Radial Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 bg-[#6a57fa]/20 blur-3xl rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#6a57fa]/20 blur-3xl rounded-full pointer-events-none" />
 
-            {/* MAIN BASE CONTAINER */}
-            <div className="relative z-10 p-2.5 sm:p-3.5 rounded-[32px] bg-white/40 dark:bg-black/30 border border-white/60 shadow-2xl backdrop-blur-md">
-              
-              {/* BASE FOUNDERS PHOTO CONTAINER */}
-              <div className="relative rounded-[24px] overflow-hidden aspect-[4/3] w-full shadow-inner bg-neutral-950">
-                {/* eslint-disable-next-html-extension */}
-                <img
-                  src="/hero-founders.jpg"
-                  alt="aiKODX Studio Founders Collaborating on Project"
-                  className="w-full h-full object-cover block filter brightness-[0.97] contrast-[1.02]"
-                />
-                {/* Subtle Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
+            {/* BASE FOUNDERS PHOTO CONTAINER (NO OUTER FRAME BORDER) */}
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] w-full shadow-2xl bg-neutral-950 z-10 border border-black/10">
+              {/* eslint-disable-next-html-extension */}
+              <img
+                src="/hero-founders.jpg"
+                alt="aiKODX Studio Founders Collaborating on Project"
+                className="w-full h-full object-cover block filter brightness-[0.97] contrast-[1.02]"
+              />
+              {/* Subtle Vignette Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
+            </div>
+
+            {/* ===================================================================== */}
+            {/* OVERLAPPING FLOATING CARD 1: TOP PILL (Productivity Metric)            */}
+            {/* ===================================================================== */}
+            <div className="absolute -top-5 sm:-top-7 left-4 sm:left-10 z-30 transition-transform duration-300 hover:scale-105">
+              <div className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-gradient-to-r from-[#6a57fa] via-[#7463fa] to-[#5844f7] text-white text-xs sm:text-sm font-extrabold shadow-xl shadow-[#6a57fa]/40 border border-white/30 backdrop-blur-md">
+                <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                  <TrendingUp className="w-3.5 h-3.5 text-white" />
+                </div>
+                <span>Your team's productivity is up by <strong className="text-amber-300 font-black">42%</strong> this week</span>
               </div>
+            </div>
 
-              {/* ===================================================================== */}
-              {/* OVERLAPPING FLOATING CARD 1: TOP PILL (Productivity Metric)            */}
-              {/* ===================================================================== */}
-              <div className="absolute -top-3 sm:-top-5 left-4 sm:left-8 z-30 transition-transform duration-300 hover:scale-105">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#6a57fa] via-[#7463fa] to-[#5844f7] text-white text-xs sm:text-sm font-extrabold shadow-lg shadow-[#6a57fa]/40 border border-white/30 backdrop-blur-md">
-                  <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                    <TrendingUp className="w-3.5 h-3.5 text-white" />
+            {/* ===================================================================== */}
+            {/* OVERLAPPING FLOATING CARD 2: TOP LEFT NOTIFICATION (ProjectPlus)      */}
+            {/* ===================================================================== */}
+            <div className="absolute top-6 sm:top-8 -left-3 sm:-left-10 z-30 max-w-[260px] sm:max-w-[310px] transition-all duration-300 hover:-translate-y-1">
+              <div className="p-3.5 sm:p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xl shadow-slate-900/20 backdrop-blur-xl">
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#6a57fa] flex items-center justify-center text-white font-black text-sm shrink-0 shadow-md shadow-[#6a57fa]/30">
+                    P
                   </div>
-                  <span>Your team's productivity is up by <strong className="text-amber-300 font-black">42%</strong> this week</span>
+                  <div className="space-y-1">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-black text-slate-900">ProjectPlus</span>
+                    </div>
+                    <p className="text-[11px] font-extrabold text-slate-800 leading-snug">
+                      Project 'Website Redesign' is on track! 🎉
+                    </p>
+                    <p className="text-[10px] text-slate-500 font-medium">
+                      All tasks are completed. Great work team! →
+                    </p>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* ===================================================================== */}
-              {/* OVERLAPPING FLOATING CARD 2: TOP LEFT NOTIFICATION (ProjectPlus)      */}
-              {/* ===================================================================== */}
-              <div className="absolute top-8 sm:top-10 left-3 sm:left-6 z-20 max-w-[260px] sm:max-w-[310px] transition-all duration-300 hover:-translate-y-1">
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/80 shadow-2xl shadow-slate-900/15 backdrop-blur-xl">
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-xl bg-[#6a57fa] flex items-center justify-center text-white font-black text-xs shrink-0 shadow-md shadow-[#6a57fa]/30">
+            {/* ===================================================================== */}
+            {/* OVERLAPPING FLOATING CARD 3: BOTTOM LEFT (Get Started Onboarding)     */}
+            {/* ===================================================================== */}
+            <div className="absolute -bottom-6 sm:-bottom-10 -left-4 sm:-left-12 z-30 max-w-[250px] sm:max-w-[300px] transition-all duration-300 hover:-translate-y-1.5">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xl shadow-slate-900/25 space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-full bg-[#6a57fa]/10 flex items-center justify-center text-[#6a57fa]">
+                    <Rocket className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-slate-900 leading-none">Get started</h4>
+                    <p className="text-[9px] text-slate-500 font-medium mt-0.5">
+                      Complete these steps to set up your workspace.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Checklist */}
+                <div className="space-y-1.5 text-[10px] font-bold">
+                  <div className="flex items-center gap-2 text-slate-400 line-through">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#6a57fa] shrink-0 fill-[#6a57fa]" />
+                    <span>Create your project</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-400 line-through">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#6a57fa] shrink-0 fill-[#6a57fa]" />
+                    <span>Invite your team</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/20 font-extrabold">
+                    <div className="w-3 h-3 rounded-full border border-[#6a57fa] shrink-0" />
+                    <span>Add your first task</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={onOpenModal}
+                  className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
+                >
+                  <span>Get started</span>
+                  <ArrowRight className="w-3 h-3" />
+                </button>
+              </div>
+            </div>
+
+            {/* ===================================================================== */}
+            {/* OVERLAPPING FLOATING CARD 4: BOTTOM RIGHT (Welcome to ProjectPlus)    */}
+            {/* ===================================================================== */}
+            <div className="absolute -bottom-8 sm:-bottom-12 -right-3 sm:-right-8 z-30 max-w-[250px] sm:max-w-[290px] transition-all duration-300 hover:-translate-y-1.5">
+              <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-2xl shadow-slate-900/30">
+                {/* Purple Banner Header */}
+                <div className="p-3.5 bg-gradient-to-r from-[#6a57fa] to-[#5844f7] text-white relative">
+                  <button type="button" className="absolute top-2.5 right-2.5 text-white/70 hover:text-white text-xs">
+                    ✕
+                  </button>
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white font-black text-xs border border-white/30 shadow-md">
                       P
                     </div>
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-black text-slate-900">ProjectPlus</span>
-                      </div>
-                      <p className="text-[11px] font-extrabold text-slate-800 leading-snug">
-                        Project 'Website Redesign' is on track! 🎉
-                      </p>
-                      <p className="text-[10px] text-slate-500 font-medium">
-                        All tasks are completed. Great work team! →
-                      </p>
+                    <div>
+                      <div className="text-[9px] uppercase font-bold text-purple-200 tracking-wider">Welcome to</div>
+                      <div className="text-xs font-black font-display text-white leading-tight">ProjectPlus</div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* ===================================================================== */}
-              {/* OVERLAPPING FLOATING CARD 3: BOTTOM LEFT (Get Started Onboarding)     */}
-              {/* ===================================================================== */}
-              <div className="absolute -bottom-4 sm:-bottom-6 left-2 sm:left-4 z-30 max-w-[250px] sm:max-w-[290px] transition-all duration-300 hover:-translate-y-1.5">
-                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xl shadow-slate-900/20 space-y-3">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#6a57fa]/10 flex items-center justify-center text-[#6a57fa]">
-                      <Rocket className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h4 className="text-xs font-black text-slate-900 leading-none">Get started</h4>
-                      <p className="text-[9px] text-slate-500 font-medium mt-0.5">
-                        Complete these steps to set up your workspace.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Checklist */}
-                  <div className="space-y-1.5 text-[10px] font-bold">
-                    <div className="flex items-center gap-2 text-slate-400 line-through">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#6a57fa] shrink-0 fill-[#6a57fa]" />
-                      <span>Create your project</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-400 line-through">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#6a57fa] shrink-0 fill-[#6a57fa]" />
-                      <span>Invite your team</span>
-                    </div>
-                    <div className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/20 font-extrabold">
-                      <div className="w-3 h-3 rounded-full border border-[#6a57fa] shrink-0" />
-                      <span>Add your first task</span>
-                    </div>
-                  </div>
-
+                {/* Body Content */}
+                <div className="p-3.5 space-y-2.5">
+                  <p className="text-[10px] text-slate-600 font-medium leading-relaxed">
+                    Let's turn your ideas into action. Manage projects, track progress and achieve more — together.
+                  </p>
                   <button
                     type="button"
                     onClick={onOpenModal}
-                    className="w-full py-1.5 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
+                    className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
                   >
-                    <span>Get started</span>
-                    <ArrowRight className="w-3 h-3" />
+                    <span>Take a tour →</span>
                   </button>
                 </div>
               </div>
-
-              {/* ===================================================================== */}
-              {/* OVERLAPPING FLOATING CARD 4: BOTTOM RIGHT (Welcome to ProjectPlus)    */}
-              {/* ===================================================================== */}
-              <div className="absolute -bottom-5 sm:-bottom-8 right-2 sm:right-4 z-30 max-w-[250px] sm:max-w-[280px] transition-all duration-300 hover:-translate-y-1.5">
-                <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-2xl shadow-slate-900/25">
-                  {/* Purple Banner Header */}
-                  <div className="p-3.5 bg-gradient-to-r from-[#6a57fa] to-[#5844f7] text-white relative">
-                    <button type="button" className="absolute top-2.5 right-2.5 text-white/70 hover:text-white text-xs">
-                      ✕
-                    </button>
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white font-black text-xs border border-white/30 shadow-md">
-                        P
-                      </div>
-                      <div>
-                        <div className="text-[9px] uppercase font-bold text-purple-200 tracking-wider">Welcome to</div>
-                        <div className="text-xs font-black font-display text-white leading-tight">ProjectPlus</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Body Content */}
-                  <div className="p-3.5 space-y-2.5">
-                    <p className="text-[10px] text-slate-600 font-medium leading-relaxed">
-                      Let's turn your ideas into action. Manage projects, track progress and achieve more — together.
-                    </p>
-                    <button
-                      type="button"
-                      onClick={onOpenModal}
-                      className="w-full py-1.5 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
-                    >
-                      <span>Take a tour →</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
             </div>
+
           </div>
 
         </div>
