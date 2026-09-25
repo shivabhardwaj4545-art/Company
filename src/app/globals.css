@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #e6e8ec; /* Modern Cool Studio Gray Background */
-  --banner-bg: #e6e8ec;
+  --bg: #dce1ff; /* Soft Periwinkle Lavender Studio Background */
+  --banner-bg: #dce1ff;
   --surface: #ffffff; /* Clean white card surface */
-  --surface-secondary: #f2f4f7; /* Soft cool-gray card surface */
+  --surface-secondary: #e8ebff; /* Soft periwinkle card surface */
   --text-primary: #000000; /* Pure Black text */
-  --text-secondary: #475467; /* Dark slate charcoal body text */
-  --border: #d0d5dd; /* Clean studio gray border */
+  --text-secondary: #3b4566; /* Dark periwinkle slate body text */
+  --border: #b8c2ff; /* Soft studio border */
   --accent: #6a57fa; /* Primary Accent / Button Background */
   --accent-light: #8777ff; /* Soft Accent / Subtitle / Eyebrow Text */
   --accent-glow: rgba(106, 87, 250, 0.35);
