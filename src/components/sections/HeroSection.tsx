@@ -44,7 +44,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
             {/* Top Eyebrow Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/30 text-xs font-black uppercase tracking-widest shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-[#6a57fa]" />
-              INTELLIGENT DIGITAL STUDIO
+              INTELLIGENT DIGITAL AGENCY
             </div>
 
             {/* Main Headline */}

@@ -61,6 +61,7 @@ export interface FounderItem {
   initials: string;
   bio: string;
   avatar: string;
+  avatarStyle?: React.CSSProperties;
   socials: { twitter?: string; linkedin?: string; github?: string };
 }
 

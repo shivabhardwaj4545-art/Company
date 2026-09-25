@@ -33,13 +33,15 @@ export function FoundersSection() {
           >
             {/* Founder Avatar & Initials Badge */}
             <div className="relative shrink-0">
-              {/* eslint-disable-next-html-extension */}
-              <img
-                src={founder.avatar}
-                alt={founder.name}
-                className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-center border border-[var(--border)] shadow-md group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-lg bg-[var(--accent)] text-white text-xs font-black font-display shadow-md">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border border-[var(--border)] shadow-md bg-neutral-900">
+                {/* eslint-disable-next-html-extension */}
+                <img
+                  src={founder.avatar}
+                  alt={founder.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-lg bg-[var(--accent)] text-white text-xs font-black font-display shadow-md z-10">
                 {founder.initials}
               </div>
             </div>

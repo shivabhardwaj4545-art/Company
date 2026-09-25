@@ -87,6 +87,7 @@ body {
   box-shadow: 0 10px 25px -5px var(--accent-glow);
 }
 
+
 /* Continuous marquee keyframes */
 @keyframes marquee {
   0% { transform: translateX(0%); }

@@ -1,68 +1,151 @@
 [
   {
     "slug": "ezrestero",
-    "title": "EzRestero — Scan. Order. Enjoy. AI-Powered Restaurant Platform",
-    "client": "EzRestero Hospitality Group",
-    "category": "AI-Powered QR Restaurant Platform",
+    "title": "EZ-Restaurant — Scan. Order. Enjoy. AI-Powered Restaurant SaaS Platform",
+    "client": "EZRestro Hospitality Tech",
+    "category": "AI & QR Restaurant SaaS Platform",
     "year": "2026",
     "cover": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
-    "summary": "The complete QR-based restaurant ordering platform. Customers scan, browse, order, and track — all without downloading an app. You get real-time orders, AI insights, and powerful analytics.",
-    "challenge": "Traditional POS systems suffered from slow order routing, kitchen delays, high app download barriers for customers, and poor table QR ordering experiences.",
-    "solution": "AiKodX engineered a zero-app web platform with sub-50ms table checkout, AI-powered menu insights, live KDS kitchen routing, and an instant Admin Dashboard.",
+    "summary": "EZ-Restaurant is a next-generation AI-powered QR ordering and restaurant management platform. Featuring real-time WebSocket order syncing, interactive Kitchen Display Systems (KDS), digital waiter bells, and Google Gemini AI dish recommendations, EZ-Restaurant redefines hospitality efficiency and customer satisfaction.",
+    "challenge": "Traditional restaurant operations suffered from slow waiter response times, physical menu printing costs, ordering errors, lack of real-time kitchen visibility, and high app download friction for diners.",
+    "solution": "AiKodX engineered a high-performance Turborepo monorepo using Next.js 15, React 19, TypeScript, Node.js, Express, Socket.IO, and Google Gemini AI. Diners scan table-specific QR codes for contactless ordering, live dish tracking (Received → Preparing → Ready → Delivered), digital waiter calling, and AI culinary advice. Kitchen staff utilize a real-time KDS with sound alerts, while restaurant owners gain Recharts sales analytics, menu CRUD controls, and table QR code generators.",
     "results": [
-      { "metric": "+240%", "label": "Table Turnover" },
-      { "metric": "< 50ms", "label": "Order Sync Speed" },
-      { "metric": "0 App", "label": "Downloads Required" }
+      { "metric": "30%", "label": "Faster Table Turnaround" },
+      { "metric": "+15-20%", "label": "Higher Average Order Value" },
+      { "metric": "70%", "label": "Reduction in Order Errors" }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
     ],
-    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets", "Node.js", "AI Analytics"],
+    "techStack": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Turborepo",
+      "Node.js",
+      "Socket.IO",
+      "Gemini AI API",
+      "Zustand",
+      "Tailwind CSS",
+      "Recharts",
+      "Docker"
+    ],
     "liveUrl": "https://ezrestro.online/"
   },
   {
     "slug": "msg-platform",
-    "title": "MSG — Premium Ladies Suits, Sarees & Ethnic Wear Store",
-    "client": "MSG Ethnic Fashion House",
-    "category": "D2C E-Commerce & Brand Strategy",
+    "title": "MSG — Luxury Ethnic Wear E-Commerce & Merchant OS",
+    "client": "MSG Fashion House",
+    "category": "E-Commerce / Retail Technology",
     "year": "2026",
     "cover": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80",
-    "summary": "High-converting D2C e-commerce platform for premium ladies suits, designer silk sarees, dupattas, and custom tailored ethnic wear.",
-    "challenge": "MSG required an ultra-fast, mobile-first e-commerce store with high-res saree zoom viewports, custom stitching option selectors, and 1-click WhatsApp checkout.",
-    "solution": "AiKodX engineered a Next.js headless storefront with sub-50ms page transitions, custom fabric filters, interactive size guides, and integrated WhatsApp order routing.",
+    "summary": "MSG is a custom-built, full-stack E-Commerce platform tailored for high-end luxury ladies' ethnic wear (Sarees, Salwar Suits, Lehengas, Kurtis, and Dupattas). Styled in Royal Matte Crimson Red (#9B1B30) & Antique Gold (#D4AF37), it bridges traditional retail charm with digital-first convenience via a high-performance Customer Storefront and intuitive Merchant Management Dashboard.",
+    "challenge": "Traditional boutique retailers often struggle with standard off-the-shelf e-commerce platforms that lack local fulfillment flexibility (such as reserve-in-store options) and fail to reflect the premium aesthetic required for luxury ethnic fashion.",
+    "solution": "AiKodX Studio engineered a lightweight, ultra-fast e-commerce engine customized specifically for luxury ladies' ethnic apparel. We combined a regal aesthetic with sophisticated merchant management features, enabling seamlessly coordinated online sales, in-store pickups, and automated inventory tracking.",
     "results": [
-      { "metric": "+210%", "label": "Mobile Conversion" },
-      { "metric": "< 0.5s", "label": "High-Res Image Load" },
-      { "metric": "25,000+", "label": "Suits & Sarees Shipped" }
+      { "metric": "< 0.5s", "label": "Zero-Delay Browsing" },
+      { "metric": "Omnichannel", "label": "Delivery & In-Store Reserve" },
+      { "metric": "Real-Time", "label": "Sales & CRM Intelligence" }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1200&q=80"
     ],
-    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Shopify Storefront API", "WhatsApp Checkout"],
+    "techStack": [
+      "Node.js",
+      "Express.js",
+      "SQLite (WAL Mode)",
+      "JWT & Bcrypt",
+      "Vanilla JS SPA Architecture",
+      "Custom CSS & Design Tokens"
+    ],
     "liveUrl": "https://msg-53do.onrender.com/"
   },
   {
-    "slug": "dropizi-courier",
-    "title": "Dropizi Courier — Dynamic Logistics & Parcel Delivery Engine",
-    "client": "Dropizi Express Global",
-    "category": "Logistics & AI Parcel Tracking (Future Works)",
-    "year": "2026 (Upcoming)",
-    "cover": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Upcoming end-to-end courier dispatching platform, dynamic parcel route optimization, and live GPS delivery tracking.",
-    "challenge": "Manual courier assignment and legacy tracking systems caused delay bottlenecks across last-mile delivery.",
-    "solution": "Developing autonomous parcel assignment algorithms, driver mobile dispatch portals, and live SMS/WhatsApp delivery alerts.",
+    "slug": "ai-studio",
+    "title": "AI Studio — Accelerate Innovation with Gemini 2.0 Flash Powered Intelligence",
+    "client": "AiKodX Innovation Labs",
+    "category": "Artificial Intelligence & LLM Web Application",
+    "year": "2026",
+    "cover": "/ai-studio-showcase.jpg",
+    "summary": "AI Studio is a cutting-edge web application designed by AiKodX to provide users with a fast, modern, and interactive interface for Google's Gemini 2.0 Flash AI model. It provides real-time answers, writes complex code snippets, formats technical markdown, and persists chat sessions.",
+    "challenge": "Existing AI model wrappers often suffer from bloated bundle sizes, slow response rendering, poor mobile responsiveness, lack of syntax highlighting, and lost prompt history upon page refreshes.",
+    "solution": "AiKodX engineered a ultra-fast React 19 + Vite 7 SPA connected directly to the Google Gemini 2.0 Flash API endpoint. Built with Tailwind CSS v4, Framer Motion drawers, Dracula code syntax highlighting, custom regex heading polishers, and 30-session localStorage history persistence.",
     "results": [
-      { "metric": "In Pipeline", "label": "Development Status" },
-      { "metric": "< 15min", "label": "Target Dispatch Time" },
-      { "metric": "Live GPS", "label": "Tracking Ready" }
+      { "metric": "< 1.2s", "label": "Sub-Second Response Time" },
+      { "metric": "30 Sessions", "label": "Persistent Prompt History" },
+      { "metric": "100% Web", "label": "Zero App Download Needed" }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
+      "/ai-studio-showcase.jpg"
     ],
-    "techStack": ["Next.js", "Google Maps API", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-    "liveUrl": "https://dropizi.com"
+    "techStack": [
+      "React 19",
+      "Vite 7",
+      "Gemini 2.0 Flash API",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "React Markdown",
+      "Dracula Highlighting"
+    ],
+    "liveUrl": "https://ai-tool-lac.vercel.app/"
+  },
+  {
+    "slug": "readygo",
+    "title": "ReadyGo — Intercity Ride Sharing & Proximity Hub Matching Platform",
+    "client": "ReadyGo Mobility Network",
+    "category": "Mobility & Smart Transportation Platform",
+    "year": "2026",
+    "cover": "/readygo-showcase.jpg",
+    "summary": "ReadyGo is an intercity ride-sharing platform that connects drivers offering empty seats with passengers traveling along similar routes. Built around a 50km hub proximity geofence, ReadyGo optimizes long-distance travel and commuting efficiency.",
+    "challenge": "Single-occupancy intercity driving creates traffic congestion, high fuel costs, and carbon waste, while passengers lack direct, affordable, and flexible regional commute options.",
+    "solution": "AiKodX engineered a dual-portal ride-sharing web system powered by MySQL transactional storage and 50km radius hub matching. Drivers publish vacant seat offers in seconds, while passengers query matching origin-destination pairs with direct driver contact details and hotline support.",
+    "results": [
+      { "metric": "50 km", "label": "Hub Proximity Geofence" },
+      { "metric": "Dual-Role", "label": "Driver & Passenger Portals" },
+      { "metric": "Zero-Lag", "label": "Instant SQL Route Matching" }
+    ],
+    "gallery": [
+      "/readygo-showcase.jpg"
+    ],
+    "techStack": [
+      "PHP",
+      "MySQL (readygo DB)",
+      "HTML5",
+      "JavaScript",
+      "jQuery Datepicker",
+      "Geofencing API"
+    ],
+    "liveUrl": "https://shivasharma12.github.io/readygo/"
+  },
+  {
+    "slug": "dropizi-courier",
+    "title": "Dropizi Courier — Next-Gen Hub-Based Parcel Delivery System",
+    "client": "Dropizi Express Global Logistics",
+    "category": "Logistics & Hub-Based Parcel Delivery Engine",
+    "year": "2026",
+    "cover": "/dropizi-showcase.jpg",
+    "summary": "Dropizi Courier is an end-to-end hub-based parcel delivery platform that leverages a 50km radius geofencing algorithm to route packages efficiently between regional hubs and intercity courier routes.",
+    "challenge": "Legacy courier dispatching systems suffered from high last-mile delivery costs, lack of regional hub relay optimization, manual package sorting delays, and poor parcel tracking visibility.",
+    "solution": "AiKodX engineered a full-stack logistics SaaS platform powered by Node.js, Express, Socket.IO, and 50km hub geofence routing. Dropizi enables automated parcel manifests, live hub-to-hub tracking, acoustic arrival alerts, and seamless driver dispatch portals.",
+    "results": [
+      { "metric": "50 km", "label": "Hub Proximity Geofence" },
+      { "metric": "< 15 min", "label": "Automated Dispatch Speed" },
+      { "metric": "99.4%", "label": "Parcel Tracking Accuracy" }
+    ],
+    "gallery": [
+      "/dropizi-showcase.jpg"
+    ],
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "PostgreSQL",
+      "Render Cloud"
+    ],
+    "liveUrl": "https://courier-web-1.onrender.com/"
   }
 ]

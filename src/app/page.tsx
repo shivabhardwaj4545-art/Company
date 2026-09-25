@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Header } from '@/components/ui/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { WhatWeDoSection } from '@/components/sections/WhatWeDoSection';
-import { ProductsSection } from '@/components/sections/ProductsSection';
+import { FeaturedWorkSection } from '@/components/sections/FeaturedWorkSection';
 import { WorkSection } from '@/components/sections/WorkSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { TrustBar } from '@/components/sections/TrustBar';
@@ -31,11 +31,11 @@ export default function HomePage() {
       {/* What We Do Section (Scratch-to-reveal) */}
       <WhatWeDoSection />
 
-      {/* In-House Products Section */}
-      <ProductsSection />
+      {/* Flagship Platform Spotlight (EzRestero) */}
+      <FeaturedWorkSection />
 
       {/* Client Work & Case Studies */}
-      <WorkSection />
+      <WorkSection onOpenModal={handleOpenModal} />
 
       {/* Social Proof & Testimonials Scroller */}
       <TestimonialsSection />

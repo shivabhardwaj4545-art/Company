@@ -75,9 +75,11 @@ export function Footer({ onOpenModal }: FooterProps) {
               Products
             </h4>
             <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li><Link href="/products/ezrestero" className="hover:text-[#857df3] transition-colors">EZRestro POS</Link></li>
-              <li><Link href="/products/canvas-craft" className="hover:text-[#857df3] transition-colors">CanvasCraft Studio</Link></li>
-              <li><Link href="/products/hyper-metric" className="hover:text-[#857df3] transition-colors">HyperMetric Analytics</Link></li>
+              <li><Link href="/products/ezrestero" className="hover:text-[#857df3] transition-colors">EZ-Restaurant SaaS</Link></li>
+              <li><Link href="/products/msg-platform" className="hover:text-[#857df3] transition-colors">MSG (Ethnic Fashion)</Link></li>
+              <li><Link href="/products/ai-studio" className="hover:text-[#857df3] transition-colors">AI Studio (Gemini 2.0)</Link></li>
+              <li><Link href="/products/readygo" className="hover:text-[#857df3] transition-colors">ReadyGo Ride Sharing</Link></li>
+              <li><Link href="/products/dropizi-courier" className="hover:text-[#857df3] transition-colors">Dropizi Courier</Link></li>
             </ul>
           </div>
 
@@ -87,9 +89,9 @@ export function Footer({ onOpenModal }: FooterProps) {
               Connect
             </h4>
             <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li>hello@aikodx.studio</li>
+              <li>ssharma636076@gmail.com</li>
               <li><strong>Direct Phone:</strong> +91 8445178177</li>
-              <li>San Francisco, CA &amp; London, UK</li>
+              <li>Dehradun, Uttarakhand, India</li>
             </ul>
           </div>
         </div>
@@ -97,12 +99,7 @@ export function Footer({ onOpenModal }: FooterProps) {
         {/* Bottom Bar: Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[var(--text-secondary)] font-semibold gap-4">
           <div>
-            © {new Date().getFullYear()} AiKodX Studio. All rights reserved.
-          </div>
-          <div className="flex items-center gap-1">
-            <span>Crafted with</span>
-            <Heart className="w-3.5 h-3.5 text-[#857df3] fill-[#857df3] inline" />
-            <span>using Next.js &amp; AiKodX Design System.</span>
+            © {new Date().getFullYear()} AiKodX. All rights reserved.
           </div>
         </div>
       </div>

@@ -1,44 +1,170 @@
 [
   {
     "slug": "ezrestero",
-    "name": "EZRestro POS System",
-    "tagline": "Smart restaurant POS, contactless QR table ordering & kitchen display engine",
-    "description": "An in-house SaaS platform for modern restaurants, cloud kitchens, and hospitality chains featuring sub-50ms table checkout, live KDS order routing, and real-time inventory tracking.",
+    "name": "EZ-Restaurant (EZRestro)",
+    "tagline": "Scan. Order. Enjoy. AI-Powered QR Restaurant Management & Ordering SaaS Platform",
+    "description": "EZ-Restaurant is an enterprise-grade, multi-tenant SaaS platform engineered to modernize traditional restaurant operations into a seamless, digital-first workflow. Customers scan table-specific QR codes to browse interactive AI-assisted menus, customize orders, call waiters, and request bills directly from their smartphones. Kitchen staff and managers receive real-time WebSocket order streams via an intuitive Kitchen Display System (KDS) with audio alerts, live order tracking, and comprehensive sales analytics.",
     "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
-    "badge": "In-House SaaS Product",
+    "badge": "AI-Powered Restaurant SaaS",
     "metrics": [
-      { "label": "Orders Processed", "value": "500K+" },
-      { "label": "Order Sync Speed", "value": "< 50ms" },
-      { "label": "Table Turnover", "value": "+240%" }
+      { "label": "Faster Table Turnaround", "value": "30%" },
+      { "label": "Higher Average Order Value", "value": "+15-20%" },
+      { "label": "Order Error Reduction", "value": "70%" },
+      { "label": "Paperless Operations", "value": "100%" }
     ],
     "liveUrl": "https://ezrestro.online/",
-    "techStack": ["Next.js", "TypeScript", "Node.js", "WebSockets", "Tailwind CSS"],
+    "techStack": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Turborepo",
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "Gemini AI API",
+      "Zustand",
+      "Tailwind CSS",
+      "Recharts",
+      "Docker"
+    ],
     "keyFeatures": [
-      "Contactless QR code menu ordering & digital payments",
-      "Real-time Kitchen Display System (KDS) order routing",
-      "Multi-outlet inventory & recipe ingredient tracking",
-      "Automated WhatsApp customer receipt & feedback bot"
+      "Contactless Customer Web App: Zero app download, table-aware QR code scanning & live order tracking",
+      "Gemini AI Culinary Assistant: Instant dietary recommendations, wine pairings & dish explanations",
+      "Kitchen Display System (KDS): Live WebSocket order streams, acoustic audio alerts & Kanban workflow",
+      "Digital Waiter Bell & Request Bill: One-tap table alerts with instant sound notifications for staff",
+      "Manager Dashboard: Visual sales analytics, Recharts peak hour trends & menu CRUD management",
+      "Table & QR Code Generator: Instant table-specific QR code asset generation & printing",
+      "Multi-Tenant Super Admin Oversight: Global tenant onboarding, subscription tiers & platform health metrics",
+      "High-Security Architecture: RBAC permissions, JWT auth, HTTP-only cookies & rate limiting"
     ]
   },
   {
     "slug": "msg-platform",
-    "name": "MSG Fashion Storefront",
-    "tagline": "Headless D2C e-commerce engine for ladies suits, sarees & designer ethnic wear",
-    "description": "An e-commerce storefront for luxury ethnic fashion featuring high-resolution saree zoom viewports, custom stitching option funnels, and 1-click WhatsApp order checkout.",
+    "name": "MSG (Ethnic Fashion & Merchant OS)",
+    "tagline": "Luxury Ethnic Wear E-Commerce Platform & Merchant Operating System",
+    "description": "MSG is a custom-built, full-stack E-Commerce platform tailored for high-end luxury ladies' ethnic wear (Sarees, Salwar Suits, Lehengas, Kurtis, and Dupattas). Styled in Royal Matte Crimson Red (#9B1B30) & Antique Gold (#D4AF37), it bridges traditional retail charm with digital-first convenience by offering a high-performance Customer Storefront alongside an intuitive Merchant Administration & Analytics Dashboard.",
     "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80",
-    "badge": "D2C E-Commerce Engine",
+    "badge": "Luxury D2C & Merchant OS",
     "metrics": [
-      { "label": "Orders Processed", "value": "25K+" },
-      { "label": "Image Load Speed", "value": "< 0.5s" },
+      { "label": "Zero-Delay Browsing", "value": "< 0.5s" },
+      { "label": "Omnichannel Order Handling", "value": "100%" },
+      { "label": "Real-Time Revenue Analytics", "value": "Live" },
       { "label": "Conversion Boost", "value": "+210%" }
     ],
     "liveUrl": "https://msg-53do.onrender.com/",
-    "techStack": ["Next.js", "Shopify Storefront", "WhatsApp API", "TypeScript", "Tailwind CSS"],
+    "techStack": [
+      "Node.js",
+      "Express.js",
+      "SQLite (WAL Mode)",
+      "JWT & Bcrypt",
+      "Vanilla JS SPA",
+      "Custom CSS Design Tokens",
+      "Royal Crimson & Gold Palette"
+    ],
     "keyFeatures": [
-      "High-resolution 4K saree catalog viewports",
-      "Custom suit stitching & size option selector",
-      "1-click WhatsApp order checkout & tracking",
-      "Automated inventory & catalog sync engine"
+      "Bespoke Luxury UI/UX: Royal Matte Crimson (#9B1B30) & Antique Gold (#D4AF37) palette with Fraunces typography",
+      "Smart Catalog & Discovery: Specialized categories (Banarasi, Kanjivaram, Anarkali, Bridal Lehengas) with stock badges",
+      "Flexible Checkout Flow: Home Delivery or In-Store Reserve & Pickup with Cash / Pay Later options",
+      "Boutique Till-Receipt Order Tracking: Receipt-style order timeline with live fulfillment status & payment links",
+      "Merchant Operating System: Real-time sales analytics (Today, Week, Month, All-Time) with 7-day trend graphs",
+      "Full Inventory & Category Engine: Complete CRUD for products, discount pricing schedules, stock & campaign badges",
+      "Customer Relationship CRM: Tracks Customer Lifetime Value (LTV), total purchase volume & order counts",
+      "Promotional Banner Ads Manager: Dynamic ad engine to create, schedule & display banner ads on storefront"
+    ]
+  },
+  {
+    "slug": "ai-studio",
+    "name": "AI Studio (Gemini 2.0 Flash Tool)",
+    "tagline": "Accelerate Innovation with Gemini 2.0 Flash Powered Intelligence",
+    "description": "AI Studio is a cutting-edge web application designed by AiKodX to provide users with a fast, modern, and interactive interface for Google's Gemini 2.0 Flash AI model. It provides real-time answers, writes complex code snippets, formats technical markdown, and persists chat sessions—delivering an exceptional user experience on both desktop and mobile devices.",
+    "image": "/ai-studio-showcase.jpg",
+    "badge": "Gemini 2.0 Flash AI",
+    "metrics": [
+      { "label": "Response Lookup Latency", "value": "< 1.2s" },
+      { "label": "Persistent History", "value": "30 Sessions" },
+      { "label": "Developer Productivity", "value": "100%" },
+      { "label": "App Installation", "value": "0 Download" }
+    ],
+    "liveUrl": "https://ai-tool-lac.vercel.app/",
+    "techStack": [
+      "React 19",
+      "Vite 7",
+      "Google Gemini 2.0 Flash API",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "React Markdown",
+      "Dracula Syntax Highlighting"
+    ],
+    "keyFeatures": [
+      "Gemini 2.0 Flash Core Reasoning: Handles multi-turn complex queries (<1.2s latency) for coding, math & business strategy",
+      "Code Syntax Highlighting & Copy Badges: Dracula-styled code boxes for JS, Python, TS, HTML, CSS & C++",
+      "Persistent Prompt History: Stores up to 30 past search sessions in localStorage with 1-click prompt rerun",
+      "Smart Workspace & Mobile Drawer: Touch-friendly slide-over drawer with backdrop blur overlay for mobile",
+      "Dark & Light Mode Switcher: Automatic OS theme detection with manual browser memory toggle",
+      "Markdown & Formatting Engine: Custom regex heading polishers & React Markdown parsing"
+    ]
+  },
+  {
+    "slug": "readygo",
+    "name": "ReadyGo (Ride Sharing & Hub Platform)",
+    "tagline": "Connecting commuters & travellers with smart 50km hub proximity matching",
+    "description": "ReadyGo is an eco-friendly intercity ride-sharing and commuting web platform designed to eliminate single-occupancy vehicle waste. Drivers offer empty seats on planned routes while passengers search and connect with nearby rides using a 50km hub proximity geofencing algorithm. Featuring dual driver/passenger portals, MySQL transactional storage, and direct hotline coordination.",
+    "image": "/readygo-showcase.jpg",
+    "badge": "Intercity Mobility & Hub Matching",
+    "metrics": [
+      { "label": "Hub Geofence Match", "value": "50 km" },
+      { "label": "Vehicle Compatibility", "value": "Multi-Modal" },
+      { "label": "Direct Coordination", "value": "Instant" },
+      { "label": "Eco Efficiency", "value": "High" }
+    ],
+    "liveUrl": "https://shivasharma12.github.io/readygo/",
+    "techStack": [
+      "PHP",
+      "MySQL (readygo DB)",
+      "HTML5 / JavaScript",
+      "jQuery Datepicker",
+      "CSS3 Design Tokens",
+      "Geofencing 50km Radius"
+    ],
+    "keyFeatures": [
+      "Dual Role Portals: Dedicated Rider/Driver portal (rindex.html) & Traveller/Passenger portal (pindex.html)",
+      "50km Hub Proximity Geofencing: Automatically filters and matches origins/destinations within a 50km radius constraint",
+      "Ride Publication Engine: Form submission capturing Driver Name, Phone, Available Seats, Vehicle Type & Travel Schedule",
+      "Ride Search & Matching Query: Dynamic SQL lookup filtering active drivers by route, date, and seat availability",
+      "Direct Coordination & Hotline: One-click phone connectivity plus central dispatch helpline (+91 8445178177)",
+      "Multi-Modal Vehicle Support: Handles motorbikes, personal cars, and mass transit buses effortlessly"
+    ]
+  },
+  {
+    "slug": "dropizi-courier",
+    "name": "Dropizi Courier (Hub Parcel Delivery System)",
+    "tagline": "Next-generation hub-based parcel dispatch & intercity delivery network",
+    "description": "Dropizi Courier is an enterprise-grade, hub-based parcel delivery system designed for seamless intercity package logistics. Featuring a 50km hub proximity geofence algorithm, Dropizi routes parcel packages between interconnected regional hubs and traveler routes, offering real-time shipment tracking, automated dispatch management, and low-latency delivery status updates.",
+    "image": "/dropizi-showcase.jpg",
+    "badge": "Hub-Based Parcel Delivery",
+    "metrics": [
+      { "label": "Hub Proximity Match", "value": "50 km" },
+      { "label": "Dispatch Speed", "value": "< 15 min" },
+      { "label": "Parcel Route Accuracy", "value": "99.4%" },
+      { "label": "Delivery Tracking", "value": "Real-Time" }
+    ],
+    "liveUrl": "https://courier-web-1.onrender.com/",
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "MongoDB / PostgreSQL",
+      "Geofencing 50km Radius"
+    ],
+    "keyFeatures": [
+      "50km Hub Proximity Geofencing: Smart parcel routing between local pickup & destination hubs within 50km radius",
+      "Real-Time Package Tracking Timeline: Live status progression (Order Confirmed → Picked Up → Hub Arrived → Dispatched → Delivered)",
+      "Interactive Parcel Dispatch Hub: Single-pane dashboard for hub operators, parcel manifests & route optimization",
+      "Driver & Courier Portal: Mobile-optimized dispatch dashboard for line-haul drivers & last-mile couriers",
+      "Automated Sound & Push Notifications: Instant acoustic & SMS/WhatsApp alerts upon hub arrival and delivery",
+      "Multi-Tenant Hub Management: Role-based permissions for Hub Managers, Logistics Dispatchers & System Admins"
     ]
   }
 ]

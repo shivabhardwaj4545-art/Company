@@ -18,25 +18,25 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aikodx.com'),
-  title: 'AiKodX Studio | Web Development, Branding & AI Automation',
+  title: 'AiKodX | Web Development, Branding & AI Automation',
   description:
-    'AiKodX Studio crafts high-converting Next.js web applications, iconic brand identities, and autonomous AI lead pipelines.',
+    'AiKodX crafts high-converting Next.js web applications, iconic brand identities, and autonomous AI lead pipelines.',
   keywords: [
-    'AiKodX Studio',
+    'AiKodX',
     'Digital Agency',
     'Next.js Web Development',
     'AI Automation',
-    'Branding Studio',
+    'Branding Agency',
   ],
-  authors: [{ name: 'AiKodX Studio' }],
+  authors: [{ name: 'AiKodX' }],
   alternates: {
     canonical: 'https://aikodx.com',
   },
   openGraph: {
-    title: 'AiKodX Studio',
+    title: 'AiKodX',
     description: 'High-performance web development, branding & AI automation.',
     url: 'https://aikodx.com',
-    siteName: 'AiKodX Studio',
+    siteName: 'AiKodX',
     type: 'website',
   },
 };

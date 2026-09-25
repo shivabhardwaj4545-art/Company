@@ -1,25 +1,25 @@
 'use client';
 
 export function TrustBar() {
-  const logos = [
-    { name: 'AURORA PAY', code: 'AURORA//PAY' },
-    { name: 'LUXE WEAR', code: 'LUXE.WEAR' },
-    { name: 'SYNAPSE AI', code: 'SYNAPSE_AI' },
-    { name: 'PULSE MEDIA', code: 'PULSE::MEDIA' },
-    { name: 'HYPER METRIC', code: 'HYPER.METRIC' },
-    { name: 'AIKODX FLOW', code: 'AIKODX.FLOW' },
-    { name: 'VERTEX LABS', code: 'VERTEX_LABS' },
-    { name: 'QUANTUM HQ', code: 'QUANTUM//HQ' },
+  const applicationPlatforms = [
+    { name: 'EZRESTRO', code: 'EZRESTRO.ONLINE', category: 'AI RESTAURANT SAAS' },
+    { name: 'MSG', code: 'MSG_PLATFORM', category: 'LUXURY E-COMMERCE' },
+    { name: 'AI KODX STUDIO', code: 'AIKODX_STUDIO', category: 'GEMINI 2.0 AI APP' },
+    { name: 'READYGO MOBILITY', code: 'READYGO.NETWORK', category: 'RIDE SHARING NETWORK' },
+    { name: 'DROPIZI COURIER', code: 'DROPIZI_EXPRESS', category: 'HUB PARCEL LOGISTICS' },
+    { name: 'GEMINI 2.0 FLASH', code: 'GEMINI_AI_FLASH', category: 'LLM INTELLIGENCE' },
+    { name: 'NEXT.JS 15 SAAS', code: 'NEXTJS_15_ENGINE', category: 'APP ROUTER OS' },
+    { name: 'SOCKET.IO REALTIME', code: 'SOCKET.IO_SYNC', category: 'SUB-50MS WEBSOCKETS' },
   ];
 
   // Duplicate for infinite continuous loop
-  const marqueeLogos = [...logos, ...logos];
+  const marqueeItems = [...applicationPlatforms, ...applicationPlatforms];
 
   return (
-    <div className="py-12 border-t border-b border-[var(--border)] bg-[var(--surface)]/50 overflow-hidden select-none">
+    <div className="py-10 border-t border-b border-[var(--border)] bg-[var(--surface)]/60 overflow-hidden select-none">
       <div className="max-w-7xl mx-auto px-4 mb-4 text-center">
-        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[var(--text-secondary)]">
-          TRUSTED BY HIGH-GROWTH STARTUPS & ENTERPRISES GLOBALLY
+        <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#6a57fa] flex items-center justify-center gap-2">
+          <span>POWERING OUR CLIENT PLATFORMS &amp; SAAS ECOSYSTEMS</span>
         </span>
       </div>
 
@@ -29,16 +29,21 @@ export function TrustBar() {
         <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-[var(--bg)] to-transparent z-10 pointer-events-none" />
 
         {/* Marquee Track (Moving in Opposite Direction) */}
-        <div className="animate-marquee-reverse py-3 flex items-center gap-12 sm:gap-20">
-          {marqueeLogos.map((logo, index) => (
+        <div className="animate-marquee-reverse py-2 flex items-center gap-10 sm:gap-16">
+          {marqueeItems.map((item, index) => (
             <div
               key={index}
               data-cursor="hover"
-              className="flex items-center gap-3 shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+              className="flex items-center gap-3 shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-pointer group"
             >
-              <span className="font-display text-xl sm:text-2xl font-black tracking-widest text-[var(--text-primary)]">
-                {logo.code}
-              </span>
+              <div className="flex flex-col">
+                <span className="font-display text-lg sm:text-xl font-black tracking-wider text-[var(--text-primary)] group-hover:text-[#6a57fa] transition-colors">
+                  {item.code}
+                </span>
+                <span className="text-[9px] font-mono font-extrabold text-[#6a57fa] uppercase tracking-widest">
+                  {item.category}
+                </span>
+              </div>
             </div>
           ))}
         </div>
