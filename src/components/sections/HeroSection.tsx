@@ -215,9 +215,6 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
               <div className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-2xl shadow-slate-900/30">
                 {/* Purple Banner Header */}
                 <div className="p-3.5 bg-gradient-to-r from-[#6a57fa] to-[#5844f7] text-white relative">
-                  <button type="button" className="absolute top-2.5 right-2.5 text-white/70 hover:text-white text-xs">
-                    ✕
-                  </button>
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white font-black text-xs border border-white/30 shadow-md">
                       P
