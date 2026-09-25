@@ -9,15 +9,54 @@ interface ProjectModalProps {
   onClose: () => void;
 }
 
-const COUNTRY_CODES = [
-  { code: '+91', country: 'IN', flag: '🇮🇳', name: 'India', digits: 10 },
-  { code: '+1', country: 'US', flag: '🇺🇸', name: 'United States', digits: 10 },
-  { code: '+44', country: 'GB', flag: '🇬🇧', name: 'United Kingdom', digits: 11 },
-  { code: '+971', country: 'AE', flag: '🇦🇪', name: 'UAE', digits: 9 },
-  { code: '+1', country: 'CA', flag: '🇨🇦', name: 'Canada', digits: 10 },
-  { code: '+61', country: 'AU', flag: '🇦🇺', name: 'Australia', digits: 9 },
-  { code: '+65', country: 'SG', flag: '🇸🇬', name: 'Singapore', digits: 8 },
-  { code: '+49', country: 'DE', flag: '🇩🇪', name: 'Germany', digits: 11 },
+export interface CountryCode {
+  code: string;
+  name: string;
+  dialCode: string;
+  flag: string;
+  placeholder: string;
+  length: number;
+}
+
+export const COUNTRY_CODES: CountryCode[] = [
+  // Frequently used
+  { code: 'IN', name: 'India', dialCode: '+91', flag: '🇮🇳', placeholder: '98765 43210', length: 10 },
+  { code: 'US', name: 'United States', dialCode: '+1', flag: '🇺🇸', placeholder: '(555) 000-0000', length: 10 },
+  { code: 'GB', name: 'United Kingdom', dialCode: '+44', flag: '🇬🇧', placeholder: '7911 123456', length: 10 },
+  { code: 'AE', name: 'United Arab Emirates', dialCode: '+971', flag: '🇦🇪', placeholder: '50 123 4567', length: 9 },
+  { code: 'SA', name: 'Saudi Arabia', dialCode: '+966', flag: '🇸🇦', placeholder: '50 123 4567', length: 9 },
+  { code: 'CA', name: 'Canada', dialCode: '+1', flag: '🇨🇦', placeholder: '(555) 000-0000', length: 10 },
+  { code: 'AU', name: 'Australia', dialCode: '+61', flag: '🇦🇺', placeholder: '412 345 678', length: 9 },
+  { code: 'SG', name: 'Singapore', dialCode: '+65', flag: '🇸🇬', placeholder: '8123 4567', length: 8 },
+  { code: 'DE', name: 'Germany', dialCode: '+49', flag: '🇩🇪', placeholder: '151 2345678', length: 10 },
+  { code: 'FR', name: 'France', dialCode: '+33', flag: '🇫🇷', placeholder: '6 12 34 56 78', length: 9 },
+  { code: 'NZ', name: 'New Zealand', dialCode: '+64', flag: '🇳🇿', placeholder: '21 123 4567', length: 9 },
+  { code: 'QA', name: 'Qatar', dialCode: '+974', flag: '🇶🇦', placeholder: '3312 3456', length: 8 },
+  { code: 'KW', name: 'Kuwait', dialCode: '+965', flag: '🇰🇼', placeholder: '9123 4567', length: 8 },
+  { code: 'OM', name: 'Oman', dialCode: '+968', flag: '🇴🇲', placeholder: '9123 4567', length: 8 },
+  { code: 'BH', name: 'Bahrain', dialCode: '+973', flag: '🇧🇭', placeholder: '3612 3456', length: 8 },
+  { code: 'BD', name: 'Bangladesh', dialCode: '+880', flag: '🇧🇩', placeholder: '1712 345678', length: 10 },
+  { code: 'NP', name: 'Nepal', dialCode: '+977', flag: '🇳🇵', placeholder: '9812 345678', length: 10 },
+  { code: 'LK', name: 'Sri Lanka', dialCode: '+94', flag: '🇱🇰', placeholder: '71 234 5678', length: 9 },
+  { code: 'MY', name: 'Malaysia', dialCode: '+60', flag: '🇲🇾', placeholder: '12 345 6789', length: 9 },
+  { code: 'PH', name: 'Philippines', dialCode: '+63', flag: '🇵🇭', placeholder: '917 123 4567', length: 10 },
+  { code: 'ID', name: 'Indonesia', dialCode: '+62', flag: '🇮🇩', placeholder: '812 3456 7890', length: 10 },
+  { code: 'PK', name: 'Pakistan', dialCode: '+92', flag: '🇵🇰', placeholder: '300 1234567', length: 10 },
+  { code: 'ZA', name: 'South Africa', dialCode: '+27', flag: '🇿🇦', placeholder: '82 123 4567', length: 9 },
+  { code: 'NG', name: 'Nigeria', dialCode: '+234', flag: '🇳🇬', placeholder: '802 123 4567', length: 10 },
+  { code: 'KE', name: 'Kenya', dialCode: '+254', flag: '🇰🇪', placeholder: '712 345678', length: 9 },
+  { code: 'JP', name: 'Japan', dialCode: '+81', flag: '🇯🇵', placeholder: '90 1234 5678', length: 10 },
+  { code: 'CN', name: 'China', dialCode: '+86', flag: '🇨🇳', placeholder: '138 1234 5678', length: 11 },
+  { code: 'KR', name: 'South Korea', dialCode: '+82', flag: '🇰🇷', placeholder: '10 1234 5678', length: 10 },
+  { code: 'IT', name: 'Italy', dialCode: '+39', flag: '🇮🇹', placeholder: '312 345 6789', length: 10 },
+  { code: 'ES', name: 'Spain', dialCode: '+34', flag: '🇪🇸', placeholder: '612 34 56 78', length: 9 },
+  { code: 'NL', name: 'Netherlands', dialCode: '+31', flag: '🇳🇱', placeholder: '6 12345678', length: 9 },
+  { code: 'CH', name: 'Switzerland', dialCode: '+41', flag: '🇨🇭', placeholder: '78 123 45 67', length: 9 },
+  { code: 'SE', name: 'Sweden', dialCode: '+46', flag: '🇸🇪', placeholder: '70 123 45 67', length: 9 },
+  { code: 'NO', name: 'Norway', dialCode: '+47', flag: '🇳🇴', placeholder: '412 34 567', length: 8 },
+  { code: 'DK', name: 'Denmark', dialCode: '+45', flag: '🇩🇰', placeholder: '20 12 34 56', length: 8 },
+  { code: 'IE', name: 'Ireland', dialCode: '+353', flag: '🇮🇪', placeholder: '85 123 4567', length: 9 },
+  { code: 'BR', name: 'Brazil', dialCode: '+55', flag: '🇧🇷', placeholder: '11 91234 5678', length: 11 }
 ];
 
 export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
@@ -26,7 +65,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const [submitted, setSubmitted] = useState(false);
 
   // Form State
-  const [selectedCountry, setSelectedCountry] = useState(COUNTRY_CODES[0]); // Default India +91
+  const [selectedCountry, setSelectedCountry] = useState<CountryCode>(COUNTRY_CODES[0]); // Default India +91
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -41,8 +80,8 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Restrict strictly to numeric digits only
     const digitsOnly = e.target.value.replace(/\D/g, '');
-    // Limit length strictly to country max digits
-    const trimmed = digitsOnly.slice(0, selectedCountry.digits);
+    // Limit length strictly to country max length
+    const trimmed = digitsOnly.slice(0, selectedCountry.length);
     setFormData({ ...formData, phone: trimmed });
     if (errors.phone) setErrors({ ...errors, phone: '' });
   };
@@ -65,9 +104,9 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
         setErrors({ phone: 'Please enter your phone / WhatsApp number' });
         return;
       }
-      if (formData.phone.length < selectedCountry.digits) {
+      if (formData.phone.length < selectedCountry.length) {
         setErrors({
-          phone: `Please enter a valid ${selectedCountry.digits}-digit phone number for ${selectedCountry.name}`,
+          phone: `Please enter a valid ${selectedCountry.length}-digit phone number for ${selectedCountry.name}`,
         });
         return;
       }
@@ -90,13 +129,13 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const fullPhone = `${selectedCountry.code} ${formData.phone}`;
+      const fullPhone = `${selectedCountry.dialCode} ${formData.phone}`;
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          countryCode: selectedCountry.code,
+          countryCode: selectedCountry.dialCode,
           fullPhone,
         }),
       });
@@ -128,6 +167,13 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
     onClose();
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleNext();
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -151,7 +197,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
         </button>
 
         {!submitted ? (
-          <>
+          <div>
             {/* Header & Step Dots */}
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-2 text-xs font-semibold tracking-wider text-[var(--accent)] uppercase">
@@ -212,6 +258,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                             setFormData({ ...formData, name: e.target.value });
                             if (errors.name) setErrors({ ...errors, name: '' });
                           }}
+                          onKeyDown={handleKeyDown}
                           className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
                         />
                         {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
@@ -228,6 +275,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                             setFormData({ ...formData, email: e.target.value });
                             if (errors.email) setErrors({ ...errors, email: '' });
                           }}
+                          onKeyDown={handleKeyDown}
                           className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
                         />
                         {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
@@ -245,36 +293,34 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                         <div className="flex gap-2.5">
                           {/* Country Code Dropdown */}
                           <select
-                            value={selectedCountry.code + '_' + selectedCountry.country}
+                            value={selectedCountry.code}
                             onChange={(e) => {
-                              const [code, country] = e.target.value.split('_');
-                              const found = COUNTRY_CODES.find(
-                                (c) => c.code === code && c.country === country
-                              );
+                              const found = COUNTRY_CODES.find((c) => c.code === e.target.value);
                               if (found) {
                                 setSelectedCountry(found);
                                 setFormData((prev) => ({
                                   ...prev,
-                                  phone: prev.phone.slice(0, found.digits),
+                                  phone: prev.phone.slice(0, found.length),
                                 }));
                               }
                             }}
-                            className="px-3 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] font-semibold text-xs focus:outline-none focus:border-[var(--accent)] cursor-pointer shrink-0"
+                            className="px-3 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] font-semibold text-xs focus:outline-none focus:border-[var(--accent)] cursor-pointer shrink-0 max-w-[150px]"
                           >
-                            {COUNTRY_CODES.map((item, idx) => (
-                              <option key={idx} value={item.code + '_' + item.country}>
-                                {item.flag} {item.code} ({item.country})
+                            {COUNTRY_CODES.map((item) => (
+                              <option key={item.code} value={item.code}>
+                                {item.flag} {item.dialCode} ({item.code})
                               </option>
                             ))}
                           </select>
 
-                          {/* Numeric Only Input with Length Restriction */}
+                          {/* Numeric Only Input with Length Restriction & Dynamic Placeholder */}
                           <input
                             type="tel"
-                            placeholder={`e.g. ${'9'.repeat(selectedCountry.digits)}`}
+                            placeholder={selectedCountry.placeholder}
                             value={formData.phone}
-                            maxLength={selectedCountry.digits}
+                            maxLength={selectedCountry.length}
                             onChange={handlePhoneChange}
+                            onKeyDown={handleKeyDown}
                             className="flex-1 px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] font-semibold focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] tracking-wider"
                           />
                         </div>
@@ -282,10 +328,10 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                         {/* Helper info & validation message */}
                         <div className="flex items-center justify-between mt-1.5 text-[11px] text-[var(--text-secondary)]">
                           <span>
-                            {selectedCountry.flag} {selectedCountry.name} ({selectedCountry.code}) — Exactly {selectedCountry.digits} digits required
+                            {selectedCountry.flag} {selectedCountry.name} ({selectedCountry.dialCode}) — Exactly {selectedCountry.length} digits required
                           </span>
                           <span className="font-bold text-[var(--accent)]">
-                            {formData.phone.length} / {selectedCountry.digits}
+                            {formData.phone.length} / {selectedCountry.length}
                           </span>
                         </div>
                         {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
@@ -331,6 +377,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                         <select
                           value={formData.budgetRange}
                           onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
+                          onKeyDown={handleKeyDown}
                           className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
                         >
                           <option value="<$5k">&lt; $5,000</option>
@@ -348,6 +395,12 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                           placeholder="Briefly describe what you want to build..."
                           value={formData.details}
                           onChange={(e) => setFormData({ ...formData, details: e.target.value })}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                              e.preventDefault();
+                              handleNext();
+                            }
+                          }}
                           className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] resize-none"
                         />
                       </div>
@@ -392,7 +445,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
                 )}
               </button>
             </div>
-          </>
+          </div>
         ) : (
           /* Submission Success State */
           <div className="py-8 text-center">
@@ -407,7 +460,7 @@ export function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
               Project Request Received &amp; Confirmed!
             </h3>
             <p className="text-sm text-[var(--text-secondary)] max-w-sm mx-auto mb-6">
-              Thank you {formData.name}! Your request has been recorded and an email notification has been sent. Our team will reach out to <strong>{selectedCountry.code} {formData.phone}</strong> shortly.
+              Thank you {formData.name}! Your request has been recorded and an email notification has been sent. Our team will reach out to <strong>{selectedCountry.dialCode} {formData.phone}</strong> shortly.
             </p>
             <button
               onClick={resetForm}
