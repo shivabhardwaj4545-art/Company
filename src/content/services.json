@@ -2,14 +2,14 @@
   {
     "slug": "web-development",
     "number": "01",
-    "title": "Full-Stack Development",
-    "tagline": "End-to-end full-stack applications, custom APIs & cloud software built for scale.",
-    "description": "We engineer robust full-stack platforms, custom APIs, mobile applications, and enterprise SaaS systems using modern stacks like Next.js, Node.js, React Native, Supabase, and PostgreSQL. Every system is built for speed, reliability, and seamless scale.",
+    "title": "Web & Product Engineering",
+    "tagline": "End-to-end application development, custom web platforms & scalable software systems.",
+    "description": "We architect custom web applications, mobile apps, enterprise SaaS platforms, and API systems built for speed, scale, and high conversion. Every build is engineered with sub-second performance, technical SEO, and modular scalability.",
     "bullets": [
-      "Full-Stack Next.js, Node.js & React Architectures",
-      "Custom REST & GraphQL APIs / Microservices",
-      "Cross-Platform iOS & Android Mobile Apps",
-      "Cloud Infrastructure, Database & Security Setup"
+      "Custom Next.js & React Enterprise Architectures",
+      "End-to-End Web & Mobile Application Development",
+      "Headless CMS & API Integrations (Sanity, Strapi)",
+      "Core Web Vitals & Technical SEO Optimization"
     ],
     "icon": "Code2",
     "color": "blue",
@@ -28,9 +28,9 @@
       }
     ],
     "deliverables": [
-      "Production-ready Full-Stack codebase",
+      "Production-ready Web & Application codebase",
       "Custom REST/GraphQL API services",
-      "Database schema & security policies",
+      "Responsive component library & SEO setup",
       "Cloud deployment & speed auditing report"
     ]
   },
