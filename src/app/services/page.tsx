@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft, Zap } from 'lucide-react';
+import { StackedServiceCards } from '@/components/sections/StackedServiceCards';
+import { StartProjectButton } from '@/components/ui/StartProjectButton';
 
 export default function ServicesPage() {
   const servicesList = [
@@ -17,6 +19,7 @@ export default function ServicesPage() {
         'Brand films, explainers and launch videos',
         'Motion graphics, captions, sound design and colour',
       ],
+      slug: 'video-editing-motion-design',
     },
     {
       num: '02',
@@ -30,6 +33,7 @@ export default function ServicesPage() {
         'Sub-second page load performance & technical SEO',
         'Scalable API integrations & custom admin dashboards',
       ],
+      slug: 'web-development',
     },
     {
       num: '03',
@@ -43,6 +47,7 @@ export default function ServicesPage() {
         'Social media content kits & brand templates',
         'Typography, color scales & asset guidelines',
       ],
+      slug: 'brand-presence-social-systems',
     },
     {
       num: '04',
@@ -56,6 +61,7 @@ export default function ServicesPage() {
         'Analytics tracking, pixel setup & attribution',
         'Retargeting strategy & email marketing workflows',
       ],
+      slug: 'performance-marketing',
     },
     {
       num: '05',
@@ -69,6 +75,7 @@ export default function ServicesPage() {
         'High-volume short-form reel editing for IG & TikTok',
         'Ad-variant generation for campaign scaling',
       ],
+      slug: 'ugc-reels-creator-collaborations',
     },
     {
       num: '06',
@@ -81,24 +88,19 @@ export default function ServicesPage() {
         'Colour, typography and supporting graphic language',
         'Usage guidelines and production-ready assets',
       ],
+      slug: 'branding-identity',
     },
   ];
 
   return (
-    <main className="min-h-screen bg-[var(--bg)] text-[var(--text-primary)] pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden font-sans">
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text-primary)] pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-x-clip font-sans">
       
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6a57fa]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         
-        {/* Back Link */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-secondary)] hover:text-[#6a57fa] transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" /> Back to Home
-        </Link>
+
 
         {/* HERO SECTION */}
         <div className="space-y-6 pt-2">
@@ -112,13 +114,10 @@ export default function ServicesPage() {
           </h1>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-2">
-            <Link
-              href="/#contact"
-              className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white text-xs font-black uppercase tracking-wider shadow-lg hover:bg-[#5844f7] hover:scale-105 transition-all flex items-center gap-2"
-            >
-              <span>Connect with us</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            <StartProjectButton
+              label="Connect with us"
+              className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white text-xs font-black uppercase tracking-wider shadow-lg hover:bg-[#5844f7] hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
+            />
             <p className="text-[var(--text-secondary)] text-xs sm:text-sm font-mono font-medium">
               Tell us the goal. We will tell you what it actually needs.
             </p>
@@ -181,70 +180,8 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* STACKED CARDS DECK (Exact CSS provided by user matching Homepage Work deck) */}
-        <div className="relative flex flex-col gap-10 sm:gap-14 pb-12">
-          {servicesList.map((svc, index) => (
-            <div
-              key={svc.num}
-              style={{ top: `${90 + index * 24}px` }}
-              className="sticky rounded-[2rem] sm:rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 overflow-hidden group hover:border-[#6a57fa]/40"
-            >
-              {/* Background Ambient Radial Glow */}
-              <div className="absolute top-0 right-0 w-80 h-80 bg-[#6a57fa]/5 rounded-full blur-3xl pointer-events-none" />
-
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
-                
-                {/* LEFT COLUMN: Title & Summary (6 Cols) */}
-                <div className="lg:col-span-6 space-y-5">
-                  <div className="flex items-center gap-3">
-                    <span className="px-3 py-1 rounded-full bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/30 text-xs font-mono font-black uppercase tracking-widest">
-                      {svc.num} / {svc.tag}
-                    </span>
-                    <span className="text-xs text-[var(--text-secondary)] font-mono font-bold">• {svc.num} — 06</span>
-                  </div>
-
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-[var(--text-primary)] leading-snug group-hover:text-[#6a57fa] transition-colors">
-                    {svc.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed">
-                    {svc.summary}
-                  </p>
-
-                  <div className="pt-2">
-                    <Link
-                      href="/#contact"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all hover:scale-105"
-                    >
-                      <span>View More Details</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-
-                {/* RIGHT COLUMN: What You Get List (6 Cols) */}
-                <div className="lg:col-span-6 space-y-4 lg:border-l lg:border-[var(--border)] lg:pl-8">
-                  <div className="text-xs font-mono font-black uppercase tracking-widest text-[#6a57fa]">
-                    WHAT YOU GET
-                  </div>
-                  <div className="space-y-3 pt-1">
-                    {svc.deliverables.map((item, itemIdx) => (
-                      <div key={itemIdx} className="flex items-start gap-3 border-b border-[var(--border)] pb-3">
-                        <span className="text-xs font-mono font-black text-[#6a57fa] pt-0.5">
-                          0{itemIdx + 1}
-                        </span>
-                        <span className="text-xs sm:text-sm font-semibold text-[var(--text-primary)] leading-snug">
-                          {item}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* REUSABLE STACKED SERVICE CARDS SECTION */}
+        <StackedServiceCards services={servicesList} />
 
         {/* BOTTOM CALLOUT BANNER */}
         <div className="flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-3xl border border-[var(--border)] bg-[var(--surface)] gap-6 shadow-md">
@@ -256,13 +193,15 @@ export default function ServicesPage() {
               We review your requirements and provide an honest scope-led roadmap within 24 hours.
             </p>
           </div>
-          <Link
-            href="/#contact"
-            className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white hover:bg-[#5844f7] text-xs font-black uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 shadow-lg hover:scale-105"
+          <button
+            onClick={() => {
+              if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('open-project-modal'));
+            }}
+            className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white hover:bg-[#5844f7] text-xs font-black uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 shadow-lg hover:scale-105 cursor-pointer"
           >
             <span>Start a Project</span>
             <ArrowUpRight className="w-4 h-4" />
-          </Link>
+          </button>
         </div>
 
       </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Zap, ShieldCheck, Rocket, Code2 } from 'lucide-react';
+import { Zap, Palette, Rocket, Code2 } from 'lucide-react';
 
 export function WhyUsSection() {
   const pillars = [
@@ -10,9 +10,9 @@ export function WhyUsSection() {
       desc: 'We engineer web apps to load in under 500ms globally. Lightning speed improves SEO rankings and drastically boosts conversion rates.',
     },
     {
-      icon: <ShieldCheck className="w-6 h-6 text-purple-400" />,
-      title: 'Dark & Light Theme Supremacy',
-      desc: 'Class-based dark/light theme systems built using CSS variables, preventing flash-of-unstyled-theme and honoring user preference.',
+      icon: <Palette className="w-6 h-6 text-[#6a57fa]" />,
+      title: 'Bespoke Brand & UI Systems',
+      desc: 'From iconic vector logo suites to scalable component design tokens, we craft visually arresting interfaces that elevate your company market authority.',
     },
     {
       icon: <Rocket className="w-6 h-6 text-emerald-400" />,

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Sparkles, ChevronRight, Check, Rocket, CheckCircle2, TrendingUp, ArrowRight } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -10,16 +11,15 @@ interface HeroSectionProps {
 export function HeroSection({ onOpenModal }: HeroSectionProps) {
   const [email, setEmail] = useState('');
   const [consent, setConsent] = useState(true);
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
-        onOpenModal?.(email);
-      }, 600);
+    const targetEmail = email.trim();
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('open-project-modal', { detail: targetEmail }));
+    }
+    if (onOpenModal) {
+      onOpenModal(targetEmail);
     }
   };
 
@@ -66,7 +66,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
             {/* Product Tour Link */}
             <div className="pt-1">
               <a
-                href="#services"
+                href="/services"
                 onClick={scrollToServices}
                 data-cursor="hover"
                 className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#6a57fa] hover:text-[#8777ff] transition-colors cursor-pointer"
@@ -90,16 +90,9 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                 <button
                   type="submit"
                   data-cursor="hover"
-                  className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:bg-[#5844f7] transition-all shrink-0 flex items-center justify-center gap-2"
+                  className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg hover:bg-[#5844f7] transition-all shrink-0 flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  {submitted ? (
-                    <>
-                      <Check className="w-4 h-4 text-white" />
-                      <span>SENT!</span>
-                    </>
-                  ) : (
-                    <span>GET STARTED</span>
-                  )}
+                  <span>GET STARTED</span>
                 </button>
               </div>
 
@@ -208,8 +201,14 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
 
                 <button
                   type="button"
-                  onClick={() => onOpenModal?.()}
-                  className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
+                  onClick={() => {
+                    if (onOpenModal) {
+                      onOpenModal(email);
+                    } else if (typeof window !== 'undefined') {
+                      window.dispatchEvent(new CustomEvent('open-project-modal', { detail: email }));
+                    }
+                  }}
+                  className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20 cursor-pointer"
                 >
                   <span>Get started</span>
                   <ArrowRight className="w-3 h-3" />
@@ -241,7 +240,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
                     Let's turn your ideas into action. Manage projects, track progress and achieve more — together.
                   </p>
                   <a
-                    href="#services"
+                    href="/services"
                     onClick={scrollToServices}
                     data-cursor="hover"
                     className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20 cursor-pointer"

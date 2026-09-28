@@ -103,5 +103,145 @@
       "Admin dashboard & conversation logs",
       "Webhook trigger integrations"
     ]
+  },
+  {
+    "slug": "video-editing-motion-design",
+    "number": "04",
+    "title": "Video Editing & Motion Design",
+    "tagline": "Post-production for campaigns, launches and everyday content.",
+    "description": "High-impact video editing, motion graphics, color grading, and sound design engineered to captivate audiences and increase engagement across digital platforms.",
+    "bullets": [
+      "Edit Direction, Pacing & Storytelling",
+      "Short-Form Reels, TikToks & Social Ads",
+      "Brand Films & Product Launch Videos",
+      "Motion Graphics, VFX & Sound Design"
+    ],
+    "icon": "Code2",
+    "color": "indigo",
+    "features": [
+      {
+        "title": "High-Conversion Edits",
+        "desc": "Paced and hook-optimized to retain viewers from the first 3 seconds."
+      },
+      {
+        "title": "Full Post-Production Suite",
+        "desc": "Color grading, audio mixing, custom kinetic captions, and motion titles."
+      },
+      {
+        "title": "Multi-Format Export",
+        "desc": "Optimized aspect ratios for vertical reels, widescreen YouTube, and ad placements."
+      }
+    ],
+    "deliverables": [
+      "Edit direction, structure and pacing",
+      "Short-form reels, ads and social edits",
+      "Brand films, explainers and launch videos",
+      "Motion graphics, captions, sound design and colour"
+    ]
+  },
+  {
+    "slug": "brand-presence-social-systems",
+    "number": "05",
+    "title": "Brand Presence & Social Systems",
+    "tagline": "Omni-channel visual strategy and scalable social content systems.",
+    "description": "We craft comprehensive brand presence systems, template libraries, and multi-channel strategies that maintain visual perfection across every touchpoint.",
+    "bullets": [
+      "Omnichannel Visual Direction & Strategy",
+      "Interactive Design Systems & Component Kits",
+      "Social Media Content Templates & Grid Rules",
+      "Typography & Color Token Architecture"
+    ],
+    "icon": "Palette",
+    "color": "pink",
+    "features": [
+      {
+        "title": "Cohesive Brand Identity",
+        "desc": "Unified visual theme for pitch decks, social graphics, and web channels."
+      },
+      {
+        "title": "Rapid Content Creation",
+        "desc": "Pre-built modular Figma and Canva templates for instantaneous publishing."
+      },
+      {
+        "title": "Audience Engagement",
+        "desc": "Strategic layout hierarchy built to maximize interaction and brand recall."
+      }
+    ],
+    "deliverables": [
+      "Omnichannel visual direction & brand strategy",
+      "Interactive design systems & component libraries",
+      "Social media content kits & brand templates",
+      "Typography, color scales & asset guidelines"
+    ]
+  },
+  {
+    "slug": "performance-marketing",
+    "number": "06",
+    "title": "Performance Marketing",
+    "tagline": "Data-driven growth campaigns, ad funnel architecture & conversion optimization.",
+    "description": "Lower customer acquisition costs and scale revenue with precision-targeted paid campaigns, high-converting landing pages, and real-time attribution analytics.",
+    "bullets": [
+      "Paid Acquisition & Creative Ad Testing",
+      "High-Converting Funnel & Landing Page Builds",
+      "Pixel Setup, Tracking & Attribution Modeling",
+      "Retargeting & Automated Email Workflows"
+    ],
+    "icon": "Code2",
+    "color": "amber",
+    "features": [
+      {
+        "title": "Conversion Rate Optimization",
+        "desc": "Data-backed A/B testing on copy, design hooks, and call-to-actions."
+      },
+      {
+        "title": "Multi-Platform Ads",
+        "desc": "Meta, Google, LinkedIn, and TikTok ad campaign setup and scaling."
+      },
+      {
+        "title": "Transparent ROI Analytics",
+        "desc": "Real-time dashboards tracking CAC, ROAS, LTV, and conversion rate."
+      }
+    ],
+    "deliverables": [
+      "Paid acquisition setup & creative ad testing",
+      "High-converting landing page design & funnel build",
+      "Analytics tracking, pixel setup & attribution",
+      "Retargeting strategy & email marketing workflows"
+    ]
+  },
+  {
+    "slug": "ugc-reels-creator-collaborations",
+    "number": "07",
+    "title": "UGC Reels & Creator Collaborations",
+    "tagline": "High-performing short-form video content & creator network management.",
+    "description": "Drive authentic audience trust and viral reach through creator-led UGC content, creative hook scripts, and ad variant testing.",
+    "bullets": [
+      "Creator Sourcing & Outreach Management",
+      "UGC Scripting, Hooks & Storyboard Direction",
+      "High-Volume Reel Editing for IG & TikTok",
+      "Ad Variant Generation for Campaign Scaling"
+    ],
+    "icon": "Bot",
+    "color": "cyan",
+    "features": [
+      {
+        "title": "Creator Matching",
+        "desc": "We pair your brand with vetted creators matching your niche demographics."
+      },
+      {
+        "title": "High-Performing Hooks",
+        "desc": "Tested psychological hooks designed to stop scrolling within 2 seconds."
+      },
+      {
+        "title": "Ad Variations",
+        "desc": "Multiple intro, audio, and CTA variations for rapid ad optimization."
+      }
+    ],
+    "deliverables": [
+      "Creator sourcing & collaboration management",
+      "UGC hook scripts & visual storyboard direction",
+      "High-volume short-form reel editing for IG & TikTok",
+      "Ad-variant generation for campaign scaling"
+    ]
   }
 ]

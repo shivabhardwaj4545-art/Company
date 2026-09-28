@@ -1,10 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowUpRight, ShieldCheck, Zap, Award, Users, Lock } from 'lucide-react';
 
-export const metadata = {
-  title: 'Why Choose Us | AiKodX - Digital Agency & AI Studio',
-  description: 'Discover why ambitious startups and enterprises choose AiKodX for custom software development, AI automation, and product design.',
-};
 
 export default function WhyUsPage() {
   const pillars = [
@@ -146,13 +144,15 @@ export default function WhyUsPage() {
             Ready to experience the difference?
           </h2>
           <div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider transition-all shadow-xl hover:scale-105"
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('open-project-modal'));
+              }}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider transition-all shadow-xl hover:scale-105 cursor-pointer"
             >
               <span>Start Your Project</span>
               <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            </button>
           </div>
         </div>
 

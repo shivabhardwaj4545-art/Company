@@ -55,17 +55,7 @@ export function ProductsSection() {
                   {product.tagline}
                 </p>
 
-                {/* Tech Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-6">
-                  {product.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[var(--bg)] text-[var(--text-secondary)] border border-[var(--border)]"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+
 
                 {/* Key Metrics Strip */}
                 <div className="grid grid-cols-3 gap-2 py-3 px-4 rounded-xl bg-[var(--bg)] border border-[var(--border)] mb-6 text-center">

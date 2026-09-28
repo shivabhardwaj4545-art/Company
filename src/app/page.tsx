@@ -2,7 +2,6 @@
 
 import { HeroSection } from '@/components/sections/HeroSection';
 import { WhatWeDoSection } from '@/components/sections/WhatWeDoSection';
-import { FeaturedWorkSection } from '@/components/sections/FeaturedWorkSection';
 import { WorkSection } from '@/components/sections/WorkSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { TrustBar } from '@/components/sections/TrustBar';
@@ -19,9 +18,6 @@ export default function HomePage() {
 
       {/* What We Do Section (Scratch-to-reveal) */}
       <WhatWeDoSection />
-
-      {/* Flagship Platform Spotlight (EzRestero) */}
-      <FeaturedWorkSection />
 
       {/* Client Work & Case Studies */}
       <WorkSection />

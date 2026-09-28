@@ -26,7 +26,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       {/* Back Button */}
       <Link
-        href="/#work"
+        href="/work"
         className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] mb-8 transition-colors"
       >
         <ArrowLeft className="w-4 h-4" /> Back to Featured Work
@@ -51,14 +51,16 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       </div>
 
       {/* Cover Image */}
-      <div className="relative rounded-3xl border border-[var(--border)] overflow-hidden bg-[var(--surface)] mb-16 shadow-2xl">
-        {/* eslint-disable-next-html-extension */}
-        <img
-          src={project.cover}
-          alt={project.title}
-          className="w-full h-80 sm:h-[500px] object-cover"
-        />
-      </div>
+      {project.cover ? (
+        <div className="relative rounded-3xl border border-[var(--border)] overflow-hidden bg-[var(--surface)] mb-16 shadow-2xl">
+          {/* eslint-disable-next-html-extension */}
+          <img
+            src={project.cover}
+            alt={project.title}
+            className="w-full h-80 sm:h-[500px] object-cover"
+          />
+        </div>
+      ) : null}
 
       {/* Results Strip */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-8 rounded-2xl bg-[var(--surface)] border border-[var(--border)] mb-16 relative overflow-hidden">
@@ -95,25 +97,17 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Tech Stack & Live Link */}
-      <div className="p-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div>
-          <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)] mb-3">
-            Technologies & Tools Used
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {project.techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1 rounded-lg bg-[var(--bg)] text-xs font-semibold text-[var(--text-primary)] border border-[var(--border)]"
-              >
-                {tech}
-              </span>
-            ))}
+      {/* Live Project CTA */}
+      {project.liveUrl && (
+        <div className="p-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] flex items-center justify-between gap-6">
+          <div className="space-y-1">
+            <h4 className="text-base font-bold font-display text-[var(--text-primary)]">
+              Experience the Live Application
+            </h4>
+            <p className="text-xs text-[var(--text-secondary)] font-medium">
+              Explore the real-time production interface and active platform features.
+            </p>
           </div>
-        </div>
-
-        {project.liveUrl && (
           <a
             href={project.liveUrl}
             target="_blank"
@@ -123,8 +117,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <span>Visit Live Project</span>
             <ExternalLink className="w-4 h-4" />
           </a>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

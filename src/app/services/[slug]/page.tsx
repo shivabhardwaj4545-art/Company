@@ -4,20 +4,29 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Footer } from '@/components/ui/Footer';
+import { StartProjectButton } from '@/components/ui/StartProjectButton';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+const slugAliases: Record<string, string> = {
+  'logo-brand-identity': 'branding-identity',
+  'web-product-engineering': 'web-development',
+};
+
 export async function generateStaticParams() {
   const services = servicesData as ServiceItem[];
-  return services.map((s) => ({ slug: s.slug }));
+  const baseSlugs = services.map((s) => ({ slug: s.slug }));
+  const aliasSlugs = Object.keys(slugAliases).map((alias) => ({ slug: alias }));
+  return [...baseSlugs, ...aliasSlugs];
 }
 
 export default async function ServiceDetailPage({ params }: PageProps) {
   const { slug } = await params;
+  const normalizedSlug = slugAliases[slug] || slug;
   const services = servicesData as ServiceItem[];
-  const service = services.find((s) => s.slug === slug);
+  const service = services.find((s) => s.slug === normalizedSlug || s.slug === slug);
 
   if (!service) {
     notFound();
@@ -28,7 +37,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {/* Back Button */}
         <Link
-          href="/#services"
+          href="/services"
           className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] mb-8 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Capabilities
@@ -36,10 +45,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
         {/* Header Info */}
         <div className="mb-12">
-          <span className="text-3xl font-extrabold font-display text-[var(--accent)] tracking-tight block mb-2">
-            SERVICE {service.number}
-          </span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold font-display text-[var(--text-primary)] mb-4">
+          <h1 className="text-4xl sm:text-6xl font-extrabold font-display text-[var(--text-primary)] mb-4 uppercase">
             {service.title}
           </h1>
           <p className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl leading-relaxed">
@@ -93,13 +99,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           <p className="text-sm text-white/80 max-w-md mx-auto mb-6">
             Let's discuss your technical requirements and build a tailored strategy.
           </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[var(--accent)] font-bold text-sm hover:scale-105 transition-transform shadow-xl"
-          >
-            <span>Get Started Today</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <StartProjectButton
+            label="Get Started Today"
+            iconType="arrow-right"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[var(--accent)] font-bold text-sm hover:scale-105 transition-transform shadow-xl cursor-pointer"
+          />
         </div>
       </div>
     </>

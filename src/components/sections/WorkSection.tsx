@@ -2,15 +2,19 @@
 
 import projectsData from '@/content/projects.json';
 import { ProjectItem } from '@/types/content';
-import { Trophy, ArrowUpRight, ExternalLink, ArrowRight } from 'lucide-react';
+import { Trophy, ArrowUpRight, ExternalLink, ArrowRight, Asterisk } from 'lucide-react';
 import Link from 'next/link';
+
+import { Work3DCarousel } from '@/components/ui/Work3DCarousel';
 
 interface WorkSectionProps {
   onOpenModal?: () => void;
 }
 
 export function WorkSection({ onOpenModal }: WorkSectionProps) {
-  const allProjects = projectsData as ProjectItem[];
+  const allProjects = (projectsData as ProjectItem[]).filter(
+    (p) => !p.isYourBrandCard && p.slug !== 'your-brand-here'
+  );
 
   return (
     <section id="work" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 scroll-mt-28">
@@ -30,47 +34,49 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
       </div>
 
       {/* Stacked Cards Deck Container */}
-      <div className="relative flex flex-col gap-10 sm:gap-14 pb-12">
+      <div className="relative flex flex-col gap-10 sm:gap-14 pb-8">
         {allProjects.map((project, index) => {
           return (
             <div
               key={project.slug}
-              style={{ top: `${90 + index * 24}px` }}
-              className="sticky rounded-[2rem] sm:rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 overflow-hidden group hover:border-[#6a57fa]/40"
+              style={{ top: `${75 + index * 16}px` }}
+              className="sticky rounded-2xl sm:rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6 lg:p-7 shadow-[0_15px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden group hover:border-[#6a57fa]/40"
             >
               {/* Background Ambient Radial Glow */}
-              <div className="absolute top-0 right-0 w-80 h-80 bg-[#6a57fa]/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#6a57fa]/5 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
                 
                 {/* LEFT COLUMN: Image & Visual Badge (5 Cols) */}
                 <div className="lg:col-span-5 relative">
-                  <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-full bg-slate-950 border border-slate-200/80 dark:border-white/10 shadow-lg group-hover:shadow-2xl transition-all duration-500">
+                  <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] w-full bg-slate-950 border border-slate-200/80 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
                     {/* eslint-disable-next-html-extension */}
-                    <img
-                      src={project.cover}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-[0.97]"
-                    />
+                    {project.cover ? (
+                      <img
+                        src={project.cover}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-[0.97]"
+                      />
+                    ) : null}
                     
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 pointer-events-none" />
 
                     {/* Top Badges */}
-                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 flex-wrap z-10">
-                      <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-[10px] font-extrabold text-white border border-white/20 uppercase tracking-wider">
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 flex-wrap z-10">
+                      <span className="px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-[10px] font-extrabold text-white border border-white/20 uppercase tracking-wider">
                         {project.category}
                       </span>
                       {project.slug === 'ezrestero' && (
-                        <span className="px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-indigo-600 text-[10px] font-black text-white shadow-md border border-white/30 uppercase tracking-widest">
+                        <span className="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-500 to-indigo-600 text-[10px] font-black text-white shadow-md border border-white/30 uppercase tracking-widest">
                           ★ FLAGSHIP
                         </span>
                       )}
                     </div>
 
                     {/* Bottom Client Tag */}
-                    <div className="absolute bottom-3.5 left-3.5 z-10">
-                      <span className="text-[11px] font-black uppercase tracking-widest text-amber-300 drop-shadow-md">
+                    <div className="absolute bottom-3 left-3 z-10">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-amber-300 drop-shadow-md">
                         {project.client}
                       </span>
                     </div>
@@ -78,46 +84,34 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
                 </div>
 
                 {/* RIGHT COLUMN: Content & Details (7 Cols) */}
-                <div className="lg:col-span-7 space-y-5">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs font-black tracking-widest text-[#6a57fa] uppercase font-mono">
+                <div className="lg:col-span-7 space-y-3.5">
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[11px] font-black tracking-widest text-[#6a57fa] uppercase font-mono">
                         {project.category}
                       </span>
-                      <span className="text-xs text-[var(--text-secondary)] font-mono">• {project.year}</span>
+                      <span className="text-[11px] text-[var(--text-secondary)] font-mono">• {project.year}</span>
                     </div>
 
                     {/* Project Title */}
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-[var(--text-primary)] leading-snug group-hover:text-[#6a57fa] transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-black font-display text-[var(--text-primary)] leading-tight group-hover:text-[#6a57fa] transition-colors">
                       {project.title}
                     </h3>
                   </div>
 
-                  {/* Summary Description */}
-                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed">
+                  {/* Summary Description - Compact line clamp */}
+                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed line-clamp-2">
                     {project.summary}
                   </p>
 
-                  {/* Tech Stack Pills */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {project.techStack.slice(0, 5).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2.5 py-1 rounded-lg bg-[var(--bg)] border border-[var(--border)] text-[11px] font-bold text-[var(--text-secondary)]"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
                   {/* Key Metrics Strip */}
-                  <div className="pt-4 border-t border-[var(--border)] grid grid-cols-3 gap-3">
+                  <div className="pt-3 border-t border-[var(--border)] grid grid-cols-3 gap-2">
                     {project.results.map((res, idx) => (
                       <div key={idx} className="space-y-0.5">
-                        <div className="text-base sm:text-xl font-black font-display text-[#6a57fa]">
+                        <div className="text-sm sm:text-lg font-black font-display text-[#6a57fa]">
                           {res.metric}
                         </div>
-                        <div className="text-[10px] sm:text-xs text-[var(--text-secondary)] font-bold truncate">
+                        <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-bold truncate">
                           {res.label}
                         </div>
                       </div>
@@ -125,13 +119,13 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
                   </div>
 
                   {/* Action Link / Buttons */}
-                  <div className="pt-2 flex items-center gap-4 flex-wrap">
+                  <div className="pt-1 flex items-center gap-3 flex-wrap">
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all hover:scale-105"
+                        className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all hover:scale-105"
                       >
                         <span>Visit Live Platform</span>
                         <ExternalLink className="w-3.5 h-3.5" />
@@ -143,7 +137,7 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
                       className="inline-flex items-center gap-1.5 text-xs font-black text-[#6a57fa] hover:text-[#5844f7] transition-colors cursor-pointer group/link"
                     >
                       <span>See full case study</span>
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
                     </Link>
                   </div>
 
@@ -153,6 +147,17 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
             </div>
           );
         })}
+      </div>
+
+      {/* SEE ALL WORKS CTA Button */}
+      <div className="flex justify-center pt-2 pb-6">
+        <Link
+          href="/work"
+          className="px-10 py-4 rounded-full bg-white border-2 border-slate-300 text-black text-sm sm:text-base font-black uppercase tracking-wider shadow-xl hover:bg-slate-50 hover:border-[#6a57fa] hover:text-[#6a57fa] hover:scale-105 transition-all flex items-center gap-2.5 group"
+        >
+          <span>See All Works</span>
+          <ArrowUpRight className="w-5 h-5 text-[#6a57fa] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </Link>
       </div>
 
       {/* Bottom Callout Banner */}
@@ -166,8 +171,11 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
           </p>
         </div>
         <button
-          onClick={onOpenModal}
-          className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white hover:bg-[#5844f7] text-xs font-black uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 shadow-lg hover:scale-105"
+          onClick={() => {
+            if (onOpenModal) onOpenModal();
+            else if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('open-project-modal'));
+          }}
+          className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white hover:bg-[#5844f7] text-xs font-black uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 shadow-lg hover:scale-105 cursor-pointer"
         >
           <span>Start a Project</span>
           <ArrowUpRight className="w-4 h-4" />

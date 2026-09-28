@@ -6,7 +6,7 @@ import { ArrowUpRight, CheckCircle2, Code2, Palette, Bot } from 'lucide-react';
 import Link from 'next/link';
 
 export function WhatWeDoSection() {
-  const services = servicesData as ServiceItem[];
+  const services = (servicesData as ServiceItem[]).slice(0, 3);
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -77,7 +77,7 @@ export function WhatWeDoSection() {
 
             {/* Detail Link */}
             <Link
-              href={`/services/${service.slug}`}
+              href="/services"
               data-cursor="hover"
               className="inline-flex items-center justify-between w-full pt-4 border-t border-[var(--border)] text-xs font-black text-[var(--text-primary)] group-hover:text-[#6a57fa] transition-colors uppercase tracking-wider"
             >

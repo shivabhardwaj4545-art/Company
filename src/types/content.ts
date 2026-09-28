@@ -38,6 +38,7 @@ export interface ProjectItem {
   gallery: string[];
   techStack: string[];
   liveUrl?: string;
+  isYourBrandCard?: boolean;
 }
 
 export interface TestimonialItem {

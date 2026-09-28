@@ -147,5 +147,58 @@
       "Render Cloud"
     ],
     "liveUrl": "https://courier-web-1.onrender.com/"
+  },
+  {
+    "slug": "aikodx-brand",
+    "title": "AiKodX Studio — Visual Brand Identity & Design Systems",
+    "client": "AiKodX Studio",
+    "category": "Brand & Visual Identity Systems",
+    "year": "2026",
+    "cover": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Our signature Brand & Identity design framework. We construct iconic vector logo suites, typography hierarchies, cohesive color tokens, and design systems for ambitious companies and modern AI startups.",
+    "challenge": "Fast-growing companies and startups often launch with fragmented visual branding, inconsistent color palettes, and non-scalable design assets across web and mobile platforms.",
+    "solution": "AiKodX Studio architects unified digital brand systems with comprehensive guidelines, responsive SVG logo packages, motion graphics assets, and Tailwind UI component design tokens.",
+    "results": [
+      { "metric": "100%", "label": "Vector SVG Scalability" },
+      { "metric": "Multi-Theme", "label": "Dark/Light Design Tokens" },
+      { "metric": "Unified", "label": "Visual Brand Standard" }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "techStack": [
+      "Figma",
+      "Adobe Illustrator",
+      "Design Systems",
+      "CSS Tokens",
+      "Framer Motion",
+      "SVG Vector Suite"
+    ],
+    "liveUrl": "https://aikodx.com"
+  },
+  {
+    "slug": "your-brand-here",
+    "title": "YOUR BRAND HERE — This spot isn't taken yet. Move fast.",
+    "client": "YOUR BRAND HERE",
+    "category": "SPOT AVAILABLE",
+    "year": "2026",
+    "cover": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "summary": "This spot isn't taken yet. Move fast. Partner with AiKodX Studio to launch your custom AI web application, SaaS engine, or visual brand identity.",
+    "challenge": "Standing out in a crowded market requires rapid execution, elite visual aesthetics, and flawless technical architecture.",
+    "solution": "Reserve your dedicated studio build slot with AiKodX today.",
+    "results": [
+      { "metric": "#1", "label": "Spot Available" },
+      { "metric": "Fast", "label": "Turnaround" },
+      { "metric": "100%", "label": "Dedicated Team" }
+    ],
+    "gallery": [],
+    "techStack": [
+      "Next.js 15",
+      "React 19",
+      "AI Integration",
+      "Brand System"
+    ],
+    "isYourBrandCard": true
   }
 ]

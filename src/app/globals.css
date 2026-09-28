@@ -43,7 +43,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   transition: background-color 0.25s ease, color 0.25s ease;
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
   padding: 0;
 }

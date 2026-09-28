@@ -36,10 +36,13 @@ export function Footer({ onOpenModal }: FooterProps) {
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
                 <button
-                  onClick={onOpenModal}
+                  onClick={() => {
+                    if (onOpenModal) onOpenModal();
+                    else if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('open-project-modal'));
+                  }}
                   type="button"
                   data-cursor="hover"
-                  className="px-7 py-3.5 rounded-full bg-white text-[#0b0a16] font-black text-xs uppercase tracking-wider hover:bg-slate-100 transition-all flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95"
+                  className="px-7 py-3.5 rounded-full bg-white text-[#0b0a16] font-black text-xs uppercase tracking-wider hover:bg-slate-100 transition-all flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
                 >
                   <span>Start a project</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -131,7 +134,7 @@ export function Footer({ onOpenModal }: FooterProps) {
             <span>|</span>
             <span>All Rights Reserved</span>
             <span>|</span>
-            <Link href="/#faq" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/faq" className="hover:text-white transition-colors">Privacy Policy</Link>
           </div>
         </div>
 

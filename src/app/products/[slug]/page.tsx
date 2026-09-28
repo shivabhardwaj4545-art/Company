@@ -26,7 +26,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       {/* Back Button */}
       <Link
-        href="/#products"
+        href="/"
         className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] mb-8 transition-colors"
       >
         <ArrowLeft className="w-4 h-4" /> Back to Products
@@ -101,21 +101,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="p-6 rounded-2xl border border-[var(--border)] bg-[var(--surface)] space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]">
-              Tech Stack
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {product.techStack.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 rounded-lg bg-[var(--bg)] text-xs font-semibold text-[var(--text-primary)] border border-[var(--border)]"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+
 
           {product.liveUrl && (
             <a

@@ -64,10 +64,13 @@ export function Header({ onOpenModal }: HeaderProps) {
         {/* Right Actions: Start a Project CTA */}
         <div className="hidden md:flex items-center gap-4">
           <button
-            onClick={onOpenModal}
+            onClick={() => {
+              if (onOpenModal) onOpenModal();
+              else if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('open-project-modal'));
+            }}
             type="button"
             data-cursor="hover"
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#6a57fa] text-white text-xs font-black shadow-md hover:shadow-lg hover:bg-[#5844f7] transition-all uppercase tracking-wider"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#6a57fa] text-white text-xs font-black shadow-md hover:shadow-lg hover:bg-[#5844f7] transition-all uppercase tracking-wider cursor-pointer"
           >
             <span>Start a Project</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -105,9 +108,10 @@ export function Header({ onOpenModal }: HeaderProps) {
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
-                onOpenModal();
+                if (onOpenModal) onOpenModal();
+                else if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('open-project-modal'));
               }}
-              className="w-full py-3 rounded-full bg-[#6a57fa] text-white text-center font-black text-sm uppercase tracking-wider shadow-md hover:bg-[#5844f7]"
+              className="w-full py-3 rounded-full bg-[#6a57fa] text-white text-center font-black text-sm uppercase tracking-wider shadow-md hover:bg-[#5844f7] cursor-pointer"
             >
               Start a Project
             </button>

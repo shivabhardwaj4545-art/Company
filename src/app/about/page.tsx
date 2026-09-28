@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowUpRight, Users, Target, Compass } from 'lucide-react';
+import { StartProjectButton } from '@/components/ui/StartProjectButton';
 import foundersData from '@/content/founders.json';
 import { FounderItem } from '@/types/content';
 
@@ -145,18 +146,6 @@ export default function AboutPage() {
                           <span>LINKEDIN ↗</span>
                         </a>
                       )}
-                      {founder.socials.github && (
-                        <a
-                          href={founder.socials.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          data-cursor="hover"
-                          className="px-3.5 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-secondary)] text-xs font-black text-[#6a57fa] hover:bg-[#6a57fa] hover:text-white transition-all inline-flex items-center gap-1.5 uppercase"
-                        >
-                          <GithubIcon />
-                          <span>GITHUB ↗</span>
-                        </a>
-                      )}
                     </div>
 
                     <div className="pt-2 space-y-2">
@@ -205,13 +194,10 @@ export default function AboutPage() {
             Want to build something extraordinary together?
           </h2>
           <div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider transition-all shadow-xl hover:scale-105"
-            >
-              <span>Talk to Founders</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            <StartProjectButton
+              label="Talk to Founders"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider transition-all shadow-xl hover:scale-105 cursor-pointer"
+            />
           </div>
         </div>
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProjectItem } from '@/types/content';
-import { ExternalLink, Play, Pause, ChevronLeft, ChevronRight, Globe, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Play, Pause, ChevronLeft, ChevronRight, Globe, ArrowUpRight, Asterisk } from 'lucide-react';
 import Link from 'next/link';
 
 interface Work3DCarouselProps {
@@ -72,6 +72,65 @@ export function Work3DCarousel({ projects, onOpenModal, showSeeAll = false }: Wo
             brightness = 'brightness(40%)';
           }
 
+          if (project.isYourBrandCard || project.slug === 'your-brand-here') {
+            return (
+              <motion.div
+                key={project.slug}
+                onClick={() => {
+                  if (isActive) {
+                    if (onOpenModal) onOpenModal();
+                    else if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('open-project-modal'));
+                  } else {
+                    setActiveIndex(idx);
+                  }
+                }}
+                animate={{
+                  x: translateX,
+                  scale: scale,
+                  opacity: opacity,
+                  zIndex: zIndex,
+                }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className={`absolute top-0 w-[85%] sm:w-[70%] max-w-[760px] aspect-[16/10] sm:aspect-[16/9] rounded-[24px] sm:rounded-[36px] overflow-hidden border-2 border-dashed border-[#6a57fa] shadow-2xl cursor-pointer bg-[#f4f3ff] dark:bg-slate-950/95 flex flex-col items-center justify-center p-6 sm:p-10 text-center ${
+                  isActive ? 'ring-2 ring-[#6a57fa]/50 shadow-[#6a57fa]/20' : ''
+                }`}
+                style={{ filter: brightness }}
+              >
+                <div className="flex flex-col items-center justify-center space-y-3 sm:space-y-5">
+                  {/* Asterisk Badge */}
+                  <div className="w-11 h-11 sm:w-16 sm:h-16 rounded-full bg-[#e8e5ff] dark:bg-[#6a57fa]/20 text-[#6a57fa] flex items-center justify-center shadow-inner">
+                    <Asterisk className="w-6 h-6 sm:w-10 sm:h-10 stroke-[3]" />
+                  </div>
+
+                  {/* Heading */}
+                  <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black font-display text-slate-950 dark:text-white tracking-tight uppercase">
+                    YOUR BRAND HERE
+                  </h3>
+
+                  {/* Subtitle */}
+                  <p className="text-xs sm:text-base text-slate-600 dark:text-slate-300 font-medium max-w-sm">
+                    This spot isn't taken yet. Move fast.
+                  </p>
+
+                  {/* CTA Button */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (onOpenModal) {
+                        onOpenModal();
+                      } else if (typeof window !== 'undefined') {
+                        window.dispatchEvent(new CustomEvent('open-project-modal'));
+                      }
+                    }}
+                    className="px-6 py-3 sm:px-9 sm:py-3.5 rounded-xl sm:rounded-2xl bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg hover:shadow-xl hover:scale-105 transition-all cursor-pointer"
+                  >
+                    START A PROJECT
+                  </button>
+                </div>
+              </motion.div>
+            );
+          }
+
           return (
             <motion.div
               key={project.slug}
@@ -89,21 +148,23 @@ export function Work3DCarousel({ projects, onOpenModal, showSeeAll = false }: Wo
               style={{ filter: brightness }}
             >
               {/* Cover Image */}
-              {/* eslint-disable-next-html-extension */}
-              <img
-                src={project.cover}
-                alt={project.title}
-                className="w-full h-full object-cover block"
-              />
+              {project.cover && project.cover.trim() !== '' ? (
+                /* eslint-disable-next-html-extension */
+                <img
+                  src={project.cover}
+                  alt={project.title}
+                  className="w-full h-full object-cover block"
+                />
+              ) : null}
 
               {/* Gradient Vignette Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none" />
 
-              {/* Top Website Pill Badge */}
+              {/* Top Category Badge */}
               <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
                 <span className="px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-black text-[10px] sm:text-xs font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
                   <Globe className="w-3.5 h-3.5 text-black" />
-                  <span>Website</span>
+                  <span>{project.category.toLowerCase().includes('brand') ? 'Brand Identity' : 'Website'}</span>
                 </span>
               </div>
 
@@ -137,25 +198,27 @@ export function Work3DCarousel({ projects, onOpenModal, showSeeAll = false }: Wo
 
       {/* Active Project Title & Description Below Carousel */}
       <AnimatePresence mode="wait">
-        <motion.div
-          key={activeProject.slug}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -15 }}
-          transition={{ duration: 0.3 }}
-          className="text-center max-w-2xl mx-auto space-y-2 px-4"
-        >
-          <Link
-            href={`/work/${activeProject.slug}`}
-            className="inline-flex items-center gap-2 text-2xl sm:text-4xl font-black font-display text-[var(--text-primary)] hover:text-[#6a57fa] transition-colors"
+        {!(activeProject.isYourBrandCard || activeProject.slug === 'your-brand-here') && (
+          <motion.div
+            key={activeProject.slug}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.3 }}
+            className="text-center max-w-2xl mx-auto space-y-2 px-4"
           >
-            <span>{activeProject.title.split('—')[0]}</span>
-            <ArrowUpRight className="w-6 h-6 text-[#6a57fa]" />
-          </Link>
-          <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed max-w-xl mx-auto">
-            {activeProject.summary}
-          </p>
-        </motion.div>
+            <Link
+              href={`/work/${activeProject.slug}`}
+              className="inline-flex items-center gap-2 text-2xl sm:text-4xl font-black font-display text-[var(--text-primary)] hover:text-[#6a57fa] transition-colors"
+            >
+              <span>{activeProject.title.split('—')[0]}</span>
+              <ArrowUpRight className="w-6 h-6 text-[#6a57fa]" />
+            </Link>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed max-w-xl mx-auto">
+              {activeProject.summary}
+            </p>
+          </motion.div>
+        )}
       </AnimatePresence>
 
       {/* Controls Bar (Pagination Dots + Play/Pause Button) */}

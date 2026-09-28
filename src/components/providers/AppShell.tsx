@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Header } from '@/components/ui/Header';
 import { Footer } from '@/components/ui/Footer';
@@ -23,6 +23,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    const handleCustomOpen = (e: Event) => {
+      const detail = (e as CustomEvent)?.detail;
+      handleOpenModal(typeof detail === 'string' ? detail : undefined);
+    };
+    window.addEventListener('open-project-modal', handleCustomOpen);
+    return () => window.removeEventListener('open-project-modal', handleCustomOpen);
+  }, []);
+
   // Check if current route is an admin or control panel page
   const isAdminPage = pathname.startsWith('/admin') || pathname.startsWith('/kx-control-857df3');
 
@@ -43,7 +52,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       {/* Global Footer on All Website Pages */}
       <Footer onOpenModal={handleOpenModal} />
 
-      {/* Floating Direct WhatsApp Button */}
+      {/* Floating Direct WhatsApp Redirect Button */}
       <WhatsAppButton />
 
       {/* Global 4-Step Project Inquiry Lead Modal */}
