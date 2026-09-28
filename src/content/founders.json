@@ -1,42 +1,48 @@
 [
   {
     "id": "f1",
-    "name": "SIMRAN SINGH",
-    "role": "FOUNDER — CLIENT ACQUISITION & MARKETING",
+    "name": "SHIVA SHARMA",
+    "role": "Founder & Technical Architect",
+    "badgeRole": "FOUNDER — TECHNICAL ARCHITECT & CLOUD",
     "initials": "SS",
-    "bgColor": "#f5c518",
-    "watermarkColor": "rgba(180, 140, 0, 0.35)",
-    "bio": "Leading client acquisition, brand strategy, and growth marketing for AiKodX Studio.",
-    "verifiedFacts": [
-      "CAN OVERTHINK FOREVER. LITERALLY FOREVER.",
-      "CAN MAKE 500 COLD CALLS A DAY",
-      "TAKES 47 SELFIES, POSTS ONE",
-      "DROPS THE MOST BANGER REELS",
-      "RUNS ON COFFEE AND CLIENTS"
-    ],
+    "bio": "Specializing in high-performance web systems, distributed cloud infrastructure, and full-stack enterprise platform architecture.",
+    "avatar": "/shiva.jpg",
+    "bgColor": "#FACC15",
+    "bgClass": "bg-[#FACC15]",
     "socials": {
-      "instagram": "https://instagram.com",
-      "linkedin": "https://linkedin.com"
-    }
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com",
+      "instagram": "https://instagram.com"
+    },
+    "verifiedFacts": [
+      "CAN CODE FOR 48 HOURS STRAIGHT ON COFFEE.",
+      "ARCHITECTS HIGH-PERFORMANCE WEB SYSTEMS.",
+      "TALKS TO CLOUD INFRASTRUCTURE. IT LISTENS.",
+      "DEBUGS PRODUCTION BUGS AT 3 AM WITH ZERO FEAR.",
+      "\"DONE IN 5 MINS\" = READY FOR ENTERPRISE DEPLOYMENT."
+    ]
   },
   {
     "id": "f2",
-    "name": "SANKET AGRAWAL",
-    "role": "FOUNDER — PROJECTS & TECH",
-    "initials": "SA",
-    "bgColor": "#ff4d00",
-    "watermarkColor": "rgba(180, 40, 0, 0.4)",
-    "bio": "Leading software engineering, system architecture, and technical execution for AiKodX Studio.",
-    "verifiedFacts": [
-      "CAN SLEEP 48 HOURS. CAN SKIP 48 TOO.",
-      "COFFEE COUNTS AS A MEAL",
-      "TALKS TO CLIENTS LIKE FAMILY",
-      "\"DONE IN 5 MINS\" = 5 HOURS",
-      "TALKS TO HIS CODE. IT LISTENS."
-    ],
+    "name": "BITTU VERMA",
+    "role": "Founder & Head of Product Design",
+    "badgeRole": "FOUNDER — PRODUCT DESIGN & SYSTEMS",
+    "initials": "BV",
+    "bio": "Leading product strategy, system design, dark-mode visual aesthetics, and high-conversion digital experiences.",
+    "avatar": "/bittu.png",
+    "bgColor": "#FF4500",
+    "bgClass": "bg-[#FF4500]",
     "socials": {
-      "instagram": "https://instagram.com",
-      "linkedin": "https://linkedin.com"
-    }
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com",
+      "instagram": "https://instagram.com"
+    },
+    "verifiedFacts": [
+      "CREATES DARK-MODE VISUALS THAT WOW CLIENTS.",
+      "OBSESSED WITH 100% PIXEL-PERFECT DESIGN.",
+      "CAN OVERTHINK A BUTTON GRADIENT FOREVER.",
+      "DROPS THE MOST BANGER UI/UX PROTOTYPES.",
+      "RUNS ON COFFEE AND STUNNING TYPOGRAPHY."
+    ]
   }
 ]

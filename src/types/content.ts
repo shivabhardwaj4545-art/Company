@@ -58,14 +58,14 @@ export interface FounderItem {
   id: string;
   name: string;
   role: string;
+  badgeRole: string;
   initials: string;
   bio: string;
-  avatar?: string;
-  bgColor?: string;
-  watermarkColor?: string;
-  verifiedFacts?: string[];
-  avatarStyle?: React.CSSProperties;
+  avatar: string;
+  bgColor: string;
+  bgClass: string;
   socials: { twitter?: string; linkedin?: string; github?: string; instagram?: string };
+  verifiedFacts: string[];
 }
 
 export interface FAQItem {
