@@ -38,7 +38,7 @@ export default function AllProjectsPage() {
 
         {/* 3D Coverflow Interactive Carousel Showcase */}
         <div className="py-6 rounded-3xl bg-[var(--surface-secondary)]/60 border border-[var(--border)] p-4 sm:p-8">
-          <Work3DCarousel projects={projects} showSeeAll={false} />
+          <Work3DCarousel projects={projects} showSeeAll={true} />
         </div>
       </div>
     </>

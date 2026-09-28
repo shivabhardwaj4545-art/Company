@@ -12,7 +12,7 @@ interface Work3DCarouselProps {
   showSeeAll?: boolean;
 }
 
-export function Work3DCarousel({ projects, onOpenModal, showSeeAll = true }: Work3DCarouselProps) {
+export function Work3DCarousel({ projects, onOpenModal, showSeeAll = false }: Work3DCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
