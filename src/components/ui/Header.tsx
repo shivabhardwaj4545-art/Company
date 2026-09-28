@@ -35,10 +35,10 @@ export function Header({ onOpenModal }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[var(--bg)]/95 backdrop-blur-md border-b border-[var(--border)] ${
         scrolled
-          ? 'py-3.5 bg-[var(--bg)]/95 backdrop-blur-md border-b border-[var(--border)] shadow-md'
-          : 'py-5 bg-transparent'
+          ? 'py-3.5 shadow-md'
+          : 'py-4 shadow-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">

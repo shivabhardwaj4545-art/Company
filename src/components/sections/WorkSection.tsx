@@ -22,7 +22,7 @@ export function WorkSection({ onOpenModal }: WorkSectionProps) {
   const allProjects = projectsData as ProjectItem[];
 
   return (
-    <section id="work" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <section id="work" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16 scroll-mt-28">
       
       {/* Section Title Header */}
       <div className="space-y-3">

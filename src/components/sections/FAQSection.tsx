@@ -15,7 +15,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-[var(--border)]">
+    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-[var(--border)] scroll-mt-28">
       {/* Section Header */}
       <div className="text-center mb-16">
         <span className="text-xs font-black tracking-widest text-[#6a57fa] uppercase inline-flex items-center gap-2 mb-2">

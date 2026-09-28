@@ -22,7 +22,7 @@ export function WhatWeDoSection() {
   };
 
   return (
-    <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-28">
       {/* Section Header */}
       <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
