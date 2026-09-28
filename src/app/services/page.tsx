@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowUpRight, ArrowLeft } from 'lucide-react';
+import { ArrowUpRight, ArrowLeft, Zap } from 'lucide-react';
 
 export default function ServicesPage() {
   const servicesList = [
@@ -11,10 +11,6 @@ export default function ServicesPage() {
       title: 'VIDEO EDITING & MOTION DESIGN',
       summary:
         'Post-production for campaigns, launches and everyday content — you supply the footage, we deliver the cut.',
-      leftBg: 'bg-[#dc5432]',
-      rightBg: 'bg-[#e26242]',
-      textColor: 'text-slate-950',
-      pillStyle: 'border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white',
       deliverables: [
         'Edit direction, structure and pacing',
         'Short-form reels, ads and social edits',
@@ -28,10 +24,6 @@ export default function ServicesPage() {
       title: 'WEB & APP DEVELOPMENT',
       summary:
         'Scalable Next.js web applications, mobile apps, and custom software systems engineered for high performance and growth.',
-      leftBg: 'bg-[#5f4fe3]',
-      rightBg: 'bg-[#6b5ce7]',
-      textColor: 'text-white',
-      pillStyle: 'border-white text-white hover:bg-white hover:text-slate-950',
       deliverables: [
         'Next.js enterprise architecture & microservices',
         'Cross-platform iOS & Android mobile applications',
@@ -45,10 +37,6 @@ export default function ServicesPage() {
       title: 'BRAND PRESENCE & SOCIAL SYSTEMS',
       summary:
         'Comprehensive brand strategy, visual direction, and cohesive design systems engineered for omni-channel presence.',
-      leftBg: 'bg-[#d89324]',
-      rightBg: 'bg-[#e5a034]',
-      textColor: 'text-slate-950',
-      pillStyle: 'border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white',
       deliverables: [
         'Omnichannel visual direction & brand strategy',
         'Interactive design systems & component libraries',
@@ -62,10 +50,6 @@ export default function ServicesPage() {
       title: 'PERFORMANCE MARKETING',
       summary:
         'Data-driven growth campaigns, ad funnel architecture, and conversion rate optimization that lower CAC and increase LTV.',
-      leftBg: 'bg-[#0b857a]',
-      rightBg: 'bg-[#0d9488]',
-      textColor: 'text-white',
-      pillStyle: 'border-white text-white hover:bg-white hover:text-slate-950',
       deliverables: [
         'Paid acquisition setup & creative ad testing',
         'High-converting landing page design & funnel build',
@@ -79,10 +63,6 @@ export default function ServicesPage() {
       title: 'UGC REELS & CREATOR COLLABORATIONS',
       summary:
         'High-performing short-form video content, UGC reel concepts, and creator management for viral social reach.',
-      leftBg: 'bg-[#1b55d5]',
-      rightBg: 'bg-[#2563eb]',
-      textColor: 'text-white',
-      pillStyle: 'border-white text-white hover:bg-white hover:text-slate-950',
       deliverables: [
         'Creator sourcing & collaboration management',
         'UGC hook scripts & visual storyboard direction',
@@ -95,10 +75,6 @@ export default function ServicesPage() {
       tag: 'DESIGN',
       title: 'LOGO & BRAND IDENTITY',
       summary: 'Distinct visual identities designed to work from an app icon to a storefront.',
-      leftBg: 'bg-[#d86e86]',
-      rightBg: 'bg-[#e07b93]',
-      textColor: 'text-slate-950',
-      pillStyle: 'border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white',
       deliverables: [
         'Research and visual direction',
         'Logo system and responsive variations',
@@ -109,57 +85,62 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050505] text-white pt-28 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden font-sans">
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text-primary)] pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden font-sans">
       
+      {/* Ambient Background Glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6a57fa]/10 rounded-full blur-[160px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         
         {/* Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-[#e26242] transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-secondary)] hover:text-[#6a57fa] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Home
         </Link>
 
-        {/* HERO SECTION (Screenshot 1) */}
-        <div className="space-y-8 pt-2">
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black font-display text-white tracking-tight leading-[0.95]">
+        {/* HERO SECTION */}
+        <div className="space-y-6 pt-2">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/30 text-xs font-black uppercase tracking-widest shadow-sm">
+            <Zap className="w-3.5 h-3.5 text-[#6a57fa]" />
+            CAPABILITIES &amp; SOLUTIONS
+          </div>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black font-display text-[var(--text-primary)] uppercase tracking-tight leading-[1.05]">
             Let’s build the next one <br className="hidden sm:inline" />
-            together.
+            <span className="text-[#6a57fa]">together.</span>
           </h1>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-2">
             <Link
               href="/#contact"
-              className="px-8 py-4 rounded-full bg-[#e26242] text-slate-950 text-sm font-black uppercase tracking-wider shadow-lg hover:bg-[#d55232] hover:scale-105 transition-all flex items-center gap-2"
+              className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white text-xs font-black uppercase tracking-wider shadow-lg hover:bg-[#5844f7] hover:scale-105 transition-all flex items-center gap-2"
             >
               <span>Connect with us</span>
-              <div className="w-6 h-6 rounded-full bg-slate-950/20 flex items-center justify-center">
-                <ArrowUpRight className="w-4 h-4 text-slate-950" />
-              </div>
+              <ArrowUpRight className="w-4 h-4" />
             </Link>
-            <p className="text-slate-400 text-xs sm:text-sm font-mono font-medium">
+            <p className="text-[var(--text-secondary)] text-xs sm:text-sm font-mono font-medium">
               Tell us the goal. We will tell you what it actually needs.
             </p>
           </div>
         </div>
 
-        {/* MARQUEE & QUOTE OVERVIEW BLOCK (Screenshot 2) */}
-        <div className="rounded-3xl bg-[#0a0a0e] border border-white/10 p-6 sm:p-10 lg:p-12 space-y-10">
+        {/* MARQUEE & QUOTE OVERVIEW BLOCK */}
+        <div className="rounded-3xl bg-[var(--surface)] border border-[var(--border)] p-6 sm:p-10 lg:p-12 space-y-10 shadow-md">
           
           {/* Running Service Ticker */}
-          <div className="overflow-hidden border-b border-white/10 pb-6 whitespace-nowrap">
-            <div className="inline-flex items-center gap-6 text-[10px] sm:text-xs font-mono font-bold tracking-widest text-slate-400 uppercase">
+          <div className="overflow-hidden border-b border-[var(--border)] pb-6 whitespace-nowrap">
+            <div className="inline-flex items-center gap-6 text-[10px] sm:text-xs font-mono font-bold tracking-widest text-[var(--text-secondary)] uppercase">
               <span>VIDEO &amp; MOTION</span>
-              <span className="text-[#e26242]">•</span>
+              <span className="text-[#6a57fa]">•</span>
               <span>WEB &amp; APP DEVELOPMENT</span>
-              <span className="text-[#e26242]">•</span>
+              <span className="text-[#6a57fa]">•</span>
               <span>BRAND &amp; SOCIAL SYSTEMS</span>
-              <span className="text-[#e26242]">•</span>
+              <span className="text-[#6a57fa]">•</span>
               <span>PERFORMANCE MARKETING</span>
-              <span className="text-[#e26242]">•</span>
+              <span className="text-[#6a57fa]">•</span>
               <span>UGC &amp; CREATOR WORK</span>
-              <span className="text-[#e26242]">•</span>
+              <span className="text-[#6a57fa]">•</span>
               <span>IDENTITY &amp; DESIGN</span>
             </div>
           </div>
@@ -169,17 +150,17 @@ export default function ServicesPage() {
             
             {/* Left Quote */}
             <div className="lg:col-span-6 space-y-6">
-              <blockquote className="text-xl sm:text-3xl lg:text-4xl font-bold font-display text-white leading-tight">
+              <blockquote className="text-xl sm:text-3xl font-bold font-display text-[var(--text-primary)] leading-tight">
                 “Six services, one team, and the same standard across all of them. We would rather scope the work honestly than sell you a package you do not need.”
               </blockquote>
               
               <div className="flex items-center gap-3 pt-2">
-                <div className="w-1 h-8 bg-[#e26242] rounded-full" />
+                <div className="w-1 h-8 bg-[#6a57fa] rounded-full" />
                 <div>
-                  <div className="text-xs font-mono font-black text-white uppercase tracking-widest">
+                  <div className="text-xs font-mono font-black text-[#6a57fa] uppercase tracking-widest">
                     AIKODX STUDIO
                   </div>
-                  <div className="text-[11px] font-mono text-slate-400">
+                  <div className="text-[11px] font-mono text-[var(--text-secondary)]">
                     Creative, product &amp; growth team
                   </div>
                 </div>
@@ -189,10 +170,10 @@ export default function ServicesPage() {
             {/* Right 6 Services Grid (3 cols x 2 rows) */}
             <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2">
               {servicesList.map((svc) => (
-                <div key={svc.num} className="space-y-1.5 border-l border-white/10 pl-4 py-1">
-                  <div className="text-[10px] font-mono text-slate-500 font-bold">{svc.num}</div>
-                  <div className="text-base font-black font-display text-white">{svc.tag}</div>
-                  <div className="text-[11px] font-mono text-slate-400 line-clamp-2">{svc.title}</div>
+                <div key={svc.num} className="space-y-1.5 border-l border-[var(--border)] pl-4 py-1">
+                  <div className="text-[10px] font-mono text-[#6a57fa] font-bold">{svc.num}</div>
+                  <div className="text-base font-black font-display text-[var(--text-primary)]">{svc.tag}</div>
+                  <div className="text-[11px] font-mono text-[var(--text-secondary)] line-clamp-2">{svc.title}</div>
                 </div>
               ))}
             </div>
@@ -200,75 +181,64 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* 6 STACKED DETAILED SERVICE CARDS (Exact match to Screenshots 3 & 4) */}
-        <div className="space-y-10 pt-4 pb-16 relative">
-          {servicesList.map((svc, idx) => (
+        {/* 6 STACKED SERVICE CARDS (Matching Homepage Work Stacked Deck) */}
+        <div className="relative flex flex-col gap-10 sm:gap-14 pb-12">
+          {servicesList.map((svc, index) => (
             <div
               key={svc.num}
-              style={{ top: `${100 + idx * 24}px` }}
-              className={`sticky rounded-[32px] overflow-hidden ${svc.textColor} shadow-2xl transition-all duration-500 border border-black/15 group mb-8`}
+              style={{ top: `${90 + index * 24}px` }}
+              className="sticky rounded-[2rem] sm:rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 overflow-hidden group hover:border-[#6a57fa]/40"
             >
-              {/* Two-tone split card container */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+              {/* Background Ambient Radial Glow */}
+              <div className="absolute top-0 right-0 w-80 h-80 bg-[#6a57fa]/5 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                 
-                {/* LEFT PANE */}
-                <div className={`lg:col-span-6 ${svc.leftBg} p-6 sm:p-10 lg:p-12 flex flex-col justify-between space-y-8`}>
-                  {/* Top Bar Left */}
-                  <div className="text-xs font-mono font-bold tracking-widest uppercase opacity-80 border-b border-current/20 pb-3">
-                    {svc.num} / {svc.tag}
+                {/* LEFT COLUMN: Title & Summary (6 Cols) */}
+                <div className="lg:col-span-6 space-y-5">
+                  <div className="flex items-center gap-3">
+                    <span className="px-3 py-1 rounded-full bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/30 text-xs font-mono font-black uppercase tracking-widest">
+                      {svc.num} / {svc.tag}
+                    </span>
+                    <span className="text-xs text-[var(--text-secondary)] font-mono font-bold">• {svc.num} — 06</span>
                   </div>
 
-                  {/* Title & Description */}
-                  <div className="space-y-4">
-                    <h2 className="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight leading-tight">
-                      {svc.title}
-                    </h2>
-                    <p className="text-xs sm:text-sm font-medium opacity-90 leading-relaxed max-w-lg">
-                      {svc.summary}
-                    </p>
-                  </div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-[var(--text-primary)] leading-snug group-hover:text-[#6a57fa] transition-colors">
+                    {svc.title}
+                  </h3>
 
-                  {/* View Details Button */}
-                  <div>
+                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed">
+                    {svc.summary}
+                  </p>
+
+                  <div className="pt-2">
                     <Link
                       href="/#contact"
-                      className={`inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 ${svc.pillStyle} text-xs font-black uppercase tracking-wider transition-all shadow-md group/btn`}
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all hover:scale-105"
                     >
-                      <span>View more details</span>
-                      <div className="w-5 h-5 rounded-full bg-current/15 flex items-center justify-center">
-                        <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                      </div>
+                      <span>View More Details</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
 
-                {/* RIGHT PANE */}
-                <div className={`lg:col-span-6 ${svc.rightBg} p-6 sm:p-10 lg:p-12 flex flex-col justify-between space-y-8 border-t lg:border-t-0 lg:border-l border-black/10`}>
-                  {/* Top Bar Right */}
-                  <div className="text-xs font-mono font-bold tracking-widest uppercase opacity-80 border-b border-current/20 pb-3 text-right">
-                    {svc.num} — 06
+                {/* RIGHT COLUMN: What You Get List (6 Cols) */}
+                <div className="lg:col-span-6 space-y-4 lg:border-l lg:border-[var(--border)] lg:pl-8">
+                  <div className="text-xs font-mono font-black uppercase tracking-widest text-[#6a57fa]">
+                    WHAT YOU GET
                   </div>
-
-                  {/* What You Get Section */}
-                  <div className="space-y-4">
-                    <div className="text-xs font-mono font-extrabold uppercase tracking-widest opacity-75">
-                      WHAT YOU GET
-                    </div>
-                    <div className="space-y-3">
-                      {svc.deliverables.map((item, itemIdx) => (
-                        <div key={itemIdx} className="flex items-start gap-4 border-b border-current/15 pb-3">
-                          <span className="text-xs font-mono font-bold opacity-60 pt-0.5">
-                            0{itemIdx + 1}
-                          </span>
-                          <span className="text-xs sm:text-sm font-semibold leading-snug">
-                            {item}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="space-y-3 pt-1">
+                    {svc.deliverables.map((item, itemIdx) => (
+                      <div key={itemIdx} className="flex items-start gap-3 border-b border-[var(--border)] pb-3">
+                        <span className="text-xs font-mono font-black text-[#6a57fa] pt-0.5">
+                          0{itemIdx + 1}
+                        </span>
+                        <span className="text-xs sm:text-sm font-semibold text-[var(--text-primary)] leading-snug">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-
-                  <div className="hidden lg:block h-6" />
                 </div>
 
               </div>
@@ -276,23 +246,23 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* BOTTOM CONNECT BANNER */}
-        <div className="rounded-3xl bg-[#0a0a0e] border border-white/10 p-8 sm:p-12 text-center space-y-6">
-          <h2 className="text-3xl sm:text-5xl font-black font-display text-white uppercase tracking-tight">
-            Ready to scope your next build?
-          </h2>
-          <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto font-medium leading-relaxed">
-            We review your requirements and provide an honest scope-led roadmap within 24 hours.
-          </p>
-          <div className="pt-2">
-            <Link
-              href="/#contact"
-              className="inline-flex items-center gap-2.5 px-10 py-4 rounded-full bg-[#e26242] text-slate-950 text-sm font-black uppercase tracking-wider shadow-xl hover:bg-[#d55232] hover:scale-105 transition-all"
-            >
-              <span>Get Started</span>
-              <ArrowUpRight className="w-5 h-5 text-slate-950" />
-            </Link>
+        {/* BOTTOM CALLOUT BANNER (Matching Homepage) */}
+        <div className="flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-3xl border border-[var(--border)] bg-[var(--surface)] gap-6 shadow-md">
+          <div className="space-y-1">
+            <h4 className="text-lg sm:text-xl font-bold font-display text-[var(--text-primary)]">
+              Ready to scope your next custom web application or AI platform?
+            </h4>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium">
+              We review your requirements and provide an honest scope-led roadmap within 24 hours.
+            </p>
           </div>
+          <Link
+            href="/#contact"
+            className="px-8 py-3.5 rounded-xl bg-[#6a57fa] text-white hover:bg-[#5844f7] text-xs font-black uppercase tracking-wider transition-all shrink-0 flex items-center gap-2 shadow-lg hover:scale-105"
+          >
+            <span>Start a Project</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
         </div>
 
       </div>
