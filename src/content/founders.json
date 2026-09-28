@@ -7,8 +7,8 @@
     "initials": "SS",
     "bio": "Specializing in high-performance web systems, distributed cloud infrastructure, and full-stack enterprise platform architecture.",
     "avatar": "/shiva.jpg",
-    "bgColor": "#FACC15",
-    "bgClass": "bg-[#FACC15]",
+    "bgColor": "#6a57fa",
+    "bgClass": "bg-gradient-to-br from-[#6a57fa] to-[#5844f7]",
     "socials": {
       "linkedin": "https://linkedin.com",
       "github": "https://github.com",
@@ -30,8 +30,8 @@
     "initials": "BV",
     "bio": "Leading product strategy, system design, dark-mode visual aesthetics, and high-conversion digital experiences.",
     "avatar": "/bittu.png",
-    "bgColor": "#FF4500",
-    "bgClass": "bg-[#FF4500]",
+    "bgColor": "#7463fa",
+    "bgClass": "bg-gradient-to-br from-[#7463fa] to-[#8777ff]",
     "socials": {
       "linkedin": "https://linkedin.com",
       "github": "https://github.com",

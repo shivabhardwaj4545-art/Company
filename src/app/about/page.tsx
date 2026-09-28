@@ -76,17 +76,17 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Neobrutalist Leadership Showcase (Shiva Sharma & Bittu Verma) */}
+        {/* Leadership Showcase in Studio Theme */}
         <div className="space-y-10">
           <div className="text-center space-y-2">
-            <span className="text-xs font-mono font-black tracking-widest text-[#FF4500] uppercase block">
-              THE HUMANS BEHIND THE JUGAAD
+            <span className="text-xs font-mono font-black tracking-widest text-[#6a57fa] uppercase block">
+              THE HUMANS BEHIND AIKODX
             </span>
-            <h2 className="text-3xl sm:text-5xl font-black font-display text-black uppercase tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-black font-display text-[var(--text-primary)] uppercase tracking-tight">
               FOUNDERS
             </h2>
-            <p className="text-sm sm:text-base text-slate-700 font-semibold font-sans">
-              Two people. Four eye bags. Infinite jugaad.
+            <p className="text-sm sm:text-base text-[var(--text-secondary)] font-medium font-sans">
+              The builders and engineering minds driving AiKodX Studio forward.
             </p>
           </div>
 
@@ -94,23 +94,21 @@ export default function AboutPage() {
             {founders.map((founder) => (
               <div
                 key={founder.id}
-                className="rounded-[28px] border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+                className="rounded-[28px] border border-[var(--border)] bg-white shadow-xl shadow-[#6a57fa]/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#6a57fa]/20"
               >
-                {/* Top Colored Box with Monogram Initials & Slanted Badge */}
+                {/* Top Colored Box with Studio Theme Gradients & Slanted Badge */}
                 <div
-                  className={`h-64 sm:h-72 border-b-2 border-black flex items-center justify-center relative p-6 ${
-                    founder.bgColor === '#FACC15' ? 'bg-[#FACC15]' : 'bg-[#FF4500]'
+                  className={`h-64 sm:h-72 border-b border-[var(--border)] flex items-center justify-center relative p-6 ${
+                    founder.id === 'f1'
+                      ? 'bg-gradient-to-br from-[#6a57fa] to-[#5844f7]'
+                      : 'bg-gradient-to-br from-[#7463fa] to-[#8777ff]'
                   }`}
                 >
-                  <span
-                    className={`text-[110px] sm:text-[145px] font-black font-display leading-none select-none tracking-tighter ${
-                      founder.bgColor === '#FACC15' ? 'text-[#B48000]/40' : 'text-[#7A1C00]/30'
-                    }`}
-                  >
+                  <span className="text-[110px] sm:text-[145px] font-black font-display leading-none select-none tracking-tighter text-white/20">
                     {founder.initials}
                   </span>
 
-                  <div className="absolute -bottom-4 left-6 sm:left-8 transform -rotate-1 z-10 px-4 py-1.5 rounded-full bg-white border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-[10px] sm:text-xs font-black uppercase tracking-wider text-black">
+                  <div className="absolute -bottom-4 left-6 sm:left-8 transform -rotate-1 z-10 px-4 py-1.5 rounded-full bg-white border border-[#6a57fa]/30 shadow-md text-[10px] sm:text-xs font-black uppercase tracking-wider text-[#6a57fa]">
                     {founder.badgeRole}
                   </div>
                 </div>
@@ -118,7 +116,7 @@ export default function AboutPage() {
                 {/* Bottom White Box (Name, Social Pills, Verified Facts) */}
                 <div className="pt-8 pb-8 px-6 sm:px-8 space-y-5 flex-1 flex flex-col justify-between">
                   <div className="space-y-4">
-                    <h3 className="text-2xl sm:text-3xl font-black font-display text-black uppercase tracking-tight">
+                    <h3 className="text-2xl sm:text-3xl font-black font-display text-[var(--text-primary)] uppercase tracking-tight">
                       {founder.name}
                     </h3>
 
@@ -129,7 +127,7 @@ export default function AboutPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           data-cursor="hover"
-                          className="px-3.5 py-1.5 rounded-full border border-black text-xs font-black text-black hover:bg-black hover:text-white transition-colors inline-flex items-center gap-1.5 uppercase"
+                          className="px-3.5 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-secondary)] text-xs font-black text-[#6a57fa] hover:bg-[#6a57fa] hover:text-white transition-all inline-flex items-center gap-1.5 uppercase"
                         >
                           <InstagramIcon />
                           <span>INSTAGRAM ↗</span>
@@ -141,7 +139,7 @@ export default function AboutPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           data-cursor="hover"
-                          className="px-3.5 py-1.5 rounded-full border border-black text-xs font-black text-black hover:bg-black hover:text-white transition-colors inline-flex items-center gap-1.5 uppercase"
+                          className="px-3.5 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-secondary)] text-xs font-black text-[#6a57fa] hover:bg-[#6a57fa] hover:text-white transition-all inline-flex items-center gap-1.5 uppercase"
                         >
                           <LinkedinIcon />
                           <span>LINKEDIN ↗</span>
@@ -153,7 +151,7 @@ export default function AboutPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           data-cursor="hover"
-                          className="px-3.5 py-1.5 rounded-full border border-black text-xs font-black text-black hover:bg-black hover:text-white transition-colors inline-flex items-center gap-1.5 uppercase"
+                          className="px-3.5 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-secondary)] text-xs font-black text-[#6a57fa] hover:bg-[#6a57fa] hover:text-white transition-all inline-flex items-center gap-1.5 uppercase"
                         >
                           <GithubIcon />
                           <span>GITHUB ↗</span>
@@ -162,14 +160,14 @@ export default function AboutPage() {
                     </div>
 
                     <div className="pt-2 space-y-2">
-                      <div className="text-[11px] font-mono font-black uppercase tracking-widest text-[#FF4500]">
+                      <div className="text-[11px] font-mono font-black uppercase tracking-widest text-[#6a57fa]">
                         100% VERIFIED FACTS
                       </div>
-                      <div className="border-t border-slate-200" />
-                      <ul className="space-y-2.5 text-xs font-mono font-bold text-slate-900 uppercase tracking-tight pt-1">
+                      <div className="border-t border-[var(--border)]" />
+                      <ul className="space-y-2.5 text-xs font-mono font-bold text-[var(--text-secondary)] uppercase tracking-tight pt-1">
                         {founder.verifiedFacts.map((fact, idx) => (
                           <li key={idx} className="flex items-start gap-2.5 leading-snug">
-                            <span className="text-[#FF4500] font-black text-sm select-none shrink-0">*</span>
+                            <span className="text-[#6a57fa] font-black text-sm select-none shrink-0">*</span>
                             <span>{fact}</span>
                           </li>
                         ))}
