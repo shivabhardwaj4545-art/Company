@@ -1,28 +1,42 @@
 [
   {
     "id": "f1",
-    "name": "Shiva Sharma",
-    "role": "Founder & Technical Architect",
+    "name": "SIMRAN SINGH",
+    "role": "FOUNDER — CLIENT ACQUISITION & MARKETING",
     "initials": "SS",
-    "bio": "Specializing in high-performance web systems, distributed cloud infrastructure, and full-stack enterprise platform architecture.",
-    "avatar": "/shiva.jpg",
+    "bgColor": "#f5c518",
+    "watermarkColor": "rgba(180, 140, 0, 0.35)",
+    "bio": "Leading client acquisition, brand strategy, and growth marketing for AiKodX Studio.",
+    "verifiedFacts": [
+      "CAN OVERTHINK FOREVER. LITERALLY FOREVER.",
+      "CAN MAKE 500 COLD CALLS A DAY",
+      "TAKES 47 SELFIES, POSTS ONE",
+      "DROPS THE MOST BANGER REELS",
+      "RUNS ON COFFEE AND CLIENTS"
+    ],
     "socials": {
-      "twitter": "https://twitter.com",
-      "linkedin": "https://linkedin.com",
-      "github": "https://github.com"
+      "instagram": "https://instagram.com",
+      "linkedin": "https://linkedin.com"
     }
   },
   {
     "id": "f2",
-    "name": "Bittu Verma",
-    "role": "Founder & Head of Product Design",
-    "initials": "BV",
-    "bio": "Leading product strategy, system design, dark-mode visual aesthetics, and high-conversion digital experiences.",
-    "avatar": "/bittu.png",
+    "name": "SANKET AGRAWAL",
+    "role": "FOUNDER — PROJECTS & TECH",
+    "initials": "SA",
+    "bgColor": "#ff4d00",
+    "watermarkColor": "rgba(180, 40, 0, 0.4)",
+    "bio": "Leading software engineering, system architecture, and technical execution for AiKodX Studio.",
+    "verifiedFacts": [
+      "CAN SLEEP 48 HOURS. CAN SKIP 48 TOO.",
+      "COFFEE COUNTS AS A MEAL",
+      "TALKS TO CLIENTS LIKE FAMILY",
+      "\"DONE IN 5 MINS\" = 5 HOURS",
+      "TALKS TO HIS CODE. IT LISTENS."
+    ],
     "socials": {
-      "twitter": "https://twitter.com",
-      "linkedin": "https://linkedin.com",
-      "github": "https://github.com"
+      "instagram": "https://instagram.com",
+      "linkedin": "https://linkedin.com"
     }
   }
 ]

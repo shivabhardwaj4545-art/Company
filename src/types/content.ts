@@ -60,9 +60,12 @@ export interface FounderItem {
   role: string;
   initials: string;
   bio: string;
-  avatar: string;
+  avatar?: string;
+  bgColor?: string;
+  watermarkColor?: string;
+  verifiedFacts?: string[];
   avatarStyle?: React.CSSProperties;
-  socials: { twitter?: string; linkedin?: string; github?: string };
+  socials: { twitter?: string; linkedin?: string; github?: string; instagram?: string };
 }
 
 export interface FAQItem {
