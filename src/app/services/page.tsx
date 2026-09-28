@@ -181,13 +181,13 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* 6 STACKED SERVICE CARDS (Matching Homepage Work Stacked Deck) */}
-        <div className="relative flex flex-col gap-10 sm:gap-14 pb-12">
+        {/* 6 STACKED STICKY SERVICE CARDS DECK ("Card ke Upar Card") */}
+        <div className="relative flex flex-col space-y-6 pb-20">
           {servicesList.map((svc, index) => (
             <div
               key={svc.num}
-              style={{ top: `${90 + index * 24}px` }}
-              className="sticky rounded-[2rem] sm:rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 overflow-hidden group hover:border-[#6a57fa]/40"
+              style={{ top: `${96 + index * 32}px` }}
+              className="sticky rounded-[2rem] sm:rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 lg:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-500 overflow-hidden group hover:border-[#6a57fa]/50 mb-8"
             >
               {/* Background Ambient Radial Glow */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-[#6a57fa]/5 rounded-full blur-3xl pointer-events-none" />
@@ -246,7 +246,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* BOTTOM CALLOUT BANNER (Matching Homepage) */}
+        {/* BOTTOM CALLOUT BANNER */}
         <div className="flex flex-col sm:flex-row items-center justify-between p-6 sm:p-8 rounded-3xl border border-[var(--border)] bg-[var(--surface)] gap-6 shadow-md">
           <div className="space-y-1">
             <h4 className="text-lg sm:text-xl font-bold font-display text-[var(--text-primary)]">
