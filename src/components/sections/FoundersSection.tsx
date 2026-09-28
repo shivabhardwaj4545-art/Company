@@ -31,19 +31,9 @@ export function FoundersSection() {
             key={founder.id}
             className="card-popout group rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 overflow-hidden"
           >
-            {/* Founder Avatar & Initials Badge */}
-            <div className="relative shrink-0">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border border-[var(--border)] shadow-md bg-neutral-900">
-                {/* eslint-disable-next-html-extension */}
-                <img
-                  src={founder.avatar}
-                  alt={founder.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-lg bg-[var(--accent)] text-white text-xs font-black font-display shadow-md z-10">
-                {founder.initials}
-              </div>
+            {/* Founder Initials Badge (Images Removed) */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#6a57fa]/15 border border-[#6a57fa]/30 text-[#6a57fa] text-xl sm:text-2xl font-black font-display flex items-center justify-center shrink-0 shadow-md">
+              {founder.initials}
             </div>
 
             {/* Bio & Socials */}

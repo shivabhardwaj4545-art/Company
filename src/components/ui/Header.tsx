@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ArrowUpRight, Zap } from 'lucide-react';
 
+import { Logo } from './Logo';
+
 interface HeaderProps {
   onOpenModal: () => void;
 }
@@ -16,17 +18,19 @@ export function Header({ onOpenModal }: HeaderProps) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'Products', href: '#products' },
-    { name: 'Work', href: '#work' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'About', href: '#founders' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Work', href: '/work' },
+    { name: 'Why Us', href: '/why-us' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -39,29 +43,21 @@ export function Header({ onOpenModal }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo - aiKODX */}
-        <Link href="/" className="flex items-center gap-2.5 group" data-cursor="hover">
-          <div className="flex flex-col">
-            <span className="font-display font-black text-2xl sm:text-3xl tracking-tight">
-              <span className="text-[var(--text-primary)]">ai</span>
-              <span className="text-[#6a57fa]">KODX</span>
-            </span>
-            <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase -mt-1 font-bold">
-              smarter by design
-            </span>
-          </div>
+        <Link href="/" className="flex items-center gap-2.5 group select-none" data-cursor="hover">
+          <Logo theme="auto" size="md" />
         </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               data-cursor="hover"
               className="text-sm font-extrabold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors relative py-1 uppercase tracking-wider"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -95,14 +91,14 @@ export function Header({ onOpenModal }: HeaderProps) {
         <div className="md:hidden border-b border-[var(--border)] bg-[var(--surface)] px-4 py-6 space-y-4">
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-lg font-black text-[var(--text-primary)] py-1 uppercase tracking-wider"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="pt-4 border-t border-[var(--border)]">

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Sparkles, ChevronRight, Check, Rocket, CheckCircle2, TrendingUp, ArrowRight } from 'lucide-react';
 
 interface HeroSectionProps {
-  onOpenModal: (initialEmail?: string) => void;
+  onOpenModal?: (initialEmail?: string) => void;
 }
 
 export function HeroSection({ onOpenModal }: HeroSectionProps) {
@@ -18,7 +18,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
-        onOpenModal(email);
+        onOpenModal?.(email);
       }, 600);
     }
   };
@@ -33,7 +33,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center pt-36 sm:pt-40 pb-24 px-4 sm:px-6 lg:px-12 overflow-visible border-b border-[var(--border)] bg-[var(--bg)]"
+      className="relative min-h-screen flex flex-col justify-start pt-32 sm:pt-40 lg:pt-44 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-12 overflow-visible border-b border-[var(--border)] bg-[var(--bg)]"
     >
       {/* Ambient Glow Blobs in Purple/Indigo */}
       <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#6a57fa]/15 rounded-full blur-3xl pointer-events-none" />
@@ -208,7 +208,7 @@ export function HeroSection({ onOpenModal }: HeroSectionProps) {
 
                 <button
                   type="button"
-                  onClick={() => onOpenModal()}
+                  onClick={() => onOpenModal?.()}
                   className="w-full py-2 rounded-xl bg-[#6a57fa] text-white text-[10px] font-black uppercase tracking-wider flex items-center justify-center gap-1 hover:bg-[#5844f7] transition-all shadow-md shadow-[#6a57fa]/20"
                 >
                   <span>Get started</span>

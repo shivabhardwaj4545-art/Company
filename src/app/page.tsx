@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-import { Header } from '@/components/ui/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { WhatWeDoSection } from '@/components/sections/WhatWeDoSection';
 import { FeaturedWorkSection } from '@/components/sections/FeaturedWorkSection';
@@ -10,32 +8,14 @@ import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { TrustBar } from '@/components/sections/TrustBar';
 import { WhyUsSection } from '@/components/sections/WhyUsSection';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { BlogSection } from '@/components/sections/BlogSection';
 import { FoundersSection } from '@/components/sections/FoundersSection';
-import { Footer } from '@/components/ui/Footer';
-import { ProjectModal } from '@/components/ui/ProjectModal';
 
 export default function HomePage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [initialEmail, setInitialEmail] = useState('');
-
-  const handleOpenModal = (email?: string) => {
-    if (typeof email === 'string' && email.trim()) {
-      setInitialEmail(email.trim());
-    }
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
-    <main className="min-h-screen bg-[var(--bg)] text-[var(--text-primary)] relative">
-      {/* Sticky Header */}
-      <Header onOpenModal={handleOpenModal} />
-
+    <div className="space-y-0">
       {/* Hero Section */}
-      <HeroSection onOpenModal={handleOpenModal} />
+      <HeroSection />
 
       {/* What We Do Section (Scratch-to-reveal) */}
       <WhatWeDoSection />
@@ -44,7 +24,7 @@ export default function HomePage() {
       <FeaturedWorkSection />
 
       {/* Client Work & Case Studies */}
-      <WorkSection onOpenModal={handleOpenModal} />
+      <WorkSection />
 
       {/* Social Proof & Testimonials Scroller */}
       <TestimonialsSection />
@@ -55,17 +35,14 @@ export default function HomePage() {
       {/* Differentiators / Why Us */}
       <WhyUsSection />
 
+      {/* Blog & Articles Section */}
+      <BlogSection />
+
       {/* Frequently Asked Questions */}
       <FAQSection />
 
       {/* Team / Founders Section */}
       <FoundersSection />
-
-      {/* Footer & Final Call to Action */}
-      <Footer onOpenModal={handleOpenModal} />
-
-      {/* 4-Step Project Inquiry Lead Modal */}
-      <ProjectModal isOpen={isModalOpen} onClose={handleCloseModal} initialEmail={initialEmail} />
-    </main>
+    </div>
   );
 }

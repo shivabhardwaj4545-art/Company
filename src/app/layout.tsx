@@ -4,7 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
 import { CustomCursor } from '@/components/ui/CustomCursor';
-import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { AppShell } from '@/components/providers/AppShell';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -52,8 +52,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
           <SmoothScrollProvider>
             <CustomCursor />
-            {children}
-            <WhatsAppButton />
+            <AppShell>{children}</AppShell>
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>

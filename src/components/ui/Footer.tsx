@@ -1,106 +1,140 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowUpRight, Zap, Heart } from 'lucide-react';
+import { ArrowUpRight, Phone, Mail, MapPin, Sparkles } from 'lucide-react';
+import { Logo } from './Logo';
 
 interface FooterProps {
-  onOpenModal: () => void;
+  onOpenModal?: () => void;
 }
 
 export function Footer({ onOpenModal }: FooterProps) {
   return (
-    <footer className="border-t border-[var(--border)] bg-[var(--surface)] pt-20 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background Accent Glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[var(--accent)]/15 rounded-full blur-[120px] pointer-events-none" />
+    <footer 
+      id="contact" 
+      className="bg-[#0b0a16] text-white border-t border-[#7c6cf0]/20 rounded-t-[2.5rem] sm:rounded-t-[3.5rem] relative overflow-hidden pt-16 sm:pt-24 pb-8"
+    >
+      {/* Background Ambient Radial Glow */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#6a57fa]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#8777ff]/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto">
-        {/* Large Final CTA Banner */}
-        <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg)] p-8 sm:p-14 mb-16 text-center relative overflow-hidden shadow-xl">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-xs font-black tracking-widest text-[#6a57fa] uppercase mb-3 inline-block">
-              READY TO SCALE YOUR BRAND?
-            </span>
-            <h2 className="text-4xl sm:text-6xl font-black font-display text-[var(--text-primary)] leading-tight mb-6 uppercase">
-              Let's build something extraordinary together
-            </h2>
-            <p className="text-sm sm:text-lg text-[var(--text-secondary)] mb-8 max-w-xl mx-auto font-medium">
-              Book a call or complete our quick 4-step project inquiry to get a detailed proposal &amp; architecture plan within 24 hours.
-            </p>
-            <button
-              onClick={onOpenModal}
-              type="button"
-              data-cursor="hover"
-              className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[#6a57fa] text-white text-base font-black shadow-md hover:shadow-lg hover:bg-[#5844f7] transition-all uppercase tracking-wide"
-            >
-              <span>Start a Project Today</span>
-              <ArrowUpRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-
-        {/* Footer Navigation & Brand Info */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[var(--border)]">
-          {/* Brand Info */}
-          <div className="md:col-span-1 space-y-4">
-            <Link href="/" className="flex flex-col" data-cursor="hover">
-              <span className="font-display font-black text-2xl tracking-tight">
-                <span className="text-[var(--text-primary)]">ai</span>
-                <span className="text-[#6a57fa]">KODX</span>
-              </span>
-              <span className="text-[10px] tracking-widest text-[var(--text-secondary)] uppercase font-bold -mt-1">
-                smarter by design
-              </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Top Navigation & Info Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
+          
+          {/* COLUMN 1: BRAND LOGO & CTA (5 Cols) */}
+          <div className="md:col-span-5 space-y-6">
+            <Link href="/" className="inline-block group select-none" data-cursor="hover">
+              <Logo theme="dark" size="lg" />
             </Link>
-            <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-medium">
-              High-performance web apps, iconic branding systems, and autonomous AI lead engines.
-            </p>
+
+            <div className="space-y-4 pt-2">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black font-display text-white tracking-tight leading-tight">
+                Do you like <br />what you see?
+              </h3>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
+                <button
+                  onClick={onOpenModal}
+                  type="button"
+                  data-cursor="hover"
+                  className="px-7 py-3.5 rounded-full bg-white text-[#0b0a16] font-black text-xs uppercase tracking-wider hover:bg-slate-100 transition-all flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95"
+                >
+                  <span>Start a project</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </button>
+
+                <div className="text-xs text-slate-400 font-medium">
+                  <span className="font-bold text-white block">Scope-led proposals</span>
+                  Built around your brief
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-xs font-black uppercase tracking-wider text-[var(--text-primary)] mb-4 font-display">
-              Services
-            </h4>
-            <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li><Link href="/services/web-development" className="hover:text-[#857df3] transition-colors">Web Development</Link></li>
-              <li><Link href="/services/branding-identity" className="hover:text-[#857df3] transition-colors">Branding &amp; Identity</Link></li>
-              <li><Link href="/services/ai-automation" className="hover:text-[#857df3] transition-colors">AI Automation</Link></li>
+          {/* COLUMN 2: EXPLORE NAVIGATION (3.5 Cols) */}
+          <div className="md:col-span-3 space-y-4">
+            <span className="text-sm font-black tracking-widest text-[#b18cf5] uppercase font-mono block">
+              EXPLORE
+            </span>
+            <ul className="space-y-3.5 text-sm font-semibold text-slate-200">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              </li>
+              <li>
+                <Link href="/work" className="hover:text-white transition-colors">Work</Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              </li>
+              <li>
+                <Link href="/why-us" className="hover:text-white transition-colors">Why Choose Us</Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-white transition-colors">About Studio</Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:text-white transition-colors">FAQs</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+              </li>
             </ul>
           </div>
 
-          {/* In-House Products */}
-          <div>
-            <h4 className="text-xs font-black uppercase tracking-wider text-[var(--text-primary)] mb-4 font-display">
-              Products
-            </h4>
-            <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li><Link href="/products/ezrestero" className="hover:text-[#857df3] transition-colors">EZ-Restaurant SaaS</Link></li>
-              <li><Link href="/products/msg-platform" className="hover:text-[#857df3] transition-colors">MSG (Ethnic Fashion)</Link></li>
-              <li><Link href="/products/ai-studio" className="hover:text-[#857df3] transition-colors">AI Studio (Gemini 2.0)</Link></li>
-              <li><Link href="/products/readygo" className="hover:text-[#857df3] transition-colors">ReadyGo Ride Sharing</Link></li>
-              <li><Link href="/products/dropizi-courier" className="hover:text-[#857df3] transition-colors">Dropizi Courier</Link></li>
-            </ul>
+          {/* COLUMN 3: GET IN TOUCH (3.5 Cols) */}
+          <div className="md:col-span-4 space-y-4">
+            <span className="text-sm font-black tracking-widest text-[#b18cf5] uppercase font-mono block">
+              GET IN TOUCH
+            </span>
+            
+            <div className="space-y-4 text-sm font-semibold text-slate-200">
+              <a href="tel:+918445178177" className="flex items-center gap-2.5 hover:text-white transition-colors">
+                <Phone className="w-4 h-4 text-[#b18cf5] shrink-0" />
+                <span>+91 8445178177</span>
+              </a>
+
+              <a href="mailto:ssharma636076@gmail.com" className="flex items-center gap-2.5 hover:text-white transition-colors">
+                <Mail className="w-4 h-4 text-[#b18cf5] shrink-0" />
+                <span className="truncate">ssharma636076@gmail.com</span>
+              </a>
+
+              <div className="flex items-start gap-2.5 text-slate-300">
+                <MapPin className="w-4 h-4 text-[#b18cf5] shrink-0 mt-0.5" />
+                <span>AiKodX Studio<br />Dehradun, Uttarakhand, India</span>
+              </div>
+
+              <div className="pt-2">
+                <span className="text-xs font-black text-[#b18cf5] tracking-widest uppercase font-mono block">
+                  aikodx.com
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* Contact / Office */}
-          <div>
-            <h4 className="text-xs font-black uppercase tracking-wider text-[var(--text-primary)] mb-4 font-display">
-              Connect
-            </h4>
-            <ul className="space-y-2.5 text-xs text-[var(--text-secondary)] font-medium">
-              <li>ssharma636076@gmail.com</li>
-              <li><strong>Direct Phone:</strong> +91 8445178177</li>
-              <li>Dehradun, Uttarakhand, India</li>
-            </ul>
+        </div>
+
+        {/* BOTTOM UTILITY FOOTER BAR */}
+        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono font-medium gap-4">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span>© AiKodX Agency {new Date().getFullYear()}</span>
+            <span>|</span>
+            <span>Dehradun, Uttarakhand, India</span>
+          </div>
+
+          <div className="flex items-center gap-4 text-[11px]">
+            <span>Web Development &amp; AI Studio</span>
+            <span>|</span>
+            <span>All Rights Reserved</span>
+            <span>|</span>
+            <Link href="/#faq" className="hover:text-white transition-colors">Privacy Policy</Link>
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[var(--text-secondary)] font-semibold gap-4">
-          <div>
-            © {new Date().getFullYear()} AiKodX. All rights reserved.
-          </div>
-        </div>
       </div>
     </footer>
   );

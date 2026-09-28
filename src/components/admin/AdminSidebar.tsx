@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Logo } from '@/components/ui/Logo';
 
 interface AdminSidebarProps {
   activeTab: 'overview' | 'projects' | 'domains' | 'requests';
@@ -62,16 +63,8 @@ export function AdminSidebar({
     <aside className="w-full md:w-72 bg-[#141518] border-b md:border-b-0 md:border-r border-[#222429] p-5 flex flex-col justify-between shrink-0 font-sans">
       <div>
         {/* Brand Header */}
-        <div className="flex items-center gap-3 px-2 py-3 mb-6 border-b border-[#222429]">
-          <div>
-            <h1 className="font-black font-display text-xl leading-none">
-              <span className="text-white">ai</span>
-              <span className="text-[#6a57fa]">KODX</span>
-            </h1>
-            <span className="text-[10px] font-bold text-[#8777ff] uppercase tracking-wider block mt-0.5">
-              smarter by design • Admin Portal
-            </span>
-          </div>
+        <div className="flex items-center gap-3 px-2 py-3 mb-6 border-b border-[#222429] select-none">
+          <Logo theme="dark" size="sm" />
         </div>
 
         {/* Menu Navigation */}
