@@ -21,14 +21,14 @@ export default function ServicesPage() {
     {
       num: '02',
       tag: 'BUILD',
-      title: 'WEB & APP DEVELOPMENT',
+      title: 'FULL-STACK DEVELOPMENT',
       summary:
-        'Scalable Next.js web applications, mobile apps, and custom software systems engineered for high performance and growth.',
+        'End-to-end web applications, mobile apps, custom APIs, and scalable enterprise software systems engineered for high performance and growth.',
       deliverables: [
-        'Next.js enterprise architecture & microservices',
+        'Full-Stack Next.js & Node.js enterprise architecture',
         'Cross-platform iOS & Android mobile applications',
-        'Sub-second page load performance & SEO optimization',
-        'Scalable API integrations & custom admin dashboards',
+        'Custom REST/GraphQL APIs & microservices',
+        'Scalable cloud database, security & admin dashboards',
       ],
     },
     {

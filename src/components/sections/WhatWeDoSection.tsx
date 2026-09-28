@@ -34,7 +34,7 @@ export function WhatWeDoSection() {
           </h2>
         </div>
         <p className="text-sm sm:text-base text-[var(--text-secondary)] font-medium max-w-md">
-          High-performance web engineering, iconic brand systems, and 24/7 AI automation workflows.
+          End-to-end full-stack engineering, iconic brand systems, and 24/7 AI automation workflows.
         </p>
       </div>
 

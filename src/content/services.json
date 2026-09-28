@@ -2,36 +2,36 @@
   {
     "slug": "web-development",
     "number": "01",
-    "title": "Web Development",
-    "tagline": "High-performance web applications built for speed, scale & conversion.",
-    "description": "We engineer fast, accessible, visually captivating web apps using modern frameworks like Next.js, React, Tailwind CSS, and WebGL. Every site is optimized for 99+ PageSpeed scores, SEO supremacy, and flawless cross-device performance.",
+    "title": "Full-Stack Development",
+    "tagline": "End-to-end full-stack applications, custom APIs & cloud software built for scale.",
+    "description": "We engineer robust full-stack platforms, custom APIs, mobile applications, and enterprise SaaS systems using modern stacks like Next.js, Node.js, React Native, Supabase, and PostgreSQL. Every system is built for speed, reliability, and seamless scale.",
     "bullets": [
-      "Custom Next.js & React Architectures",
-      "Interactive 3D & GSAP Motion Experiences",
-      "Headless CMS Integration (Sanity, Strapi)",
-      "Core Web Vitals & Technical SEO Optimization"
+      "Full-Stack Next.js, Node.js & React Architectures",
+      "Custom REST & GraphQL APIs / Microservices",
+      "Cross-Platform iOS & Android Mobile Apps",
+      "Cloud Infrastructure, Database & Security Setup"
     ],
     "icon": "Code2",
     "color": "blue",
     "features": [
       {
-        "title": "Sub-Second Load Times",
-        "desc": "Built with SSR, edge caching, and media optimization for instant renders."
+        "title": "End-to-End System Architecture",
+        "desc": "Complete frontend, backend API, database, and cloud infrastructure integration."
       },
       {
-        "title": "Dynamic Micro-Interactions",
-        "desc": "Engaging scroll triggers, glassmorphism UI, and fluid page transitions."
+        "title": "Sub-Second Performance",
+        "desc": "Built with SSR, edge caching, and DB optimization for instant response times."
       },
       {
         "title": "Scalable Infrastructure",
-        "desc": "Modular architecture ready to handle millions of requests gracefully."
+        "desc": "Modular microservices architecture ready to handle high concurrent traffic."
       }
     ],
     "deliverables": [
-      "Production-ready Next.js codebase",
-      "Responsive UI component library",
-      "SEO setup & XML sitemaps",
-      "Analytics & speed auditing report"
+      "Production-ready Full-Stack codebase",
+      "Custom REST/GraphQL API services",
+      "Database schema & security policies",
+      "Cloud deployment & speed auditing report"
     ]
   },
   {
