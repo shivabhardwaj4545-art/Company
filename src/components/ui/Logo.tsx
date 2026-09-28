@@ -60,9 +60,7 @@ export function Logo({ size = 'md', theme = 'auto', className = '' }: LogoProps)
 
   const subtitleColor = theme === 'dark'
     ? 'text-slate-200'
-    : theme === 'light'
-    ? 'text-[#283149]'
-    : 'text-[#283149] dark:text-slate-200';
+    : 'text-[#2b354f]';
 
   const letters = 'SMARTER BY DESIGN'.split('');
 
