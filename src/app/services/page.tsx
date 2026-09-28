@@ -87,12 +87,12 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--text-primary)] pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden font-sans">
       
-      {/* Background Ambient Radial Glow */}
+      {/* Background Ambient Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6a57fa]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         
-        {/* Back Button */}
+        {/* Back Link */}
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-secondary)] hover:text-[#6a57fa] transition-colors"
@@ -181,16 +181,13 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* 6 STACKED SERVICE CARDS WITH OVERLAPPING STICKY DECK */}
-        <div className="relative flex flex-col pb-20 space-y-8">
+        {/* STACKED CARDS DECK (Exact CSS provided by user matching Homepage Work deck) */}
+        <div className="relative flex flex-col gap-10 sm:gap-14 pb-12">
           {servicesList.map((svc, index) => (
             <div
               key={svc.num}
-              style={{
-                top: `${96 + index * 24}px`,
-                zIndex: index + 10,
-              }}
-              className="sticky rounded-[2rem] sm:rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-10 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-300 overflow-hidden group hover:border-[#6a57fa]/50 mb-10"
+              style={{ top: `${90 + index * 24}px` }}
+              className="sticky rounded-[2rem] sm:rounded-[2.5rem] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 overflow-hidden group hover:border-[#6a57fa]/40"
             >
               {/* Background Ambient Radial Glow */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-[#6a57fa]/5 rounded-full blur-3xl pointer-events-none" />
@@ -198,29 +195,29 @@ export default function ServicesPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
                 
                 {/* LEFT COLUMN: Title & Summary (6 Cols) */}
-                <div className="lg:col-span-6 space-y-6">
+                <div className="lg:col-span-6 space-y-5">
                   <div className="flex items-center gap-3">
-                    <span className="px-3.5 py-1 rounded-full bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/30 text-xs font-mono font-black uppercase tracking-widest">
+                    <span className="px-3 py-1 rounded-full bg-[#6a57fa]/10 text-[#6a57fa] border border-[#6a57fa]/30 text-xs font-mono font-black uppercase tracking-widest">
                       {svc.num} / {svc.tag}
                     </span>
                     <span className="text-xs text-[var(--text-secondary)] font-mono font-bold">• {svc.num} — 06</span>
                   </div>
 
-                  <h2 className="text-3xl sm:text-5xl font-black font-display text-[var(--text-primary)] uppercase tracking-tight leading-tight group-hover:text-[#6a57fa] transition-colors">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-[var(--text-primary)] leading-snug group-hover:text-[#6a57fa] transition-colors">
                     {svc.title}
-                  </h2>
+                  </h3>
 
-                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed max-w-lg">
+                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] font-medium leading-relaxed">
                     {svc.summary}
                   </p>
 
                   <div className="pt-2">
                     <Link
                       href="/#contact"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[var(--text-primary)] text-[var(--text-primary)] hover:bg-[#6a57fa] hover:border-[#6a57fa] hover:text-white text-xs font-black uppercase tracking-wider transition-all shadow-md group/btn"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#6a57fa] hover:bg-[#5844f7] text-white font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all hover:scale-105"
                     >
                       <span>View More Details</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -232,7 +229,7 @@ export default function ServicesPage() {
                   </div>
                   <div className="space-y-3 pt-1">
                     {svc.deliverables.map((item, itemIdx) => (
-                      <div key={itemIdx} className="flex items-start gap-4 border-b border-[var(--border)] pb-3">
+                      <div key={itemIdx} className="flex items-start gap-3 border-b border-[var(--border)] pb-3">
                         <span className="text-xs font-mono font-black text-[#6a57fa] pt-0.5">
                           0{itemIdx + 1}
                         </span>
