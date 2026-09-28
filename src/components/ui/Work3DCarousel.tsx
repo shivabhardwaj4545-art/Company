@@ -9,9 +9,10 @@ import Link from 'next/link';
 interface Work3DCarouselProps {
   projects: ProjectItem[];
   onOpenModal?: () => void;
+  showSeeAll?: boolean;
 }
 
-export function Work3DCarousel({ projects, onOpenModal }: Work3DCarouselProps) {
+export function Work3DCarousel({ projects, onOpenModal, showSeeAll = true }: Work3DCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -35,18 +36,13 @@ export function Work3DCarousel({ projects, onOpenModal }: Work3DCarouselProps) {
   const activeProject = projects[activeIndex] || projects[0];
 
   return (
-    <div className="w-full space-y-10 py-6 relative overflow-hidden select-none">
+    <div className="w-full space-y-8 py-6 relative overflow-hidden select-none">
       
       {/* 3D Coverflow Container */}
       <div className="relative h-[320px] sm:h-[450px] lg:h-[500px] w-full flex items-center justify-center">
         
         {projects.map((project, idx) => {
           // Calculate offset relative to active index
-          let offset = idx - activeIndex;
-          if (offset < -1 && activeIndex === projects.length - 1) {
-            // loop buffer logic if needed, or index relative
-          }
-
           const isActive = idx === activeIndex;
           const isLeft = idx === (activeIndex - 1 + projects.length) % projects.length;
           const isRight = idx === (activeIndex + 1) % projects.length;
@@ -162,16 +158,16 @@ export function Work3DCarousel({ projects, onOpenModal }: Work3DCarouselProps) {
         </motion.div>
       </AnimatePresence>
 
-      {/* Carousel Controls Bar (Pagination Dots + Play/Pause + See All Works Pill) */}
-      <div className="flex items-center justify-center gap-6 pt-4">
+      {/* Controls Bar (Pagination Dots + Play/Pause Button) */}
+      <div className="flex items-center justify-center gap-4 pt-2">
         {/* Pagination Lines/Dots */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-2">
           {projects.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setActiveIndex(idx)}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
+              className={`h-2 rounded-full transition-all duration-300 ${
                 idx === activeIndex
                   ? 'w-8 bg-[#6a57fa]'
                   : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400'
@@ -184,21 +180,26 @@ export function Work3DCarousel({ projects, onOpenModal }: Work3DCarouselProps) {
         <button
           onClick={() => setIsPlaying(!isPlaying)}
           aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
-          className="w-8 h-8 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] flex items-center justify-center hover:border-[#6a57fa] transition-colors shadow-sm"
+          className="w-8 h-8 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text-primary)] flex items-center justify-center hover:border-[#6a57fa] transition-colors shadow-sm ml-2"
         >
           {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 ml-0.5" />}
         </button>
-
-        {/* See All Works CTA Button */}
-        <Link
-          href="/work"
-          className="px-6 py-2.5 rounded-full bg-white border border-slate-300 text-black text-xs font-black uppercase tracking-wider shadow-md hover:bg-slate-100 hover:shadow-lg transition-all flex items-center gap-1.5"
-        >
-          <span>See All Works</span>
-          <ArrowUpRight className="w-3.5 h-3.5" />
-        </Link>
       </div>
+
+      {/* Big "SEE ALL WORKS ↗" CTA Button Below Controls */}
+      {showSeeAll && (
+        <div className="flex justify-center pt-3">
+          <Link
+            href="/work"
+            className="px-10 py-4 rounded-full bg-white border-2 border-slate-300 text-black text-sm sm:text-base font-black uppercase tracking-wider shadow-xl hover:bg-slate-50 hover:border-[#6a57fa] hover:text-[#6a57fa] hover:scale-105 transition-all flex items-center gap-2.5 group"
+          >
+            <span>See All Works</span>
+            <ArrowUpRight className="w-5 h-5 text-[#6a57fa] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
+        </div>
+      )}
 
     </div>
   );
 }
+
